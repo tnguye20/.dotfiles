@@ -1,3 +1,4 @@
+export TERM="xterm-256color"
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 source ~/antigen/antigen.zsh
 
@@ -49,8 +50,8 @@ POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="╰\uF460\uF460\uF460 "
 
 #POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ssh root_indicator dir_writable dir )
 #POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator context dir_writable dir vcs)
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator context dir_writable dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(os_icon background_jobs time ssh battery)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator context dir_writable dir vcs )
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(load os_icon background_jobs)
 
 POWERLEVEL9K_VCS_CLEAN_BACKGROUND="green"
 POWERLEVEL9K_VCS_CLEAN_FOREGROUND="$DEFAULT_BACKGROUND"
@@ -163,7 +164,7 @@ antigen theme bhilburn/powerlevel9k powerlevel9k
 antigen apply
 
 alias clip="xclip -sel clip" 
-
+alias t="tmux new -s kat"
 # bind -r '\C-s'
  stty -ixon
 
@@ -171,3 +172,7 @@ alias clip="xclip -sel clip"
   emulate -L zsh
   ls 
  }
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
