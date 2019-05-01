@@ -1,5 +1,5 @@
-export TERM="xterm-256color"
-source ~/antigen/antigen.zsh
+# export TERM="xterm-256color"
+source ~/antigen.zsh
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator user dir_writable dir)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs)
 
