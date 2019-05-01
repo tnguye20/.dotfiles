@@ -29,9 +29,12 @@ antigen apply
   ls
  }
 
+alias vc="vim ~/.vimrc"
+alias vt="vim ~/.tmux.conf.local"
+alias vz="vim ~/.zshrc"
+alias copy="xclip -sel clip"
 alias t="tmux new -s A"
 alias tl="tmux ls"
-alias tm="tmux new -s"
 alias ta="tmux attach -t A"
 alias tb="tmux attach -t B"
 
