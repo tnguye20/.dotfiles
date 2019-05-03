@@ -46,3 +46,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPS="--extended"
 export COMPOSE_HTTP_TIMEOUT=5000
+
+feh --bg-scale /home/$user/.dotfiles/.wallpaper/mr_robot.jpg

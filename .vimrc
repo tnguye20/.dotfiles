@@ -83,8 +83,8 @@ set background=dark
 highlight LineNr guifg=#aaaaaa " Dracula's colors are too dark dood
 set number " show line numbers
 set relativenumber
-" set clipboard=unnamedplus
-set clipboard=unnamed " use os clipboard
+set clipboard=unnamedplus
+" set clipboard=unnamed " use os clipboard
 set shiftwidth=2 " number of spaces when shift indenting
 set tabstop=2 " number of visual spaces per tab
 set softtabstop=2 " number of spaces in tab when editing
@@ -132,3 +132,8 @@ map <C-o> :NERDTreeToggle<CR>
 :map <c-x> :tabn<cr>
 
 :map <c-p> :Files<cr>
+
+" autocommand for sourcing and other tasks
+autocmd BufWritePost ~/.zshrc !source ~/.zshrc
+" autocmd BufWritePost ~/.vimrc !source ~/.vimrc
+autocmd BufWritePost ~/.i3/config !i3-msg reload
