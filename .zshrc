@@ -197,4 +197,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPS="--extended"
 export COMPOSE_HTTP_TIMEOUT=5000
+export VISUAL=vim
 export EDITOR=vim
+if  pacman -Qi google-chrome > /dev/null; then
+  export BROWSER=/usr/bin/google-chrome-stable
+fi
+export RANGER_LOAD_DEFAULT_RC=false

@@ -59,7 +59,7 @@ bindsym $mod+Ctrl+m exec terminology -e 'alsamixer'
 bindsym $mod+Ctrl+b exec terminology -e 'bmenu'
 bindsym $mod+F2 exec google-chrome-stable
 # bindsym $mod+F3 exec pcmanfm
-bindsym $mod+F3 exec terminology -e ranger
+bindsym $mod+F3 exec terminology -e sh ~/scripts/startRanger.sh
 bindsym $mod+Shift+F3 exec gksu pcmanfm
 bindsym $mod+F5 exec terminology -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
