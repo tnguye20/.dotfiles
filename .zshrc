@@ -52,10 +52,10 @@ POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="╭"
 POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="❱ "
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="╰\uF460\uF460\uF460 "
 
-#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ssh root_indicator dir_writable dir )
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator context dir_writable dir vcs)
-# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator dir_writable dir vcs )
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(context load os_icon background_jobs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator user context ssh dir_writable dir )
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator context dir_writable dir vcs)
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh root_indicator dir_writable dir vcs )
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status load os_icon background_jobs)
 
 POWERLEVEL9K_VCS_CLEAN_BACKGROUND="green"
 POWERLEVEL9K_VCS_CLEAN_FOREGROUND="$DEFAULT_BACKGROUND"

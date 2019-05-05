@@ -44,7 +44,7 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ################################################################################################
 
 exec --no-startup-id volumeicon
-bindsym $mod+Ctrl+m exec terminology -e 'alsamixer'
+bindsym $mod+Ctrl+s exec terminology -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
 #bindsym $mod+Ctrl+m exec pavucontrol
@@ -57,18 +57,29 @@ bindsym $mod+Ctrl+m exec terminology -e 'alsamixer'
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminology -e 'bmenu'
-bindsym $mod+F2 exec google-chrome-stable
-# bindsym $mod+F3 exec pcmanfm
-bindsym $mod+F3 exec terminology -e sh ~/scripts/startRanger.sh
+bindsym $mod+F1 exec google-chrome-stable
+bindsym $mod+r exec terminology -e sh ~/scripts/startRanger.sh
 bindsym $mod+Shift+F3 exec gksu pcmanfm
-bindsym $mod+F5 exec terminology -e 'mocp'
-bindsym $mod+t exec --no-startup-id pkill compton
+
+# mpd Music keybinding
+bindsym $mod+m exec terminology -e 'ncmpcpp'
+bindsym XF86AudioPlay exec terminology -e 'mpc toggle'
+bindsym XF86AudioStop exec terminology -e 'mpc stop'
+bindsym XF86AudioPrev exec terminology -e 'mpc prev'
+bindsym XF86AudioNext exec terminology -e 'mpc next'
+bindsym $mod+Shift+m exec terminology -e 'pkill -9 mpd'
+# cmus Music keybinding
+# bindsym $mod+m exec terminology -e 'nc'
+# bindsym XF86AudioPlay exec terminology -e 'cmus-remote -p'
+# bindsym XF86AudioPause exec terminology -e 'cmus-remote -u'
+# bindsym XF86AudioPrev exec terminology -e 'cmus-remote -r'
+# bindsym XF86AudioNext exec terminology -e 'cmus-remote -n'
+# bindsym $mod+Shift+m exec terminology -e 'pkill -9 cmus'
+
+# bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
-# bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
+bindsym Print exec --no-startup-id flameshot gui -p ~/Pictures/Screenshots
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # focus_follows_mouse no
@@ -111,9 +122,9 @@ bindsym $mod+q split toggle
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+# bindsym $mod+Shift+s layout stacking
+bindsym $mod+t layout tabbed
+bindsym $mod+s layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -132,7 +143,7 @@ bindsym $mod+Shift+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
+bindsym $mod+Ctrl+minus scratchpad show
 
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next
@@ -245,28 +256,28 @@ mode "$mode_system" {
 }
 
 # Resize window (you can also use the mouse for that)
-bindsym $mod+r mode "resize"
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 5 px or 5 ppt
-        bindsym j resize grow height 5 px or 5 ppt
-        bindsym k resize shrink height 5 px or 5 ppt
-        bindsym l resize grow width 5 px or 5 ppt
+# bindsym $mod+r mode "resize"
+# mode "resize" {
+#         # These bindings trigger as soon as you enter the resize mode
+#         # Pressing left will shrink the window’s width.
+#         # Pressing right will grow the window’s width.
+#         # Pressing up will shrink the window’s height.
+#         # Pressing down will grow the window’s height.
+#         bindsym h resize shrink width 5 px or 5 ppt
+#         bindsym j resize grow height 5 px or 5 ppt
+#         bindsym k resize shrink height 5 px or 5 ppt
+#         bindsym l resize grow width 5 px or 5 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+#         # same bindings, but for the arrow keys
+#         bindsym Left resize shrink width 10 px or 10 ppt
+#         bindsym Down resize grow height 10 px or 10 ppt
+#         bindsym Up resize shrink height 10 px or 10 ppt
+#         bindsym Right resize grow width 10 px or 10 ppt
 
-        # exit resize mode: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
+#         # exit resize mode: Enter or Escape
+#         bindsym Return mode "default"
+#         bindsym Escape mode "default"
+# }
 
 bindsym $mod+y resize shrink width 5 px or 5 ppt
 bindsym $mod+u resize grow height 5 px or 5 ppt
@@ -281,7 +292,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id ~/.screenlayout/layout.sh
 exec feh --bg-scale ~/.dotfiles/.wallpaper/pink-mountain.jpg
-#exec --no-startup-id manjaro-hello
+exec --no-startup-id mpd
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
@@ -290,7 +301,7 @@ exec --no-startup-id clipit
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id xautolock -time 15 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
@@ -328,16 +339,17 @@ set_from_resource $term_color15    color15
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
 	i3bar_command i3bar
-	status_command i3status
+	# status_command i3status
+  status_command ~/bumblebee-status/bumblebee-status -m xrandr spacer spacer mpd spacer spacer time date spacer disk memory cpu spacer battery spacer kernel caffeine -p interval=1 -t iceberg-dark-powerline
 	position bottom
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 	tray_output primary
-#	tray_output eDP1
+  font pango:DejaVu Sans Mono, FontAwesome 10.5
 
 	bindsym button4 nop
 	bindsym button5 nop
-#   font xft:URWGothic-Book 11
+  # font xft:URWGothic-Book 11
 	strip_workspace_numbers yes
 
     colors {
@@ -355,7 +367,7 @@ bar {
 }
 
 # hide/unhide i3status bar
-bindsym $mod+m bar mode toggle
+bindsym $mod+Ctrl+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
@@ -363,7 +375,7 @@ bindsym $mod+m bar mode toggle
   client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
   client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
   client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000 
+  client.placeholder      #000000 #0c0c0c #ffffff #000000
 
   client.background       #2B2C2B
 
@@ -391,7 +403,7 @@ smart_borders on
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-bindsym $mod+Shift+g mode "$mode_gaps"
+bindsym $mod+g mode "$mode_gaps"
 
 mode "$mode_gaps" {
         bindsym o      mode "$mode_gaps_outer"

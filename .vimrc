@@ -75,6 +75,8 @@ call plug#end()
 " ============ general settings ===========
 let base16colorspace="256"
 let g:airline_theme='one'
+let NERDTreeShowHidden=1
+let NERDTreeMapOpenInTab='\t'
 " colorscheme onedark
 colorscheme one
 " colorscheme OceanicNext
@@ -134,5 +136,6 @@ map <C-o> :NERDTreeToggle<CR>
 
 " autocommand for sourcing and other tasks
 autocmd BufWritePost ~/.zshrc !source ~/.zshrc
+autocmd BufWritePost ~/.config/ranger/rc.conf !source ~/.config/ranger/rc.conf
 " autocmd BufWritePost ~/.vimrc !source ~/.vimrc
 autocmd BufWritePost ~/.i3/config !i3-msg reload
