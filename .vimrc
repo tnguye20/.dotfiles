@@ -78,7 +78,8 @@ let g:airline_theme='one'
 let NERDTreeShowHidden=1
 let NERDTreeMapOpenInTab='\t'
 " colorscheme onedark
-colorscheme one
+" colorscheme one
+colorscheme gruvbox
 " colorscheme OceanicNext
 set background=dark
 highlight LineNr guifg=#aaaaaa " Dracula's colors are too dark dood
