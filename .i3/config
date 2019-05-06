@@ -79,6 +79,9 @@ bindsym $mod+Shift+m exec --no-startup-id terminology -e 'pkill -9 ncmpcpp'
 # Clipboard Manager copyQ
 bindsym $mod+c exec --no-startup-id copyq show
 
+# Calculator using Pyhton3
+bindsym $mod+Ctrl+c exec --no-startup-id urxvt -name calculator -e "python3"
+
 # bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
@@ -228,6 +231,7 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+for_window [class="URxvt" instance="calculator"] floating enable center
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
