@@ -52,6 +52,7 @@ Plug 'https://github.com/miconda/lucariox.vim.git'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'ludovicchabant/vim-gutentags'
 " ======== REACT/JSX SUPPORT  ========
 Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript'
@@ -138,5 +139,5 @@ map <C-o> :NERDTreeToggle<CR>
 " autocommand for sourcing and other tasks
 autocmd BufWritePost ~/.zshrc !source ~/.zshrc
 autocmd BufWritePost ~/.config/ranger/rc.conf !source ~/.config/ranger/rc.conf
-" autocmd BufWritePost ~/.vimrc !source ~/.vimrc
+autocmd BufWritePost ~/.vimrc :source %
 autocmd BufWritePost ~/.i3/config !i3-msg reload
