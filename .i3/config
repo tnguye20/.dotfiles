@@ -59,6 +59,8 @@ bindsym $mod+Ctrl+s exec terminology -e 'alsamixer'
 bindsym $mod+Ctrl+b exec terminology -e 'bmenu'
 bindsym $mod+F1 exec google-chrome-stable
 bindsym $mod+r exec terminology -e sh ~/scripts/startRanger.sh
+#To Preview Images better
+bindsym $mod+Ctrl+r exec urxvt -e sh ~/scripts/startRanger.sh
 bindsym $mod+Shift+F3 exec gksu pcmanfm
 
 # mpd Music keybinding
@@ -67,6 +69,7 @@ bindsym XF86AudioPlay exec --no-startup-id terminology -e 'mpc toggle'
 bindsym XF86AudioStop exec --no-startup-id terminology -e 'mpc stop'
 bindsym XF86AudioPrev exec --no-startup-id terminology -e 'mpc prev'
 bindsym XF86AudioNext exec --no-startup-id terminology -e 'mpc next'
+bindsym $mod+Ctrl+m exec --no-startup-id terminology -e 'mpc update'
 bindsym $mod+Shift+m exec --no-startup-id terminology -e 'pkill -9 ncmpcpp'
 # cmus Music keybinding
 # bindsym $mod+m exec terminology -e 'nc'
@@ -116,8 +119,8 @@ bindsym $mod+Shift+Right move right
 
 # workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
-bindsym $mod+b workspace back_and_forth
-bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
+# bindsym $mod+b workspace back_and_forth
+# bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
 bindsym $mod+bar split h;exec notify-send 'tile horizontally'
@@ -376,7 +379,7 @@ bar {
 }
 
 # hide/unhide i3status bar
-bindsym $mod+Ctrl+m bar mode toggle
+bindsym $mod+b bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
