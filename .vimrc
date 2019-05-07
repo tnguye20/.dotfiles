@@ -105,6 +105,7 @@ hi clear signColumn
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+set statusline+=%{gutentags#statusline()}
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -135,6 +136,9 @@ map <C-o> :NERDTreeToggle<CR>
 :map <c-x> :tabn<cr>
 
 :map <c-p> :Files<cr>
+
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 " autocommand for sourcing and other tasks
 autocmd BufWritePost ~/.zshrc !source ~/.zshrc
