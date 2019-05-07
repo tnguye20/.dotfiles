@@ -31,7 +31,7 @@ floating_modifier $mod
 bindsym $mod+Return exec terminology
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start program launcher
 bindsym $mod+d exec --no-startup-id dmenu_recency
@@ -125,7 +125,7 @@ workspace_auto_back_and_forth yes
 # split orientation
 bindsym $mod+bar split h;exec notify-send 'tile horizontally'
 bindsym $mod+underscore split v;exec notify-send 'tile vertically'
-bindsym $mod+q split toggle
+# bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
