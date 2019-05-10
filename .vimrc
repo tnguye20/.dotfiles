@@ -36,6 +36,7 @@ call plug#begin('~/.vim/plugged')
 
 " ======== INTERFACE SUPPORT  ========
 Plug 'scrooloose/nerdtree'
+Plug 'justinmk/vim-sneak'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-commentary'
 Plug '~/.fzf'
@@ -78,10 +79,10 @@ let base16colorspace="256"
 let g:airline_theme='one'
 let NERDTreeShowHidden=1
 let NERDTreeMapOpenInTab='\t'
-" colorscheme onedark
-" colorscheme one
 colorscheme gruvbox
 " colorscheme OceanicNext
+" colorscheme dracula
+" colorscheme one
 set background=dark
 highlight LineNr guifg=#aaaaaa " Dracula's colors are too dark dood
 set number " show line numbers
