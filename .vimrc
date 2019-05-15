@@ -54,6 +54,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'dylanaraps/wal.vim'
 " ======== REACT/JSX SUPPORT  ========
 Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript'
@@ -78,10 +79,11 @@ call plug#end()
 let base16colorspace="256"
 let g:airline_theme='one'
 let NERDTreeShowHidden=1
-let NERDTreeMapOpenInTab='\t'
-colorscheme gruvbox
+" let NERDTreeMapOpenInTab='\t'
+" colorscheme wal
+" colorscheme gruvbox
 " colorscheme OceanicNext
-" colorscheme dracula
+colorscheme dracula
 " colorscheme one
 set background=dark
 highlight LineNr guifg=#aaaaaa " Dracula's colors are too dark dood
@@ -146,3 +148,4 @@ autocmd BufWritePost ~/.zshrc !source ~/.zshrc
 autocmd BufWritePost ~/.config/ranger/rc.conf !source ~/.config/ranger/rc.conf
 autocmd BufWritePost ~/.vimrc :source %
 autocmd BufWritePost ~/.i3/config !i3-msg reload
+autocmd BufWritePost ~/.Xresources !xrdb ~/.Xresources
