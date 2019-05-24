@@ -130,12 +130,14 @@ noremap  <buffer> <silent> $ g$
 inoremap jk <Esc>
 
 map <C-o> :NERDTreeToggle<CR>
-:nmap <c-S-s> :w<CR>
-:imap <c-S-s> <Esc>:w<CR>
+" :nmap <c-S-s> :w<CR>
+" :imap <c-S-s> <Esc>:w<CR>
+:nmap <c-s> :w<CR>
+:imap <c-s> <Esc>:w<CR>
 
 :map <C-x-left> :tabp<CR>
 :map <C-x-right> :tabn<CR>
-:map <c-s> :tabp<cr>
+" :map <c-s> :tabp<cr>
 :map <c-x> :tabn<cr>
 
 :map <c-p> :Files<cr>
