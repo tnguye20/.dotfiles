@@ -81,9 +81,9 @@ let g:airline_theme='one'
 let NERDTreeShowHidden=1
 " let NERDTreeMapOpenInTab='\t'
 " colorscheme wal
-" colorscheme gruvbox
+colorscheme gruvbox
 " colorscheme OceanicNext
-colorscheme dracula
+" colorscheme dracula
 " colorscheme one
 set background=dark
 highlight LineNr guifg=#aaaaaa " Dracula's colors are too dark dood
@@ -130,15 +130,11 @@ noremap  <buffer> <silent> $ g$
 inoremap jk <Esc>
 
 map <C-o> :NERDTreeToggle<CR>
-" :nmap <c-S-s> :w<CR>
-" :imap <c-S-s> <Esc>:w<CR>
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>
 
-:map <C-x-left> :tabp<CR>
-:map <C-x-right> :tabn<CR>
-" :map <c-s> :tabp<cr>
-:map <c-x> :tabn<cr>
+:map <s-j> <ESC> :tabp<CR>
+:map <s-k> <ESC> :tabn<CR>
 
 :map <c-p> :Files<cr>
 
@@ -151,3 +147,4 @@ autocmd BufWritePost ~/.config/ranger/rc.conf !source ~/.config/ranger/rc.conf
 autocmd BufWritePost ~/.vimrc :source %
 autocmd BufWritePost ~/.i3/config !i3-msg reload
 autocmd BufWritePost ~/.Xresources !xrdb ~/.Xresources
+:map <c-j> :%! python -m json.tool <cr>
