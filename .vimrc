@@ -36,7 +36,7 @@ call plug#begin('~/.vim/plugged')
 
 " ======== INTERFACE SUPPORT  ========
 Plug 'scrooloose/nerdtree'
-Plug 'justinmk/vim-sneak'
+" Plug 'justinmk/vim-sneak'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-commentary'
 Plug '~/.fzf'
