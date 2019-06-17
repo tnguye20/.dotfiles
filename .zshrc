@@ -183,6 +183,7 @@ alias v3="vim ~/.i3/config"
 alias vc="vim ~/.vimrc"
 alias vt="vim ~/.tmux.conf.local"
 alias vz="vim ~/.zshrc"
+alias vg="vim ~/.gitconfig"
 alias vf='vim $(fzf)'
 alias copy="xclip -sel clip"
 alias t="tmux new -s A"
