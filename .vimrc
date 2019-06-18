@@ -55,6 +55,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'dylanaraps/wal.vim'
+Plug 'scrooloose/nerdtree'
 " ======== REACT/JSX SUPPORT  ========
 Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript'
@@ -66,7 +67,7 @@ Plug 'terryma/vim-multiple-cursors'
 
 " ======== VIM THEMES  =======
 Plug 'https://github.com/joshdick/onedark.vim.git'
-Plug 'scrooloose/nerdtree'
+Plug 'ayu-theme/ayu-vim'
 Plug 'rafi/awesome-vim-colorschemes'
 call plug#end()
 
@@ -83,8 +84,14 @@ let NERDTreeShowHidden=1
 " colorscheme wal
 colorscheme gruvbox
 " colorscheme OceanicNext
+" colorscheme onedark
 " colorscheme dracula
-" colorscheme one
+
+" let ayucolor="light"  " for light version of theme
+" let ayucolor="mirage" " for mirage version of theme
+" let ayucolor="dark"   " for dark version of theme
+" colorscheme ayu
+
 set background=dark
 highlight LineNr guifg=#aaaaaa " Dracula's colors are too dark dood
 set number " show line numbers
