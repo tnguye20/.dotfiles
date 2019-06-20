@@ -178,6 +178,7 @@ antigen apply
   ls
  }
 
+alias cdf="cd ~/.dotfiles"
 alias vx="vim ~/.Xresources"
 alias v3="vim ~/.i3/config"
 alias vc="vim ~/.vimrc"
@@ -205,3 +206,4 @@ if  pacman -Qi google-chrome > /dev/null; then
   export BROWSER=/usr/bin/google-chrome-stable
 fi
 export RANGER_LOAD_DEFAULT_RC=false
+export FPP_EDITOR="vim -p"
