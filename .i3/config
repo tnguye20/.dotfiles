@@ -134,7 +134,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 # bindsym $mod+Shift+s layout stacking
 bindsym $mod+t layout tabbed
-bindsym $mod+s layout toggle split
+bindsym $mod+s layout splith
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
