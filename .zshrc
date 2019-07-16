@@ -1,6 +1,4 @@
 export TERM="xterm-256color"
-bindkey -v
-set -o vi
 source ~/antigen.zsh
 # POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator user dir_writable dir)
 # POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs)
@@ -209,3 +207,4 @@ if  pacman -Qi google-chrome > /dev/null; then
 fi
 export RANGER_LOAD_DEFAULT_RC=false
 export FPP_EDITOR="vim -p"
+# set -o vi

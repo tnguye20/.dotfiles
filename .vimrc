@@ -19,7 +19,7 @@ set wildmode=longest,list
 set nolist
 set autoread
 set nojoinspaces
-:set timeout timeoutlen=1000 ttimeoutlen=100
+:set timeout timeoutlen=1000
 "set shell=bash
 set encoding=UTF-8
 syntax on
@@ -40,7 +40,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-commentary'
 Plug '~/.fzf'
-Plug 'mattn/emmet-vim'
+" Plug 'mattn/emmet-vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
@@ -56,6 +56,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'dylanaraps/wal.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'junegunn/goyo.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'easymotion/vim-easymotion'
+Plug 'https://github.com/tpope/vim-surround.git'
 " ======== REACT/JSX SUPPORT  ========
 Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript'
@@ -63,12 +67,12 @@ Plug 'mxw/vim-jsx'
 Plug 'epilande/vim-react-snippets'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'terryma/vim-multiple-cursors'
 
 " ======== VIM THEMES  =======
-Plug 'https://github.com/joshdick/onedark.vim.git'
-Plug 'ayu-theme/ayu-vim'
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'https://github.com/joshdick/onedark.vim.git'
+Plug 'https://github.com/rakr/vim-one.git'
+Plug 'nightsense/carbonized'
 call plug#end()
 
 " ============ Prettier on save ===========
@@ -82,16 +86,16 @@ let g:airline_theme='one'
 let NERDTreeShowHidden=1
 " let NERDTreeMapOpenInTab='\t'
 " colorscheme wal
-colorscheme gruvbox
+" colorscheme gruvbox
 " colorscheme OceanicNext
-" colorscheme onedark
+" colorscheme one
+colorscheme onedark
 " colorscheme dracula
+" let g:carbonized_dark_CursorLineNr = 'off'
+" let g:carbonized_dark_LineNr = 'off'
+" colorscheme carbonized-dark
 
-" let ayucolor="light"  " for light version of theme
-" let ayucolor="mirage" " for mirage version of theme
-" let ayucolor="dark"   " for dark version of theme
-" colorscheme ayu
-
+" set cursorline  " highlight current line
 set background=dark
 highlight LineNr guifg=#aaaaaa " Dracula's colors are too dark dood
 set number " show line numbers
@@ -102,7 +106,6 @@ set shiftwidth=2 " number of spaces when shift indenting
 set tabstop=2 " number of visual spaces per tab
 set softtabstop=2 " number of spaces in tab when editing
 set expandtab " tab to spaces
-set cursorline  " highlight current line
 set showmatch " highlight matching [{()}]
 set incsearch " search as characters are entered
 set hlsearch " highlight matches
@@ -129,6 +132,7 @@ set laststatus=2
 set noswapfile
 "let g:jsx_ext_required=0
 let g:airline#extensions#hunks#non_zero_only = 1
+
 " Mappings
 noremap  <buffer> <silent> k gk
 noremap  <buffer> <silent> j gj
@@ -144,6 +148,7 @@ map <C-o> :NERDTreeToggle<CR>
 :map <s-k> <ESC> :tabn<CR>
 
 :map <c-p> :Files<cr>
+:map <c-g> :Goyo<cr>
 
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
