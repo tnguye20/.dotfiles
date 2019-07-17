@@ -179,6 +179,7 @@ antigen apply
  }
 
 alias cdf="cd ~/.dotfiles"
+alias cds="cd ~/scripts"
 alias vx="vim ~/.Xresources"
 alias v3="vim ~/.i3/config"
 alias vc="vim ~/.vimrc"
