@@ -209,3 +209,4 @@ fi
 export RANGER_LOAD_DEFAULT_RC=false
 export FPP_EDITOR="vim -p"
 # set -o vi
+export PATH=$PATH:~/scripts
