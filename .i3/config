@@ -63,6 +63,7 @@ bindsym $mod+r exec terminal -e sh ~/scripts/startRanger
 bindsym $mod+Shift+F2 exec gksu pcmanfm
 
 # mpd Music keybinding
+# bindsym $mod+m exec --no-startup-id terminology -e 'ncmpcpp'
 bindsym $mod+m exec --no-startup-id terminal -e 'ncmpcpp'
 bindsym XF86AudioPlay exec --no-startup-id terminal -e 'mpc toggle'
 bindsym XF86AudioStop exec --no-startup-id terminal -e 'mpc stop'
