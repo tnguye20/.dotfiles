@@ -210,3 +210,4 @@ export RANGER_LOAD_DEFAULT_RC=false
 export FPP_EDITOR="vim -p"
 # set -o vi
 export PATH=$PATH:~/scripts
+neofetch --w3m ~/.dotfiles/.wallpaper/mr_robot.jpg --size 350px

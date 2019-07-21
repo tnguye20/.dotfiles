@@ -196,6 +196,7 @@ URxvt.keysym.Shift-Control-Down:  \033[1;6B
 ! URxvt*hold:                       boolean
 ! URxvt*externalBorder:             number
 ! URxvt*internalBorder:             number
+URxvt.internalBorder: 0
 ! URxvt*borderLess:                 true
 ! URxvt*lineSpace:                  number
 ! URxvt*letterSpace:                number
