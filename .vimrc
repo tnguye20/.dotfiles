@@ -44,7 +44,15 @@ Plug '~/.fzf'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'Shougo/neocomplete.vim'
+" Plug 'Shougo/neocomplete.vim'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
 Plug 'Townk/vim-autoclose'
 Plug 'majutsushi/tagbar'
 Plug 'vim-syntastic/syntastic'
@@ -117,7 +125,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/* " lol
 hi clear signColumn
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 set statusline+=%{gutentags#statusline()}
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
