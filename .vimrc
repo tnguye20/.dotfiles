@@ -143,6 +143,7 @@ inoremap jk <Esc>
 map <C-o> :NERDTreeToggle<CR>
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>
+:nmap <c-x> :q<CR>
 
 :map <s-j> <ESC> :tabp<CR>
 :map <s-k> <ESC> :tabn<CR>
@@ -150,8 +151,8 @@ map <C-o> :NERDTreeToggle<CR>
 :map <c-p> :Files<cr>
 :map <c-g> :Goyo<cr>
 
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+map <c-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <a-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 " autocommand for sourcing and other tasks
 autocmd BufWritePost ~/.zshrc !source ~/.zshrc
