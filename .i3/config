@@ -28,6 +28,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec terminal
+bindsym $mod+Shift+Return exec terminal -name float
 
 # kill focused window
 bindsym $mod+q kill
@@ -238,6 +239,7 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="copyq"] floating enable center
 for_window [class="URxvt" instance="calculator"] floating enable center
+for_window [class="URxvt" instance="float"] floating enable border pixel 2 move absolute position 15px 15px
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
