@@ -349,20 +349,22 @@ set_from_resource $term_color15    color15
 bar {
 	i3bar_command i3bar
 	# status_command i3status
-  status_command ~/bumblebee-status/bumblebee-status -m xrandr spacer spacer mpd spacer spacer time date spacer disk memory cpu spacer battery spacer kernel caffeine -p interval=1 -t iceberg-dark-powerline
+  # status_command ~/bumblebee-status/bumblebee-status -m xrandr spacer spacer mpd spacer spacer time date spacer disk memory cpu spacer battery spacer kernel caffeine -p interval=1 -t iceberg-dark-powerline
+  # status_command ~/bumblebee-status/bumblebee-status -m xrandr spacer spacer mpd spacer spacer time date spacer disk memory cpu spacer battery spacer kernel caffeine -p interval=1 -t gruvbox-powerline
+  status_command ~/bumblebee-status/bumblebee-status -m xrandr spacer spacer mpd spacer spacer time date spacer disk memory cpu spacer battery spacer kernel caffeine -p interval=1 -t iceberg
 	position bottom
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 	tray_output primary
-  font pango:DejaVu Sans Mono, FontAwesome 10.5
+  font pango:DejaVu Sans Mono, FontAwesome 9
 
 	bindsym button4 nop
 	bindsym button5 nop
-  # font xft:URWGothic-Book 11
+  # font xft:URWGothic-Book 9
 	strip_workspace_numbers yes
 
     colors {
-        background #222D31
+        # background #222D31
         statusline #F9FAF9
         separator  #454947
 
