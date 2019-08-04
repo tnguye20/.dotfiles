@@ -349,12 +349,13 @@ set_from_resource $term_color15    color15
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
+  mode hide
 	i3bar_command i3bar
 	# status_command i3status
   # status_command ~/bumblebee-status/bumblebee-status -m xrandr spacer spacer mpd spacer spacer time date spacer disk memory cpu spacer battery spacer kernel caffeine -p interval=1 -t iceberg-dark-powerline
   # status_command ~/bumblebee-status/bumblebee-status -m xrandr spacer spacer mpd spacer spacer time date spacer disk memory cpu spacer battery spacer kernel caffeine -p interval=1 -t gruvbox-powerline
   status_command ~/bumblebee-status/bumblebee-status -m xrandr spacer spacer mpd spacer spacer time date spacer disk memory cpu spacer battery spacer kernel caffeine -p interval=1 -t iceberg
-	position bottom
+	position top
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 	tray_output primary
@@ -397,8 +398,10 @@ bindsym $mod+Shift+b bar mode toggle
 #############################
 
 # Set inner/outer gaps
-gaps inner 14
-gaps outer -2
+# gaps inner 14
+# gaps outer -2
+gaps inner 9
+gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -408,7 +411,7 @@ gaps outer -2
 # Smart gaps (gaps used if only more than one container on the workspace)
 smart_gaps on
 
-# Smart borders (draw borders around container only if it is not the only container on this workspace) 
+# Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
 smart_borders on
 
