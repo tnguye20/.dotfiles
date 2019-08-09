@@ -1,5 +1,5 @@
 export TERM="xterm-256color"
-source ~/antigen.zsh
+source $HOME/antigen.zsh
 # POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator user dir_writable dir)
 # POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs)
 
@@ -178,14 +178,14 @@ antigen apply
   ls
  }
 
-alias cdf="cd ~/.dotfiles"
-alias cds="cd ~/scripts"
-alias vx="vim ~/.Xresources"
-alias v3="vim ~/.i3/config"
-alias vc="vim ~/.vimrc"
-alias vt="vim ~/.tmux.conf.local"
-alias vz="vim ~/.zshrc"
-alias vg="vim ~/.gitconfig"
+alias cdf="cd $HOME/.dotfiles"
+alias cds="cd $HOME/scripts"
+alias vx="vim $HOME/.Xresources"
+alias v3="vim $HOME/.i3/config"
+alias vc="vim $HOME/.vimrc"
+alias vt="vim $HOME/.tmux.conf.local"
+alias vz="vim $HOME/.zshrc"
+alias vg="vim $HOME/.gitconfig"
 alias vf='vim $(fzf)'
 alias copy="xclip -sel clip"
 alias t="tmux new -s A"
@@ -198,7 +198,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 export FZF_DEFAULT_OPS="--extended"
 export COMPOSE_HTTP_TIMEOUT=5000
 export VISUAL=vim
@@ -209,5 +209,7 @@ fi
 export RANGER_LOAD_DEFAULT_RC=false
 export FPP_EDITOR="vim -p"
 # set -o vi
-export PATH=$PATH:~/scripts
-neofetch --w3m ~/.dotfiles/.wallpaper/mr_robot.jpg --size 350px
+export PATH=$PATH:$HOME/scripts
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+neofetch --w3m $HOME/.dotfiles/.wallpaper/mr_robot.jpg --size 350px
