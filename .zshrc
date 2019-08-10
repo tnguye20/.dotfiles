@@ -186,6 +186,7 @@ alias vc="vim $HOME/.vimrc"
 alias vt="vim $HOME/.tmux.conf.local"
 alias vz="vim $HOME/.zshrc"
 alias vg="vim $HOME/.gitconfig"
+alias vp="vim $HOME/.profile"
 alias vf='vim $(fzf)'
 alias copy="xclip -sel clip"
 alias t="tmux new -s A"
@@ -201,15 +202,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 export FZF_DEFAULT_OPS="--extended"
 export COMPOSE_HTTP_TIMEOUT=5000
-export VISUAL=vim
-export EDITOR=vim
-if  pacman -Qi google-chrome > /dev/null; then
-  export BROWSER=/usr/bin/google-chrome-stable
-fi
 export RANGER_LOAD_DEFAULT_RC=false
 export FPP_EDITOR="vim -p"
 # set -o vi
 export PATH=$PATH:$HOME/scripts
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/go
 neofetch --w3m $HOME/.dotfiles/.wallpaper/mr_robot.jpg --size 350px

@@ -166,5 +166,6 @@ autocmd BufWritePost ~/.zshrc !source ~/.zshrc
 autocmd BufWritePost ~/.config/ranger/rc.conf !source ~/.config/ranger/rc.conf
 autocmd BufWritePost ~/.vimrc :source %
 autocmd BufWritePost ~/.i3/config !i3-msg reload
+autocmd BufWritePost ~/.profile :source ~/.profile
 autocmd BufWritePost ~/.Xresources !xrdb ~/.Xresources
 :map <c-j> :%! python -m json.tool <cr>
