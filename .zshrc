@@ -180,6 +180,7 @@ antigen apply
 
 alias cdf="cd $HOME/.dotfiles"
 alias cds="cd $HOME/scripts"
+alias cdn="cd $HOME/notes"
 alias vx="vim $HOME/.Xresources"
 alias v3="vim $HOME/.i3/config"
 alias vc="vim $HOME/.vimrc"
