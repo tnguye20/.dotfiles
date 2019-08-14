@@ -197,7 +197,10 @@ alias tb="tmux attach -t B"
 
 alias gt="git status"
 alias ga="git add $@"
-alias gc="git commit -m"
+alias gc="git commit"
+alias gcm="git commit -m $1"
+alias gp="git pull"
+alias gf="git fetch"
 
 export DOCKERBINDIP=10.1.101.223
 export NVM_DIR="$HOME/.nvm"
