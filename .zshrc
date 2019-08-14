@@ -195,6 +195,10 @@ alias tl="tmux ls"
 alias ta="tmux attach -t A"
 alias tb="tmux attach -t B"
 
+alias gt="git status"
+alias ga="git add $@"
+alias gc="git commit -m"
+
 export DOCKERBINDIP=10.1.101.223
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
