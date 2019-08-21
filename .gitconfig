@@ -8,22 +8,22 @@
 ; 	cmd = meld \"$LOCAL\" \"$REMOTE\"
 ; [difftool]
 ; 	prompt = false
-; [merge]
-; 	tool = meld
-; [mergetool "meld"]
-; 	path = /usr/bin/meld
-; [mergetool]
-; 	prompt = false
+[merge]
+	tool = meld
+[mergetool "meld"]
+	path = /usr/bin/meld
+[mergetool]
+	prompt = false
 [diff]
 	tool = vimdiff
 	conflictstyle = diff3
 [difftool]
 	prompt = false
-[merge]
-	tool = vimdiff
-	conflictstyle = diff3
-[mergetool]
-	prompt = false
+; [merge]
+; 	tool = vimdiff
+; 	conflictstyle = diff3
+; [mergetool]
+; 	prompt = false
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
