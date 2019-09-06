@@ -190,6 +190,7 @@ alias vz="vim $HOME/.zshrc"
 alias vg="vim $HOME/.gitconfig"
 alias vp="vim $HOME/.profile"
 alias vf='vim $(fzf)'
+alias gvf='gvim $(fzf)'
 alias copy="xclip -sel clip"
 alias t="tmux new -s A"
 alias tl="tmux ls"
