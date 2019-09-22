@@ -96,8 +96,8 @@ let NERDTreeShowHidden=1
 " colorscheme wal
 " colorscheme gruvbox
 " colorscheme OceanicNext
-colorscheme one
-" colorscheme onedark
+" colorscheme one
+colorscheme onedark
 " colorscheme dracula
 " let g:carbonized_dark_CursorLineNr = 'off'
 " let g:carbonized_dark_LineNr = 'off'

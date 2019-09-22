@@ -3,6 +3,7 @@ source $HOME/antigen.zsh
 # POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator user dir_writable dir)
 # POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs)
 
+autoload -U colors && colors
 
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 
@@ -204,12 +205,24 @@ alias gcm="git commit -m $1"
 alias gp="git pull"
 alias gf="git fetch"
 
+# Vim key on shell
+bindkey -v
+export KEYTIMEOUT=1
+bindkey 'jk' vi-cmd-mode
+# Use vim keys in tab complete menu:
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -v '^?' backward-delete-char
+
 export DOCKERBINDIP=10.1.101.223
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
+export FZF_DEFAULT_COMMAND='find .'
 export FZF_DEFAULT_OPS="--extended"
 export COMPOSE_HTTP_TIMEOUT=5000
 export RANGER_LOAD_DEFAULT_RC=false
