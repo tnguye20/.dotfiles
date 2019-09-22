@@ -230,3 +230,5 @@ export FPP_EDITOR="vim -p"
 # set -o vi
 export PATH=$PATH:$HOME/scripts
 neofetch --w3m $HOME/.dotfiles/.wallpaper/mr_robot.jpg --size 350px
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
