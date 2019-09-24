@@ -96,8 +96,8 @@ let g:airline_theme='one'
 let NERDTreeShowHidden=1
 " let NERDTreeMapOpenInTab='\t'
 " colorscheme wal
-" colorscheme gruvbox
-colorscheme OceanicNext
+colorscheme gruvbox
+" colorscheme OceanicNext
 " colorscheme one
 " colorscheme onedark
 " colorscheme dracula
