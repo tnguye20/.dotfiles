@@ -134,9 +134,9 @@ bindsym $mod+underscore split v;exec notify-send 'tile vertically'
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-# bindsym $mod+Shift+s layout stacking
+# bindsym $mod+Shift+s layout stacked
 bindsym $mod+t layout tabbed
-bindsym $mod+s layout splith
+bindsym $mod+s layout split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -158,8 +158,8 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+Ctrl+minus scratchpad show
 
 #navigate workspaces next / previous
-bindsym $mod+Ctrl+Right workspace next
-bindsym $mod+Ctrl+Left workspace prev
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
 
 # Workspace names
 # to display names or symbols instead of plain workspace numbers you can use
