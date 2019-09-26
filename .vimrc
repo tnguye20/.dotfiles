@@ -96,10 +96,10 @@ let g:airline_theme='one'
 let NERDTreeShowHidden=1
 " let NERDTreeMapOpenInTab='\t'
 " colorscheme wal
-colorscheme gruvbox
+" colorscheme gruvbox
 " colorscheme OceanicNext
 " colorscheme one
-" colorscheme onedark
+colorscheme onedark
 " colorscheme dracula
 " let g:carbonized_dark_CursorLineNr = 'off'
 " let g:carbonized_dark_LineNr = 'off'
@@ -156,6 +156,10 @@ map <C-o> :NERDTreeToggle<CR>
 
 :map <s-j> <ESC> :tabp<CR>
 :map <s-k> <ESC> :tabn<CR>
+:map <s-h> <ESC> :m .-2<CR>==
+:map <s-l> <ESC> :m .+1<CR>==
+:vnoremap <s-h> :m '<-2<CR>gv=gv
+:vnoremap <s-l> :m '>+1<CR>gv=gv
 
 :map <c-p> :Files<cr>
 :map <c-g> :Goyo<cr>
@@ -170,4 +174,3 @@ autocmd BufWritePost ~/.vimrc :source %
 autocmd BufWritePost ~/.i3/config !i3-msg reload
 autocmd BufWritePost ~/.profile :source ~/.profile
 autocmd BufWritePost ~/.Xresources !xrdb ~/.Xresources
-:map <c-j> :%! python -m json.tool <cr>
