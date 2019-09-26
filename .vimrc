@@ -10,7 +10,6 @@ set showtabline=2
 set showcmd
 set nobackup
 set nowritebackup
-set autoindent
 set showmatch
 set scrolloff=3
 set switchbuf=useopen
@@ -30,9 +29,15 @@ set term=screen-256color
 " set t_ut=
 " endif
 
-set smartindent
 set rtp+=~/.fzf
 call plug#begin('~/.vim/plugged')
+
+filetype on
+filetype plugin on
+filetype indent on
+
+set autoindent
+" set smartindent
 
 " ======== INTERFACE SUPPORT  ========
 Plug 'scrooloose/nerdtree'
@@ -45,14 +50,14 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 " Plug 'Shougo/neocomplete.vim'
-" if has('nvim')
-"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" else
-"   Plug 'Shougo/deoplete.nvim'
-"   Plug 'roxma/nvim-yarp'
-"   Plug 'roxma/vim-hug-neovim-rpc'
-" endif
-" let g:deoplete#enable_at_startup = 1
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Townk/vim-autoclose'
 Plug 'majutsushi/tagbar'
@@ -71,8 +76,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'https://github.com/tpope/vim-surround.git'
 " ======== REACT/JSX SUPPORT  ========
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'pangloss/vim-javascript'
-Plug 'sheerun/vim-polyglot'
+Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'epilande/vim-react-snippets'
 Plug 'christoomey/vim-tmux-navigator'
@@ -97,9 +101,9 @@ let NERDTreeShowHidden=1
 " let NERDTreeMapOpenInTab='\t'
 " colorscheme wal
 " colorscheme gruvbox
-" colorscheme OceanicNext
+colorscheme OceanicNext
 " colorscheme one
-colorscheme onedark
+" colorscheme onedark
 " colorscheme dracula
 " let g:carbonized_dark_CursorLineNr = 'off'
 " let g:carbonized_dark_LineNr = 'off'
