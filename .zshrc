@@ -200,8 +200,9 @@ alias tb="tmux attach -t B"
 
 alias gt="git status"
 alias ga="git add $@"
-alias gc="git commit"
+alias g="git commit"
 alias gcm="git commit -m $1"
+alias gpp="git push"
 alias gp="git pull"
 alias gf="git fetch"
 
