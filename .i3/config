@@ -62,6 +62,7 @@ bindsym $mod+Shift+F1 exec google-chrome-stable --incognito
 bindsym $mod+F2 exec pcmanfm
 bindsym $mod+w exec --no-startup-id ~/scripts/randomWallpaper
 bindsym $mod+Shift+w exec ~/scripts/wallpaperChooser
+bindsym $mod+Ctrl+l exec ~/scripts/layoutChooser
 bindsym $mod+r exec terminal -e ranger
 bindsym $mod+Shift+F2 exec gksu pcmanfm
 

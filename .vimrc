@@ -101,10 +101,10 @@ let NERDTreeShowHidden=1
 " let NERDTreeMapOpenInTab='\t'
 " colorscheme wal
 " colorscheme gruvbox
-colorscheme OceanicNext
+" colorscheme OceanicNext
 " colorscheme one
 " colorscheme onedark
-" colorscheme dracula
+colorscheme dracula
 " let g:carbonized_dark_CursorLineNr = 'off'
 " let g:carbonized_dark_LineNr = 'off'
 " colorscheme carbonized-dark
@@ -156,7 +156,8 @@ inoremap jk <Esc>
 map <C-o> :NERDTreeToggle<CR>
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>
-:nmap <c-x> :q<CR>
+:nmap <c-x> :x<CR>
+:imap <c-x> <Esc>:x<CR>
 
 :map <s-j> <ESC> :tabp<CR>
 :map <s-k> <ESC> :tabn<CR>

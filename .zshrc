@@ -205,6 +205,7 @@ alias gcm="git commit -m $1"
 alias gpp="git push"
 alias gp="git pull"
 alias gf="git fetch"
+alias gd="git difftool -y"
 
 # Vim key on shell
 bindkey -v
