@@ -23,11 +23,13 @@ set nojoinspaces
 set encoding=UTF-8
 syntax on
 set t_Co=256
-set term=screen-256color
 " set termguicolors
-" if &term =~ '256color'
-" set t_ut=
-" endif
+set term=xterm-256color
+if &term =~ '256color'
+  set t_ut=256
+endif
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 set rtp+=~/.fzf
 call plug#begin('~/.vim/plugged')
@@ -57,7 +59,7 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 "   Plug 'roxma/nvim-yarp'
 "   Plug 'roxma/vim-hug-neovim-rpc'
 " endif
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Townk/vim-autoclose'
 Plug 'majutsushi/tagbar'
@@ -87,6 +89,9 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'https://github.com/joshdick/onedark.vim.git'
 Plug 'https://github.com/rakr/vim-one.git'
 Plug 'nightsense/carbonized'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'ayu-theme/ayu-vim'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 " ============ Prettier on save ===========
@@ -98,16 +103,31 @@ call plug#end()
 let base16colorspace="256"
 let g:airline_theme='one'
 let NERDTreeShowHidden=1
-" let NERDTreeMapOpenInTab='\t'
+let NERDTreeMapOpenInTab='\t'
+
 " colorscheme wal
+
 " colorscheme gruvbox
+
 " colorscheme OceanicNext
+
 " colorscheme one
+
 " colorscheme onedark
+
 colorscheme dracula
+
 " let g:carbonized_dark_CursorLineNr = 'off'
 " let g:carbonized_dark_LineNr = 'off'
 " colorscheme carbonized-dark
+
+" colorscheme palenight
+
+" let ayucolor="mirage" "for mirage version of theme"
+" let ayucolor="dark"   "for dark version of theme"
+" colorscheme ayu
+
+" colorscheme nord
 
 " set cursorline  " highlight current line
 set background=dark
@@ -176,6 +196,7 @@ map <a-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 autocmd BufWritePost ~/.zshrc !source ~/.zshrc
 autocmd BufWritePost ~/.config/ranger/rc.conf !source ~/.config/ranger/rc.conf
 autocmd BufWritePost ~/.vimrc :source %
+autocmd BufWritePost ~/.config/nvim/init.vim :source %
 autocmd BufWritePost ~/.i3/config !i3-msg reload
 autocmd BufWritePost ~/.profile :source ~/.profile
 autocmd BufWritePost ~/.Xresources !xrdb ~/.Xresources
