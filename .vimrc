@@ -24,7 +24,7 @@ set encoding=UTF-8
 syntax on
 set t_Co=256
 set termguicolors
-set term=xterm-256color
+set term=screen-256color
 if &term =~ '256color'
   set t_ut=256
 endif
@@ -121,11 +121,11 @@ let NERDTreeMapOpenInTab='\t'
 " let g:carbonized_dark_LineNr = 'off'
 " colorscheme carbonized-dark
 
-" colorscheme palenight
+colorscheme palenight
 
 " let ayucolor="mirage" "for mirage version of theme"
-let ayucolor="dark"   "for dark version of theme"
-colorscheme ayu
+" let ayucolor="dark"   "for dark version of theme"
+" colorscheme ayu
 
 " colorscheme nord
 
