@@ -166,8 +166,9 @@ antigen bundle ssh-agent
 # Theme
 # antigen theme afowler
 # antigen theme af-magic
-antigen theme bhilburn/powerlevel9k powerlevel9k
+# antigen theme bhilburn/powerlevel9k powerlevel9k
 # antigen theme amuse
+antigen theme bira
 
 antigen apply
 

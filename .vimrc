@@ -23,7 +23,7 @@ set nojoinspaces
 set encoding=UTF-8
 syntax on
 set t_Co=256
-" set termguicolors
+set termguicolors
 set term=xterm-256color
 if &term =~ '256color'
   set t_ut=256
@@ -115,7 +115,7 @@ let NERDTreeMapOpenInTab='\t'
 
 " colorscheme onedark
 
-colorscheme dracula
+" colorscheme dracula
 
 " let g:carbonized_dark_CursorLineNr = 'off'
 " let g:carbonized_dark_LineNr = 'off'
@@ -124,8 +124,8 @@ colorscheme dracula
 " colorscheme palenight
 
 " let ayucolor="mirage" "for mirage version of theme"
-" let ayucolor="dark"   "for dark version of theme"
-" colorscheme ayu
+let ayucolor="dark"   "for dark version of theme"
+colorscheme ayu
 
 " colorscheme nord
 
