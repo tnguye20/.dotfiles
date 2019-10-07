@@ -25,9 +25,9 @@ syntax on
 set t_Co=256
 set termguicolors
 set term=screen-256color
-if &term =~ '256color'
-  set t_ut=256
-endif
+" if &term =~ '256color'
+"   set t_ut=256
+" endif
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 

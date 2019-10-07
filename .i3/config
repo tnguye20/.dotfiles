@@ -69,12 +69,12 @@ bindsym $mod+Shift+F2 exec gksu pcmanfm
 # mpd Music keybinding
 # bindsym $mod+m exec --no-startup-id terminology -e 'ncmpcpp'
 bindsym $mod+m exec --no-startup-id st -e 'ncmpcpp'
-bindsym XF86AudioPlay exec --no-startup-id st -e 'mpc toggle'
-bindsym XF86AudioStop exec --no-startup-id st -e 'mpc stop'
-bindsym XF86AudioPrev exec --no-startup-id st -e 'mpc prev'
-bindsym XF86AudioNext exec --no-startup-id st -e 'mpc next'
-bindsym $mod+Ctrl+m exec --no-startup-id st -e 'mpc update'
-bindsym $mod+Shift+m exec --no-startup-id st -e 'pkill -9 ncmpcpp'
+bindsym XF86AudioPlay exec --no-startup-id terminal -e 'mpc toggle'
+bindsym XF86AudioStop exec --no-startup-id terminal -e 'mpc stop'
+bindsym XF86AudioPrev exec --no-startup-id terminal -e 'mpc prev'
+bindsym XF86AudioNext exec --no-startup-id terminal -e 'mpc next'
+bindsym $mod+Ctrl+m exec --no-startup-id terminal -e 'mpc update'
+bindsym $mod+Shift+m exec --no-startup-id terminal -e 'pkill -9 ncmpcpp'
 # cmus Music keybinding
 # bindsym $mod+m exec st -e 'nc'
 # bindsym XF86AudioPlay exec st -e 'cmus-remote -p'
