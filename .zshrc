@@ -166,8 +166,9 @@ antigen bundle ssh-agent
 # Theme
 # antigen theme afowler
 # antigen theme af-magic
-antigen theme bhilburn/powerlevel9k powerlevel9k
+# antigen theme bhilburn/powerlevel9k powerlevel9k
 # antigen theme amuse
+antigen theme bira
 
 antigen apply
 
@@ -202,7 +203,10 @@ alias gt="git status"
 alias ga="git add $@"
 alias g="git commit"
 alias gcm="git commit -m $1"
+alias gcam="git commit -am $1"
 alias gpp="git push"
+alias gcob="git checkout -b $1"
+alias gco="git checkout $1"
 alias gp="git pull"
 alias gf="git fetch"
 alias gd="git difftool -y"
