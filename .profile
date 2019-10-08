@@ -8,3 +8,8 @@ if pacman -Qi google-chrome > /dev/null; then
 else
   export BROWSER=/usr/bin/palemoon
 fi
+if pacman -Qi firefox > /dev/null; then
+  export BROWSER=/usr/bin/firefox
+else
+  export BROWSER=/usr/bin/palemoon
+fi
