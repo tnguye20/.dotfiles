@@ -103,7 +103,7 @@ call plug#end()
 let base16colorspace="256"
 let g:airline_theme='one'
 let NERDTreeShowHidden=1
-let NERDTreeMapOpenInTab='\t'
+" let NERDTreeMapOpenInTab='\t'
 
 " colorscheme wal
 
@@ -121,11 +121,11 @@ let NERDTreeMapOpenInTab='\t'
 " let g:carbonized_dark_LineNr = 'off'
 " colorscheme carbonized-dark
 
-colorscheme palenight
+" colorscheme palenight
 
 " let ayucolor="mirage" "for mirage version of theme"
-" let ayucolor="dark"   "for dark version of theme"
-" colorscheme ayu
+let ayucolor="dark"   "for dark version of theme"
+colorscheme ayu
 
 " colorscheme nord
 
