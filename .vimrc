@@ -127,7 +127,7 @@ colorscheme palenight
 " let ayucolor="dark"   "for dark version of theme"
 " colorscheme ayu
 
-" colorscheme nord
+colorscheme nord
 
 " set cursorline  " highlight current line
 set background=dark
@@ -178,6 +178,8 @@ map <C-o> :NERDTreeToggle<CR>
 :imap <c-s> <Esc>:w<CR>
 :nmap <c-x> :x<CR>
 :imap <c-x> <Esc>:x<CR>
+:nmap <c-q> :q!<CR>
+:imap <c-q> <Esc>:q!<CR>
 
 :map <s-j> <ESC> :tabp<CR>
 :map <s-k> <ESC> :tabn<CR>
