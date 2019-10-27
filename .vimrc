@@ -127,7 +127,7 @@ colorscheme palenight
 " let ayucolor="dark"   "for dark version of theme"
 " colorscheme ayu
 
-colorscheme nord
+" colorscheme nord
 
 " set cursorline  " highlight current line
 set background=dark
