@@ -213,7 +213,7 @@ alias gd="git difftool -y"
 
 # Vim key on shell
 bindkey -v
-export KEYTIMEOUT=1
+export KEYTIMEOUT=40
 bindkey 'jk' vi-cmd-mode
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
