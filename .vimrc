@@ -183,8 +183,8 @@ map <C-o> :NERDTreeToggle<CR>
 
 :map <s-j> <ESC> :tabp<CR>
 :map <s-k> <ESC> :tabn<CR>
-:map <s-h> <ESC> :m .-2<CR>==
-:map <s-l> <ESC> :m .+1<CR>==
+:map <s-l> <ESC> :m .-2<CR>==
+:map <s-h> <ESC> :m .+1<CR>==
 :vnoremap <s-h> :m '<-2<CR>gv=gv
 :vnoremap <s-l> :m '>+1<CR>gv=gv
 
