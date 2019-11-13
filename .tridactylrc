@@ -1,5 +1,5 @@
 " General Settings
-js tri.config.set("update", {"checkintervalsecs": 86400})
+js tri.config.set("update", {"lastchecktime": 1573602076029})
 set configversion 1.8
 set theme shydactyl
 set modeindicator false
@@ -37,8 +37,8 @@ bind yc clipboard yankcanon
 bind ym clipboard yankmd
 bind gh home
 bind gH home true
-bind p clipboard open
-bind P clipboard tabopen
+bind p fillcmdline tab
+bind P fillcmdline taball
 bind G scrollto 100
 bind gg scrollto 0
 bind <C-u> scrollpage -0.5
@@ -69,8 +69,9 @@ bind gf viewsource
 bind : fillcmdline_notrail
 bind s fillcmdline open search
 bind S fillcmdline tabopen search
-bind M gobble 1 quickmark
-bind B fillcmdline taball
+bind m fillcmdline source ~/.tridactylrc
+bind M fillcmdline mkt! ~/.tridactylrc
+bind B fillcmdline bmarks -t
 bind ZZ qall
 bind f hint
 bind F hint -b
@@ -134,5 +135,6 @@ bind zI zoom 3
 bind zO zoom 0.3
 bind . repeat
 bind <AS-ArrowUp><AS-ArrowUp><AS-ArrowDown><AS-ArrowDown><AS-ArrowLeft><AS-ArrowRight><AS-ArrowLeft><AS-ArrowRight>ba open https://www.youtube.com/watch?v=M3iOROuTuMA
+bind ,<Space> nohlsearch
 
 " vim: set filetype=vim:
