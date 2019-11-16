@@ -202,3 +202,4 @@ autocmd BufWritePost ~/.config/nvim/init.vim :source %
 autocmd BufWritePost ~/.i3/config !i3-msg reload
 autocmd BufWritePost ~/.profile :source ~/.profile
 autocmd BufWritePost ~/.Xresources !xrdb ~/.Xresources
+autocmd BufWritePost *.tex !pdflatex *.tex
