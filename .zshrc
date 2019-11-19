@@ -210,6 +210,7 @@ alias gco="git checkout $1"
 alias gp="git pull"
 alias gf="git fetch"
 alias gd="git difftool -y"
+alias gl="git log --oneline $@"
 
 # Vim key on shell
 bindkey -v
