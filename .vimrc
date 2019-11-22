@@ -173,6 +173,7 @@ noremap  <buffer> <silent> 0 g0
 noremap  <buffer> <silent> $ g$
 inoremap jk <Esc>
 
+map <C-h> :noh<CR>
 map <C-o> :NERDTreeToggle<CR>
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>
