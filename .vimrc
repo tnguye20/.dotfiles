@@ -76,6 +76,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'easymotion/vim-easymotion'
 Plug 'https://github.com/tpope/vim-surround.git'
+" Plug 'mhinz/vim-grepper'
 " ======== REACT/JSX SUPPORT  ========
 Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript'
@@ -173,7 +174,7 @@ noremap  <buffer> <silent> 0 g0
 noremap  <buffer> <silent> $ g$
 inoremap jk <Esc>
 
-map <C-h> :noh<CR>
+map <Leader><Space> :noh<CR>
 map <C-o> :NERDTreeToggle<CR>
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>
@@ -186,14 +187,20 @@ map <C-o> :NERDTreeToggle<CR>
 :map <s-k> <ESC> :tabn<CR>
 :map <s-l> <ESC> :m .-2<CR>==
 :map <s-h> <ESC> :m .+1<CR>==
-:vnoremap <s-h> :m '<-2<CR>gv=gv
-:vnoremap <s-l> :m '>+1<CR>gv=gv
+:vnoremap <s-l> :m '<-2<CR>gv=gv
+:vnoremap <s-h> :m '>+1<CR>gv=gv
 
 :map <c-p> :Files<cr>
 :map <c-g> :Goyo<cr>
 
 map <c-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <a-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+map <Leader>] :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+map <C-f> :Rg<CR>
+nnoremap <Leader>r :%s///g<Left><Left>
+nnoremap <Leader>rc :%s///gc<Left><Left><Left>
+xnoremap <Leader>r :s///g<Left><Left>
+xnoremap <Leader>rc :s///gc<Left><Left><Left>
 
 " autocommand for sourcing and other tasks
 autocmd BufWritePost ~/.zshrc !source ~/.zshrc

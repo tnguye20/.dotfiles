@@ -172,13 +172,12 @@ antigen theme bhilburn/powerlevel9k powerlevel9k
 
 antigen apply
 
-# bind -r '\C-s'
- stty -ixon
+stty -ixon
 
- function chpwd() {
-  emulate -L zsh
-  ls
- }
+function chpwd() {
+ emulate -L zsh
+ ls
+}
 
 alias cdf="cd $HOME/.dotfiles"
 alias cds="cd $HOME/scripts"
@@ -210,6 +209,7 @@ alias gco="git checkout $1"
 alias gp="git pull"
 alias gf="git fetch"
 alias gd="git difftool -y"
+alias gds="git difftool --staged -y"
 alias gl="git log --oneline $@"
 
 # Vim key on shell
@@ -229,7 +229,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
-export FZF_DEFAULT_COMMAND='find .'
+export FZF_DEFAULT_COMMAND='find . -not -path "*.git*" -type f'
 export FZF_DEFAULT_OPS="--extended"
 export COMPOSE_HTTP_TIMEOUT=5000
 export RANGER_LOAD_DEFAULT_RC=false
