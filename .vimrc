@@ -76,6 +76,8 @@ Plug 'junegunn/goyo.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'easymotion/vim-easymotion'
 Plug 'https://github.com/tpope/vim-surround.git'
+Plug 'iamcco/markdown-preview.vim'
+" Plug 'vim-pandoc/vim-pandoc'
 " Plug 'mhinz/vim-grepper'
 " ======== REACT/JSX SUPPORT  ========
 Plug 'vim-airline/vim-airline-themes'
