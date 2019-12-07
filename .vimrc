@@ -77,7 +77,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'easymotion/vim-easymotion'
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'iamcco/markdown-preview.vim'
-" Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc'
 " Plug 'mhinz/vim-grepper'
 " ======== REACT/JSX SUPPORT  ========
 Plug 'vim-airline/vim-airline-themes'
@@ -195,8 +195,8 @@ map <C-o> :NERDTreeToggle<CR>
 :map <c-p> :Files<cr>
 :map <c-g> :Goyo<cr>
 
-map <c-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <Leader>] :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+map <Leader>] :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <Leader>[ :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 map <C-f> :Rg<CR>
 nnoremap <Leader>r :%s///g<Left><Left>
@@ -213,3 +213,8 @@ autocmd BufWritePost ~/.i3/config !i3-msg reload
 autocmd BufWritePost ~/.profile :source ~/.profile
 autocmd BufWritePost ~/.Xresources !xrdb ~/.Xresources
 autocmd BufWritePost *.tex !pdflatex *.tex
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave *.md mkview
+  autocmd BufWinEnter *.md silent! loadview
+augroup END
