@@ -13,6 +13,6 @@ arr[".zshrc"]="source $HOME/.zshrc > /dev/null 2> /dev/null"
 files_changed="$(git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD | grep -v .wallpaper)"
 
 for file in $files_changed; do
-  # [[ $(echo ${arr["$file"]}) ]] && echo "$file changed. Running command ${arr["$file"]}" && eval "${arr["$file"]}"
-  eval "${arr["$file"]}"
+  [[ $(echo ${arr["$file"]}) ]] && echo "$file changed. Running command ${arr["$file"]}" && eval "${arr["$file"]}"
+  # eval "${arr["$file"]}"
 done
