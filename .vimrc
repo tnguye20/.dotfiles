@@ -192,6 +192,9 @@ map <C-o> :NERDTreeToggle<CR>
 :vnoremap <s-l> :m '<-2<CR>gv=gv
 :vnoremap <s-h> :m '>+1<CR>gv=gv
 
+:nnoremap <Leader>S :set spell!<CR>
+:nnoremap <Leader><Leader>p :set paste!<CR>
+
 :map <c-p> :Files<cr>
 :map <c-g> :Goyo<cr>
 
@@ -215,6 +218,6 @@ autocmd BufWritePost ~/.Xresources !xrdb ~/.Xresources
 autocmd BufWritePost *.tex !pdflatex *.tex
 augroup remember_folds
   autocmd!
-  autocmd BufWinLeave *.md mkview
-  autocmd BufWinEnter *.md silent! loadview
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
 augroup END

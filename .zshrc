@@ -179,6 +179,11 @@ function chpwd() {
  ls
 }
 
+function acp() {
+  msg=$1
+  git add . && git commit -m $msg && git push
+}
+
 alias cdf="cd $HOME/.dotfiles"
 alias cds="cd $HOME/scripts"
 alias cdn="cd $HOME/notes"
@@ -211,6 +216,7 @@ alias gf="git fetch"
 alias gd="git difftool -y"
 alias gds="git difftool --staged -y"
 alias gl="git log --oneline $@"
+alias acp=acp $1
 
 # Vim key on shell
 bindkey -v
