@@ -1,8 +1,9 @@
 " General Settings
-js tri.config.set("update", {"lastchecktime": 1573602076029})
+js tri.config.set("update", {"lastchecktime": 1577933623651})
 set configversion 1.8
-set theme shydactyl
+set theme halloween
 set modeindicator false
+set newtab https://google.com
 
 " Binds
 bind u scrollline -10
@@ -37,14 +38,12 @@ bind yc clipboard yankcanon
 bind ym clipboard yankmd
 bind gh home
 bind gH home true
-bind p fillcmdline tab
 bind P fillcmdline taball
 bind G scrollto 100
 bind gg scrollto 0
 bind <C-u> scrollpage -0.5
 bind <C-d> scrollpage 0.5
 bind $ scrollto 100 x
-bind ^ scrollto 0 x
 bind <C-6> tab #
 bind <C-^> tab #
 bind <C-o> jumpprev
@@ -59,22 +58,18 @@ bind g? rot13
 bind K tabnext
 bind gt tabnext_gt
 bind gT tabprev
-bind g^ tabfirst
 bind g0 tabfirst
 bind g$ tablast
 bind gr reader
 bind gu urlparent
 bind gU urlroot
 bind gf viewsource
-bind : fillcmdline_notrail
 bind s fillcmdline open search
 bind S fillcmdline tabopen search
 bind m fillcmdline source ~/.tridactylrc
 bind M fillcmdline mkt! ~/.tridactylrc
 bind B fillcmdline bmarks -t
 bind ZZ qall
-bind f hint
-bind F hint -b
 bind gF hint -qb
 bind ;i hint -i
 bind ;b hint -b
@@ -136,5 +131,12 @@ bind zO zoom 0.3
 bind . repeat
 bind <AS-ArrowUp><AS-ArrowUp><AS-ArrowDown><AS-ArrowDown><AS-ArrowLeft><AS-ArrowRight><AS-ArrowLeft><AS-ArrowRight>ba open https://www.youtube.com/watch?v=M3iOROuTuMA
 bind ,<Space> nohlsearch
+bind p fillcmdline tab
+bind ^ scrollto 0 x
+bind g^ tabfirst
+bind : fillcmdline_notrail
+bind f hint
+bind F hint -b
 
-" vim: set filetype=vim:
+" For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
+" vim: set filetype=tridactyl
