@@ -1,9 +1,9 @@
 " General Settings
-js tri.config.set("update", {"lastchecktime": 1577933623651})
+js tri.config.set("update", {"lastchecktime": 1578352895700})
 set configversion 1.8
 set theme halloween
 set modeindicator false
-set newtab https://google.com
+set newtab http://stfd.net
 
 " Binds
 bind u scrollline -10
