@@ -63,6 +63,7 @@ bindsym $mod+F1 exec firefox
 bindsym $mod+Shift+F1 exec firefox --private-window
 bindsym $mod+F2 exec pcmanfm
 bindsym $mod+w exec --no-startup-id ~/scripts/randomWallpaper
+bindsym $mod+Shift+a exec --no-startup-id /usr/local/android-studio/bin/studio.sh
 bindsym $mod+Shift+w exec ~/scripts/wallpaperChooser
 bindsym $mod+Ctrl+l exec ~/scripts/layoutChooser
 bindsym $mod+r exec urxvt -e ranger
