@@ -76,7 +76,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'easymotion/vim-easymotion'
 Plug 'https://github.com/tpope/vim-surround.git'
-Plug 'iamcco/markdown-preview.vim'
+" Plug 'iamcco/markdown-preview.vim'
 Plug 'vim-pandoc/vim-pandoc'
 " Plug 'mhinz/vim-grepper'
 " ======== REACT/JSX SUPPORT  ========
@@ -118,7 +118,7 @@ let NERDTreeShowHidden=1
 
 " colorscheme onedark
 
-colorscheme dracula
+" colorscheme dracula
 
 " let g:carbonized_dark_CursorLineNr = 'off'
 " let g:carbonized_dark_LineNr = 'off'
@@ -130,7 +130,7 @@ colorscheme dracula
 " let ayucolor="dark"   "for dark version of theme"
 " colorscheme ayu
 
-" colorscheme nord
+colorscheme nord
 
 set cursorline  " highlight current line
 set background=dark
@@ -148,6 +148,23 @@ set incsearch " search as characters are entered
 set hlsearch " highlight matches
 set ignorecase smartcase
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/* " lol
+
+" ====== FOLD SETTINGS (indent/syntax) =======
+" set foldmethod=indent
+" set foldnestmax=2
+set foldcolumn=2
+set foldmethod=syntax
+set foldlevelstart=1
+let javaScript_fold=1         " JavaScript
+let perl_fold=1               " Perl
+let php_folding=1             " PHP
+let r_syntax_folding=1        " R
+let ruby_fold=1               " Ruby
+let sh_fold_enabled=1         " sh
+let vimsyn_folding='af'       " Vim script
+let xml_syntax_folding=1      " XML
+let markdown_folding=1        " markdown
+let markdown_enable_folding=1 " markdown
 
 " ====== SYNTASTIC / GIT GUTTER SETTINGS =======
 " set signcolumn="yes"
@@ -216,8 +233,8 @@ autocmd BufWritePost ~/.i3/config !i3-msg reload
 autocmd BufWritePost ~/.profile :source ~/.profile
 autocmd BufWritePost ~/.Xresources !xrdb ~/.Xresources
 autocmd BufWritePost *.tex !pdflatex *.tex
-augroup remember_folds
-  autocmd!
-  autocmd BufWinLeave * mkview
-  autocmd BufWinEnter * silent! loadview
-augroup END
+" augroup remember_folds
+"   autocmd!
+"   autocmd BufWinLeave * mkview
+"   autocmd BufWinEnter * silent! loadview
+" augroup END
