@@ -13,3 +13,7 @@ if pacman -Qi firefox > /dev/null; then
 else
   export BROWSER=/usr/bin/palemoon
 fi
+
+# Map Drive
+[[ -b /dev/sda1 ]] && sudo mount -o gid=1000,uid=1000 /dev/sda1 /media/seagate
+
