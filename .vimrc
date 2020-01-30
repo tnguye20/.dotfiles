@@ -42,6 +42,7 @@ set autoindent
 " set smartindent
 
 " ======== INTERFACE SUPPORT  ========
+Plug 'chriskempson/base16-vim'
 Plug 'scrooloose/nerdtree'
 " Plug 'justinmk/vim-sneak'
 Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -79,6 +80,8 @@ Plug 'https://github.com/tpope/vim-surround.git'
 " Plug 'iamcco/markdown-preview.vim'
 Plug 'vim-pandoc/vim-pandoc'
 " Plug 'mhinz/vim-grepper'
+Plug 'frazrepo/vim-rainbow'
+Plug 'dhruvasagar/vim-table-mode'
 " ======== REACT/JSX SUPPORT  ========
 Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript'
@@ -91,7 +94,6 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'https://github.com/joshdick/onedark.vim.git'
 Plug 'https://github.com/rakr/vim-one.git'
-Plug 'nightsense/carbonized'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'arcticicestudio/nord-vim'
@@ -109,28 +111,18 @@ let NERDTreeShowHidden=1
 " let NERDTreeMapOpenInTab='\t'
 
 " colorscheme wal
-
 " colorscheme gruvbox
-
 " colorscheme OceanicNext
-
 " colorscheme one
-
 " colorscheme onedark
-
 " colorscheme dracula
-
-" let g:carbonized_dark_CursorLineNr = 'off'
-" let g:carbonized_dark_LineNr = 'off'
-" colorscheme carbonized-dark
-
 " colorscheme palenight
+" colorscheme nord
+colorscheme base16-default-dark
 
 " let ayucolor="mirage" "for mirage version of theme"
 " let ayucolor="dark"   "for dark version of theme"
 " colorscheme ayu
-
-colorscheme nord
 
 set cursorline  " highlight current line
 set background=dark
@@ -148,6 +140,22 @@ set incsearch " search as characters are entered
 set hlsearch " highlight matches
 set ignorecase smartcase
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/* " lol
+
+" ====== RAINBOW SETTINGS =======
+let g:rainbow_active = 1
+let g:rainbow_load_separately = [
+    \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+    \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
+    \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+    \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
+    \ ]
+let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
+let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
+
+" ====== Markdown Table SETTINGS =======
+" let g:table_mode_corner='|'
+" let g:table_mode_corner_corner='+'
+" let g:table_mode_header_fillchar='='
 
 " ====== FOLD SETTINGS (indent/syntax) =======
 " set foldmethod=indent
@@ -197,10 +205,10 @@ map <Leader><Space> :noh<CR>
 map <C-o> :NERDTreeToggle<CR>
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>
-:nmap <c-x> :x<CR>
-:imap <c-x> <Esc>:x<CR>
-:nmap <c-q> :q!<CR>
-:imap <c-q> <Esc>:q!<CR>
+" :nmap <c-x> :x<CR>
+" :imap <c-x> <Esc>:x<CR>
+:nmap <c-q> :q<CR>
+:imap <c-q> <Esc>:q<CR>
 
 :map <s-j> <ESC> :tabp<CR>
 :map <s-k> <ESC> :tabn<CR>

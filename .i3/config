@@ -113,10 +113,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+Shift+h move left 25 px
+bindsym $mod+Shift+j move down 25 px
+bindsym $mod+Shift+k move up 25 px
+bindsym $mod+Shift+l move right 25 px
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -304,10 +304,10 @@ mode "$mode_system" {
 #         bindsym Escape mode "default"
 # }
 
-bindsym $mod+y resize shrink width 5 px or 5 ppt
-bindsym $mod+u resize grow height 5 px or 5 ppt
-bindsym $mod+i resize shrink height 5 px or 5 ppt
-bindsym $mod+o resize grow width 5 px or 5 ppt
+bindsym $mod+y resize shrink width 25 px or 25 ppt
+bindsym $mod+u resize grow height 25 px or 25 ppt
+bindsym $mod+i resize shrink height 25 px or 25 ppt
+bindsym $mod+o resize grow width 25 px or 25 ppt
 
 # Lock screen
 bindsym $mod+9 exec --no-startup-id blurlock
