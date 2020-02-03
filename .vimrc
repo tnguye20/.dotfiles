@@ -117,8 +117,8 @@ let NERDTreeShowHidden=1
 " colorscheme onedark
 " colorscheme dracula
 " colorscheme palenight
-" colorscheme nord
-colorscheme base16-default-dark
+colorscheme nord
+" colorscheme base16-default-dark
 
 " let ayucolor="mirage" "for mirage version of theme"
 " let ayucolor="dark"   "for dark version of theme"
