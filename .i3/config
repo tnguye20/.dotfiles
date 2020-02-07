@@ -259,7 +259,7 @@ bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+e exec --no-startup-id ~/scripts/emojipicker
+bindsym $mod+e exec --no-startup-id ~/scripts/emojipicker
 
 # Set shut down, restart and locking features
 bindsym $mod+0 mode "$mode_system"
@@ -467,4 +467,4 @@ mode "$mode_gaps_outer" {
 default_orientation vertical #start in opposite orientation from your monitor
 for_window [class=".*"] split toggle #toggles split at each new window
 bindsym $mod+shift+q split toggle restart #kill command resets the split
-bindsym $mod+e layout toggle split # should already exist but use if split orientation  messes up
+bindsym $mod+Shift+e layout toggle split # should already exist but use if split orientation  messes up
