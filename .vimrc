@@ -116,8 +116,8 @@ let NERDTreeShowHidden=1
 " colorscheme one
 " colorscheme onedark
 " colorscheme dracula
-" colorscheme palenight
-colorscheme nord
+colorscheme palenight
+" colorscheme nord
 " colorscheme base16-default-dark
 
 " let ayucolor="mirage" "for mirage version of theme"
@@ -204,7 +204,7 @@ inoremap jk <Esc>
 map <Leader><Space> :noh<CR>
 map <C-o> :NERDTreeToggle<CR>
 :nmap <c-s> :w<CR>
-:imap <c-s> <Esc>:w<CR>
+:imap <c-s> <Esc><Esc>:w<CR>
 " :nmap <c-x> :x<CR>
 " :imap <c-x> <Esc>:x<CR>
 :nmap <c-q> :q<CR>
