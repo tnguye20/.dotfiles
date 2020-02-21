@@ -116,13 +116,13 @@ let NERDTreeShowHidden=1
 " colorscheme one
 " colorscheme onedark
 " colorscheme dracula
-colorscheme palenight
+" colorscheme palenight
 " colorscheme nord
 " colorscheme base16-default-dark
 
 " let ayucolor="mirage" "for mirage version of theme"
 " let ayucolor="dark"   "for dark version of theme"
-" colorscheme ayu
+colorscheme ayu
 
 set cursorline  " highlight current line
 set background=dark

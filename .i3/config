@@ -316,8 +316,8 @@ bindsym $mod+9 exec --no-startup-id blurlock
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
-exec --no-startup-id ~/scripts/randomWallpaper
 exec --no-startup-id ~/.screenlayout/layout.sh
+exec --no-startup-id ~/scripts/randomWallpaper
 exec --no-startup-id mpd
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
@@ -363,18 +363,15 @@ bar {
   mode hide
 	i3bar_command i3bar
 	# status_command i3status
-  # status_command ~/bumblebee-status/bumblebee-status -m xrandr spacer spacer mpd spacer spacer time date spacer disk memory cpu spacer battery spacer kernel caffeine -p interval=1 -t iceberg-dark-powerline
-  # status_command ~/bumblebee-status/bumblebee-status -m xrandr spacer spacer mpd spacer spacer time date spacer disk memory cpu spacer battery spacer kernel caffeine -p interval=1 -t gruvbox-powerline
   status_command ~/bumblebee-status/bumblebee-status -m xrandr spacer spacer mpd spacer spacer time date spacer disk memory cpu spacer battery spacer kernel caffeine -p interval=1 -t iceberg
-	position top
+	position bottom
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 	tray_output primary
-  font pango:DejaVu Sans Mono, FontAwesome 9
+  font pango:Iosevka, Font Awesome 10
 
 	bindsym button4 nop
 	bindsym button5 nop
-  # font xft:URWGothic-Book 9
 	strip_workspace_numbers yes
 
     colors {
