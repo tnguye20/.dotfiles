@@ -222,9 +222,11 @@ alias gl="git log --oneline $@"
 alias acp=acp $1
 
 # Vim key on shell
-bindkey -v
 export KEYTIMEOUT=40
+bindkey -v
 bindkey 'jk' vi-cmd-mode
+# set -o vi
+# bind '"jk":vi-movement-mode'
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
@@ -243,7 +245,6 @@ export FZF_DEFAULT_OPS="--extended"
 export COMPOSE_HTTP_TIMEOUT=5000
 export RANGER_LOAD_DEFAULT_RC=false
 export FPP_EDITOR="vim -p"
-# set -o vi
 export PATH=$PATH:$HOME/scripts
 export PATH=$PATH:$HOME/packages/flutter/bin
 # neofetch --w3m $HOME/.dotfiles/.wallpaper/mr_robot.jpg --size 350px
