@@ -209,9 +209,9 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Set workspace on startup
-# workspace 1 output primary HDMI1
-# workspace 2 output HDMI2
-# workspace 3 output DP1
+# workspace 1 output HDMI1
+# workspace 2 output primary DP2-1
+# workspace 3 output DP2-3
 
 # Open applications on specific workspaces
 # assign [class="Thunderbird"] $ws1
@@ -365,7 +365,7 @@ bar {
   mode hide
 	i3bar_command i3bar
 	# status_command i3status
-  status_command ~/bumblebee-status/bumblebee-status -m xrandr spacer spacer mpd spacer spacer time date spacer disk memory cpu spacer battery spacer kernel caffeine -p interval=1 -t iceberg
+  status_command ~/bumblebee-status/bumblebee-status -m xrandr spacer spacer mpd spacer spacer time date spacer disk memory cpu spacer battery spacer kernel caffeine bluetooth -p interval=1 -t iceberg
 	position bottom
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'

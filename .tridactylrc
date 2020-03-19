@@ -4,7 +4,7 @@ js tri.config.set("customthemes", {"base16-gruvbox-dark-hard": ":root { /* Gruvb
 set configversion 1.8
 set theme base16-gruvbox-dark-hard
 set modeindicator false
-set newtab http://stfd.net
+set newtab
 
 " Binds
 bind u scrollline -10
@@ -67,8 +67,8 @@ bind gu urlparent
 bind gU urlroot
 bind gf viewsource
 bind : fillcmdline_notrail
-bind S fillcmdline open search
-bind s fillcmdline tabopen search
+bind s fillcmdline open search
+bind S fillcmdline tabopen search
 bind m fillcmdline source ~/.tridactylrc
 bind M fillcmdline mkt! ~/.tridactylrc
 bind B fillcmdline bmarks -t
