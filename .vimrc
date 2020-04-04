@@ -77,7 +77,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'easymotion/vim-easymotion'
 Plug 'https://github.com/tpope/vim-surround.git'
-" Plug 'iamcco/markdown-preview.vim'
+Plug 'iamcco/markdown-preview.vim'
 Plug 'vim-pandoc/vim-pandoc'
 " Plug 'mhinz/vim-grepper'
 Plug 'frazrepo/vim-rainbow'
@@ -116,13 +116,13 @@ let NERDTreeShowHidden=1
 " colorscheme one
 " colorscheme onedark
 " colorscheme dracula
-colorscheme palenight
+" colorscheme palenight
 " colorscheme nord
 " colorscheme base16-default-dark
 
 " let ayucolor="mirage" "for mirage version of theme"
-" let ayucolor="dark"   "for dark version of theme"
-" colorscheme ayu
+let ayucolor="dark"   "for dark version of theme"
+colorscheme ayu
 
 set cursorline  " highlight current line
 set background=dark
