@@ -197,8 +197,8 @@ alias vt="vim $HOME/.tmux.conf.local"
 alias vz="vim $HOME/.zshrc"
 alias vg="vim $HOME/.gitconfig"
 alias vp="vim $HOME/.profile"
-alias vf='vim $(fzf)'
-alias gvf='gvim $(fzf)'
+alias vf='vim $( fzf --preview "bat --style=numbers --color=always {} | head -500"  )'
+alias gvf='gvim $( fzf --preview "bat --style=numbers --color=always {} | head -500"  )'
 alias copy="xclip -sel clip"
 alias t="tmux new -s A"
 alias tl="tmux ls"

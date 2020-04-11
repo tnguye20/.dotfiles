@@ -7,12 +7,11 @@ declare -A arr
 
 arr[".i3/config"]="i3-msg reload"
 arr[".tmux.conf"]="tmux source-file $HOME/.tmux.conf"
-arr[".vimrc"]="vim +source +qall && stty sane"
+arr[".vimrc"]="vim +source +qall; vim +PlugUpdate +qall; vim +PlugInstall +qall; stty sane"
 arr[".zshrc"]="source $HOME/.zshrc > /dev/null 2> /dev/null"
 
 files_changed="$(git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD | grep -v .wallpaper)"
 
 for file in $files_changed; do
   [[ $(echo ${arr["$file"]}) ]] && echo "$file changed. Running command ${arr["$file"]}" && eval "${arr["$file"]}"
-  # eval "${arr["$file"]}"
 done

@@ -109,6 +109,7 @@ let base16colorspace="256"
 let g:airline_theme='one'
 let NERDTreeShowHidden=1
 " let NERDTreeMapOpenInTab='\t'
+let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
 
 " colorscheme wal
 " colorscheme gruvbox
