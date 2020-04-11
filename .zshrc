@@ -4,6 +4,8 @@ source $HOME/antigen.zsh
 # POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs)
 
 autoload -U colors && colors
+autoload -U edit-command-line
+zle -N edit-command-line
 
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 
@@ -225,6 +227,7 @@ alias acp=acp $1
 export KEYTIMEOUT=40
 bindkey -v
 bindkey 'jk' vi-cmd-mode
+bindkey -M vicmd V edit-command-line
 # set -o vi
 # bind '"jk":vi-movement-mode'
 # Use vim keys in tab complete menu:
