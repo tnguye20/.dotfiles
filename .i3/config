@@ -68,6 +68,7 @@ bindsym $mod+Shift+a exec --no-startup-id /usr/local/android-studio/bin/studio.s
 bindsym $mod+Shift+w exec ~/scripts/wallpaperChooser
 bindsym $mod+Ctrl+l exec ~/scripts/layoutChooser
 bindsym $mod+r exec urxvt -e ranger
+bindsym $mod+Ctrl+r exec urxvt -name randomwordpick -e "python3 ~/scripts/randomWords/randomWordPick"
 bindsym $mod+Shift+F2 exec gksu pcmanfm
 
 # mpd Music keybinding
@@ -210,9 +211,9 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Set workspace on startup
-# workspace 1 output HDMI1
-# workspace 2 output primary DP2-1
-# workspace 3 output DP2-3
+workspace 1 output HDMI1
+workspace 2 output primary DP2-1
+workspace 3 output DP2-3
 
 # Open applications on specific workspaces
 # assign [class="Thunderbird"] $ws1
@@ -248,6 +249,7 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="copyq"] floating enable center
 for_window [class="URxvt" instance="calculator"] floating enable center
+for_window [class="URxvt" instance="randomwordpick"] floating enable center
 for_window [class="URxvt" instance="float"] floating enable border pixel 2 move absolute position 15px 15px
 for_window [class="Gvim"] floating enable border pixel 2
 

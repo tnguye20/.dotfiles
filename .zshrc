@@ -202,6 +202,7 @@ alias vp="vim $HOME/.profile"
 alias vf='vim $( fzf --preview "bat --style=numbers --color=always {} | head -500"  )'
 alias gvf='gvim $( fzf --preview "bat --style=numbers --color=always {} | head -500"  )'
 alias copy="xclip -sel clip"
+alias tmux="tmux -2"
 alias t="tmux new -s A"
 alias tl="tmux ls"
 alias ta="tmux attach -t A"
@@ -243,7 +244,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
-export FZF_DEFAULT_COMMAND='find . -not -path "*.git*" -not -path "*venv*"  -not -path "*node_modules*" -type f'
+export FZF_DEFAULT_COMMAND='find . -not -path "*.git/*" -not -path "*venv*"  -not -path "*node_modules*" -type f'
 export FZF_DEFAULT_OPS="--extended"
 export COMPOSE_HTTP_TIMEOUT=5000
 export RANGER_LOAD_DEFAULT_RC=false

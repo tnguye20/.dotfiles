@@ -67,8 +67,8 @@ bind gu urlparent
 bind gU urlroot
 bind gf viewsource
 bind : fillcmdline_notrail
-bind s fillcmdline open search
-bind S fillcmdline tabopen search
+" bind s fillcmdline open search
+" bind S fillcmdline tabopen search
 bind m fillcmdline source ~/.tridactylrc
 bind M fillcmdline mkt! ~/.tridactylrc
 bind B fillcmdline bmarks -t
@@ -138,5 +138,8 @@ bind <AS-ArrowUp><AS-ArrowUp><AS-ArrowDown><AS-ArrowDown><AS-ArrowLeft><AS-Arrow
 bind ,<Space> nohlsearch
 bind <A-m> mute toggle
 bind <F1> help
-
+bind --mode=insert <A-l> composite unfocus | mode normal
+bind <A-l> composite mode normal ; hidecmdline
+bind s fillcmdline_notrail open https://www.merriam-webster.com/dictionary/
+bind S fillcmdline_notrail tabopen https://www.merriam-webster.com/dictionary/
 " vim: set filetype=vim:

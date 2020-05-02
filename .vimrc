@@ -40,12 +40,13 @@ filetype indent on
 
 set autoindent
 " set smartindent
+set splitbelow splitright
 
 " ======== INTERFACE SUPPORT  ========
 Plug 'chriskempson/base16-vim'
 Plug 'scrooloose/nerdtree'
 " Plug 'justinmk/vim-sneak'
-Plug 'tmux-plugins/vim-tmux-focus-events'
+" Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-commentary'
 Plug '~/.fzf'
 " Plug 'mattn/emmet-vim'
@@ -75,10 +76,11 @@ Plug 'dylanaraps/wal.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/goyo.vim'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'easymotion/vim-easymotion'
+" Plug 'easymotion/vim-easymotion'
 Plug 'https://github.com/tpope/vim-surround.git'
-Plug 'iamcco/markdown-preview.vim'
-Plug 'vim-pandoc/vim-pandoc'
+" Plug 'iamcco/markdown-preview.vim'
+" Plug 'vim-pandoc/vim-pandoc'
+" Plug 'vim-pandoc/vim-pandoc-syntax'
 " Plug 'mhinz/vim-grepper'
 Plug 'frazrepo/vim-rainbow'
 Plug 'dhruvasagar/vim-table-mode'
@@ -87,7 +89,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'epilande/vim-react-snippets'
-Plug 'christoomey/vim-tmux-navigator'
+" Plug 'christoomey/vim-tmux-navigator'
 Plug 'ntpeters/vim-better-whitespace'
 
 " ======== VIM THEMES  =======
@@ -106,7 +108,7 @@ call plug#end()
 
 " ============ general settings ===========
 let base16colorspace="256"
-let g:airline_theme='one'
+let g:airline_theme='dracula'
 let NERDTreeShowHidden=1
 " let NERDTreeMapOpenInTab='\t'
 let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
@@ -114,7 +116,7 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " colorscheme wal
 " colorscheme gruvbox
 " colorscheme OceanicNext
-" colorscheme one
+colorscheme one
 " colorscheme onedark
 " colorscheme dracula
 " colorscheme palenight
@@ -122,8 +124,8 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " colorscheme base16-default-dark
 
 " let ayucolor="mirage" "for mirage version of theme"
-let ayucolor="dark"   "for dark version of theme"
-colorscheme ayu
+" let ayucolor="dark"   "for dark version of theme"
+" colorscheme ayu
 
 set cursorline  " highlight current line
 set background=dark
@@ -204,25 +206,25 @@ inoremap jk <Esc>
 
 map <Leader><Space> :noh<CR>
 map <C-o> :NERDTreeToggle<CR>
-:nmap <c-s> :w<CR>
-:imap <c-s> <Esc><Esc>:w<CR>
+nnoremap <c-s> :w<CR>
+inoremap <c-s> <Esc><Esc>:w<CR>
 " :nmap <c-x> :x<CR>
 " :imap <c-x> <Esc>:x<CR>
-:nmap <c-q> :q<CR>
-:imap <c-q> <Esc>:q<CR>
+nnoremap <c-q> :q<CR>
+inoremap <c-q> <Esc>:q<CR>
 
-:map <s-j> <ESC> :tabp<CR>
-:map <s-k> <ESC> :tabn<CR>
-:map <s-l> <ESC> :m .-2<CR>==
-:map <s-h> <ESC> :m .+1<CR>==
-:vnoremap <s-l> :m '<-2<CR>gv=gv
-:vnoremap <s-h> :m '>+1<CR>gv=gv
+noremap <s-j> <ESC> :tabp<CR>
+noremap <s-k> <ESC> :tabn<CR>
+noremap <s-l> <ESC> :m .-2<CR>==
+noremap <s-h> <ESC> :m .+1<CR>==
+vnoremap <s-l> :m '<-2<CR>gv=gv
+vnoremap <s-h> :m '>+1<CR>gv=gv
 
-:nnoremap <Leader>S :set spell!<CR>
-:nnoremap <Leader><Leader>p :set paste!<CR>
+nnoremap <Leader>S :set spell!<CR>
+nnoremap <Leader><Leader>p :set paste!<CR>
 
-:map <c-p> :Files<cr>
-:map <c-g> :Goyo<cr>
+map <c-p> :Files<cr>
+map <c-g> :Goyo<cr>
 
 map <Leader>] :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <Leader>[ :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
@@ -233,6 +235,16 @@ nnoremap <Leader>rc :%s///gc<Left><Left><Left>
 xnoremap <Leader>r :s///g<Left><Left>
 xnoremap <Leader>rc :s///gc<Left><Left><Left>
 
+" Split resize and navigation
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-h> <C-w>h
+map <C-l> <C-w>l
+map <Leader><l> :vertical resize +3<CR>
+map <Leader><h> :vertical resize -3<CR>
+map <Leader><k> :resize +3<CR>
+map <Leader><j> :resize -3<CR>
+
 " autocommand for sourcing and other tasks
 autocmd BufWritePost ~/.zshrc !source ~/.zshrc
 autocmd BufWritePost ~/.config/ranger/rc.conf !source ~/.config/ranger/rc.conf
@@ -241,9 +253,24 @@ autocmd BufWritePost ~/.config/nvim/init.vim :source %
 autocmd BufWritePost ~/.i3/config !i3-msg reload
 autocmd BufWritePost ~/.profile :source ~/.profile
 autocmd BufWritePost ~/.Xresources !xrdb ~/.Xresources
+
+" Compile tex file
 autocmd BufWritePost *.tex !pdflatex *.tex
+
+" Put Markdown in Goyo and Disable Coc
+autocmd BufReadPost,BufNewFile *.md silent! :CocDisable
+autocmd BufReadPost,BufNewFile *.md silent! :Goyo 120
+autocmd BufReadPost,BufNewFile *.md silent! :set spell
+
 " augroup remember_folds
 "   autocmd!
 "   autocmd BufWinLeave * mkview
 "   autocmd BufWinEnter * silent! loadview
 " augroup END
+
+" Key Mappings
+" Markdown
+
+inoremap <Leader><Leader><Space> <Esc>/<++><Enter>"_c4l
+autocmd FileType pandoc,markdown inoremap ;b ____<Space><++><Esc>F_;i
+autocmd FileType pandoc,markdown inoremap ;i __<Space><++><Esc>F_i
