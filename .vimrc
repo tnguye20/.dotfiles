@@ -108,7 +108,7 @@ call plug#end()
 
 " ============ general settings ===========
 let base16colorspace="256"
-let g:airline_theme='dracula'
+let g:airline_theme='gruvbox'
 let NERDTreeShowHidden=1
 " let NERDTreeMapOpenInTab='\t'
 let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
@@ -116,12 +116,12 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " colorscheme wal
 " colorscheme gruvbox
 " colorscheme OceanicNext
-colorscheme one
+" colorscheme one
 " colorscheme onedark
 " colorscheme dracula
 " colorscheme palenight
 " colorscheme nord
-" colorscheme base16-default-dark
+colorscheme base16-default-dark
 
 " let ayucolor="mirage" "for mirage version of theme"
 " let ayucolor="dark"   "for dark version of theme"
