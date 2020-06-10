@@ -121,11 +121,11 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " colorscheme dracula
 " colorscheme palenight
 " colorscheme nord
-colorscheme base16-default-dark
+" colorscheme base16-default-dark
 
 " let ayucolor="mirage" "for mirage version of theme"
-" let ayucolor="dark"   "for dark version of theme"
-" colorscheme ayu
+let ayucolor="dark"   "for dark version of theme"
+colorscheme ayu
 
 set cursorline  " highlight current line
 set background=dark

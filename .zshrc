@@ -254,3 +254,6 @@ export PATH=$PATH:$HOME/packages/flutter/bin
 # neofetch --w3m $HOME/.dotfiles/.wallpaper/mr_robot.jpg --size 350px
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Increase speed when holding down keys
+xset r rate 300 50
