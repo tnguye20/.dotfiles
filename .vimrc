@@ -1,6 +1,8 @@
 "
 " Thang Nguyen's settings
 "
+
+" General Config
 set nocompatible
 set ruler
 set hidden
@@ -8,42 +10,66 @@ set history=10000
 set expandtab
 set showtabline=2
 set showcmd
+set showmode
 set nobackup
 set nowritebackup
 set showmatch
 set scrolloff=3
 set switchbuf=useopen
-:let mapleader=","
+let mapleader=","
 set wildmode=longest,list
 set nolist
 set autoread
+set nowrap
+set linebreak
 set nojoinspaces
-:set timeout timeoutlen=1000
+set timeout timeoutlen=1000
+set mouse=a
+set laststatus=2
+set noswapfile
 "set shell=bash
 set encoding=UTF-8
-syntax on
+set autoindent
+set splitbelow splitright
 set t_Co=256
 set termguicolors
 set term=screen-256color
+set rtp+=~/.fzf
+set cursorline  " highlight current line
+set background=dark
+set number " show line numbers
+set relativenumber
+set clipboard=unnamedplus
+" set clipboard=unnamed " use os clipboard
+set shiftwidth=2 " number of spaces when shift indenting
+set tabstop=2 " number of visual spaces per tab
+set softtabstop=2 " number of spaces in tab when editing
+set expandtab " tab to spaces
+set showmatch " highlight matching [{()}]
+set incsearch " search as characters are entered
+set hlsearch " highlight matches
+set ignorecase
+set smartcase
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/* " lol
 " if &term =~ '256color'
 "   set t_ut=256
 " endif
+" set smartindent
+syntax on
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-set rtp+=~/.fzf
 call plug#begin('~/.vim/plugged')
 
 filetype on
 filetype plugin on
 filetype indent on
 
-set autoindent
-" set smartindent
-set splitbelow splitright
 
 " ======== INTERFACE SUPPORT  ========
 Plug 'chriskempson/base16-vim'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'nelstrom/vim-visual-star-search'
 Plug 'scrooloose/nerdtree'
 " Plug 'justinmk/vim-sneak'
 " Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -99,6 +125,7 @@ Plug 'https://github.com/rakr/vim-one.git'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'arcticicestudio/nord-vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 " ============ Prettier on save ===========
@@ -107,6 +134,7 @@ call plug#end()
 " let g:prettier#config#bracket_spacing = 'true'
 
 " ============ general settings ===========
+let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint', 'coc-json', 'coc-json', 'coc-prettier', 'coc-css', 'coc-ultisnips', 'coc-snippets']
 let base16colorspace="256"
 let g:airline_theme='gruvbox'
 let NERDTreeShowHidden=1
@@ -119,30 +147,23 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " colorscheme one
 " colorscheme onedark
 " colorscheme dracula
+" let g:dracula_colorterm = 0
 " colorscheme palenight
 " colorscheme nord
 " colorscheme base16-default-dark
+colorscheme base16-solarized-dark
+" colorscheme base16-darktooth
+" colorscheme base16-bespin
+" colorscheme base16-dracula
 
 " let ayucolor="mirage" "for mirage version of theme"
-let ayucolor="dark"   "for dark version of theme"
-colorscheme ayu
+" let ayucolor="dark"   "for dark version of theme"
+" colorscheme ayu
 
-set cursorline  " highlight current line
-set background=dark
-highlight LineNr guifg=#aaaaaa " Dracula's colors are too dark dood
-set number " show line numbers
-set relativenumber
-set clipboard=unnamedplus
-" set clipboard=unnamed " use os clipboard
-set shiftwidth=2 " number of spaces when shift indenting
-set tabstop=2 " number of visual spaces per tab
-set softtabstop=2 " number of spaces in tab when editing
-set expandtab " tab to spaces
-set showmatch " highlight matching [{()}]
-set incsearch " search as characters are entered
-set hlsearch " highlight matches
-set ignorecase smartcase
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/* " lol
+" set signcolumn="yes"
+" set signcolumn=number
+highlight clear LineNr
+highlight clear SignColumn
 
 " ====== RAINBOW SETTINGS =======
 let g:rainbow_active = 1
@@ -178,8 +199,6 @@ let markdown_folding=1        " markdown
 let markdown_enable_folding=1 " markdown
 
 " ====== SYNTASTIC / GIT GUTTER SETTINGS =======
-" set signcolumn="yes"
-hi clear signColumn
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%{gutentags#statusline()}
@@ -189,11 +208,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers= ['eslint']
 let g:syntastic_javascript_eslint_exe = 'npm run lint --'
+let g:gitgutter_set_sign_backgrounds = 1
 " You gotta add a lint npm script to each package.json you want linting for
-set mouse=a
-
-set laststatus=2
-set noswapfile
 "let g:jsx_ext_required=0
 let g:airline#extensions#hunks#non_zero_only = 1
 
@@ -240,10 +256,13 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-h> <C-w>h
 map <C-l> <C-w>l
-map <Leader><l> :vertical resize +3<CR>
-map <Leader><h> :vertical resize -3<CR>
-map <Leader><k> :resize +3<CR>
-map <Leader><j> :resize -3<CR>
+map <Leader>l :vertical resize +3<CR>
+map <Leader>h :vertical resize -3<CR>
+map <Leader>k :resize +3<CR>
+map <Leader>j :resize -3<CR>
+
+nmap sj :SplitjoinSplit<cr>
+nmap sk :SplitjoinJoin<cr>
 
 " autocommand for sourcing and other tasks
 autocmd BufWritePost ~/.zshrc !source ~/.zshrc

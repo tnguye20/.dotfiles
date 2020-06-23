@@ -32,3 +32,5 @@
 	required = true
 [core]
 	hookspath = .githooks
+[push]
+  default=upstream
