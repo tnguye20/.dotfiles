@@ -20,7 +20,7 @@ let mapleader=","
 set wildmode=longest,list
 set nolist
 set autoread
-set nowrap
+set wrap
 set linebreak
 set nojoinspaces
 set timeout timeoutlen=1000
@@ -151,10 +151,10 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " colorscheme palenight
 " colorscheme nord
 " colorscheme base16-default-dark
-colorscheme base16-solarized-dark
+" colorscheme base16-solarized-dark
 " colorscheme base16-darktooth
 " colorscheme base16-bespin
-" colorscheme base16-dracula
+colorscheme base16-dracula
 
 " let ayucolor="mirage" "for mirage version of theme"
 " let ayucolor="dark"   "for dark version of theme"
