@@ -18,3 +18,7 @@ fi
 [[ -b /dev/sda1 ]] && sudo mount -o gid=1000,uid=1000 /dev/sda1 /media/seagate
 [[ -b /dev/nvme0n1p3 ]] && sudo mount -o gid=1000,uid=1000 /dev/nvme0n1p3 /media/windows
 
+# Rsync files if necessary
+[[ ! -d ~/rsync ]] && mkdir ~/rsync
+rsync -avcX --progress tnguye20@w3.uvm.edu:~/rsync/ ~/rsync
+
