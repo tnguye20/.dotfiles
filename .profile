@@ -20,5 +20,5 @@ fi
 
 # Rsync files if necessary
 [[ ! -d ~/rsync ]] && mkdir ~/rsync
-rsync -avcX --progress tnguye20@w3.uvm.edu:~/rsync/ ~/rsync
+rsync -avcXL --progress tnguye20@w3.uvm.edu:~/rsync/ ~/rsync
 
