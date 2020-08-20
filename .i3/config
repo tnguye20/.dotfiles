@@ -324,6 +324,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id ~/.screenlayout/layout.sh
 exec --no-startup-id ~/scripts/randomWallpaper
+exec --no-startup-id ~/scripts/rsyncFilesFrom
 exec --no-startup-id mpd
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
