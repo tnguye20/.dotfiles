@@ -68,7 +68,6 @@ bindsym $mod+Shift+a exec --no-startup-id /usr/local/android-studio/bin/studio.s
 bindsym $mod+Shift+w exec ~/scripts/wallpaperChooser
 bindsym $mod+Ctrl+l exec ~/scripts/layoutChooser
 bindsym $mod+r exec urxvt -e ranger
-bindsym $mod+Ctrl+r exec urxvt -name randomwordpick -e "python3 ~/scripts/randomWords/randomWordPick"
 bindsym $mod+Shift+F2 exec gksu pcmanfm
 
 # mpd Music keybinding
@@ -266,6 +265,16 @@ bindsym $mod+Shift+r restart
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+e exec --no-startup-id ~/scripts/emojipicker
 bindsym $mod+b exec --no-startup-id ~/scripts/bluetoothPicker
+
+# Rsync Mode for syncing files
+bindsym $mod+Ctrl+r mode "$mode_rsync"
+set $mode_rsync rsync(f)romW3, rsync(t)oW3
+mode "$mode_rsync" {
+    bindsym f exec --no-startup-id  ~/scripts/rsyncFilesFrom, mode "default"
+    bindsym t exec --no-startup-id  ~/scripts/rsyncFilesTo, mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 
 # Set shut down, restart and locking features
 bindsym $mod+0 mode "$mode_system"
