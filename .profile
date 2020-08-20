@@ -20,4 +20,4 @@ fi
 
 # Rsync files if necessary
 [[ ! -d ~/rsync ]] && mkdir ~/rsync
-rsync -avcXLu --progress tnguye20@w3.uvm.edu:~/rsync/ ~/rsync
+rsync -avcXLu --progress --delete tnguye20@w3.uvm.edu:~/rsync/ ~/rsync
