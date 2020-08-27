@@ -20,7 +20,7 @@ bind N findnext -1
 bind ? fillcmdline find -?
 bind / fillcmdline find
 bind b fillcmdline bmarks
-bind <A-p> pin
+bind <A-p> fillcmdline tabpush
 bind o fillcmdline open
 bind O current_url open
 bind t fillcmdline tabopen
@@ -70,7 +70,8 @@ bind : fillcmdline_notrail
 " bind s fillcmdline open search
 " bind S fillcmdline tabopen search
 bind m fillcmdline source ~/.tridactylrc
-bind M fillcmdline mkt! ~/.tridactylrc
+" bind M fillcmdline mkt! ~/.tridactylrc
+bind M fillcmdline winmerge
 bind B fillcmdline bmarks -t
 bind ZZ qall
 bind f hint

@@ -14,14 +14,14 @@
 [difftool]
 	prompt = false
 
-; [merge]
-; 	tool = meld
-; [mergetool "meld"]
-; 	path = /usr/bin/meld
-;   cmd = meld $LOCAL $BASE $REMOTE -o $MERGED --diff $BASE $LOCAL --diff $BASE $REMOTE --auto-merge
 [merge]
-	tool = vimdiff
-	conflictstyle = diff3
+	tool = meld
+[mergetool "meld"]
+	path = /usr/bin/meld
+  cmd = meld $LOCAL $BASE $REMOTE -o $MERGED --diff $BASE $LOCAL --diff $BASE $REMOTE --auto-merge
+; [merge]
+; 	tool = vimdiff
+; 	conflictstyle = diff3
 
 [mergetool]
 	prompt = false
