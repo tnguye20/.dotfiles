@@ -70,7 +70,6 @@ filetype indent on
 Plug 'chriskempson/base16-vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'nelstrom/vim-visual-star-search'
-Plug 'scrooloose/nerdtree'
 " Plug 'justinmk/vim-sneak'
 " Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-commentary'
@@ -99,7 +98,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'dylanaraps/wal.vim'
-Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/nerdtree'
 Plug 'junegunn/goyo.vim'
 Plug 'terryma/vim-multiple-cursors'
 " Plug 'easymotion/vim-easymotion'
@@ -110,6 +109,8 @@ Plug 'https://github.com/tpope/vim-surround.git'
 " Plug 'mhinz/vim-grepper'
 Plug 'frazrepo/vim-rainbow'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'francoiscabrol/ranger.vim'
+
 " ======== REACT/JSX SUPPORT  ========
 Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript'
@@ -136,8 +137,7 @@ call plug#end()
 " ============ general settings ===========
 let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint', 'coc-json', 'coc-json', 'coc-prettier', 'coc-css', 'coc-ultisnips', 'coc-snippets']
 let base16colorspace="256"
-let g:airline_theme='gruvbox'
-let NERDTreeShowHidden=1
+" let NERDTreeShowHidden=1
 " let NERDTreeMapOpenInTab='\t'
 let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
 
@@ -152,13 +152,19 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " colorscheme nord
 " colorscheme base16-default-dark
 " colorscheme base16-solarized-dark
+" let g:airline_theme='solarized'
 " colorscheme base16-darktooth
 " colorscheme base16-bespin
-colorscheme base16-dracula
+" colorscheme base16-dracula
+" let g:airline_theme='dracula'
+
+" let g:airline_theme='base16'
+" let g:airline_theme='jellybeans'
 
 " let ayucolor="mirage" "for mirage version of theme"
-" let ayucolor="dark"   "for dark version of theme"
-" colorscheme ayu
+let ayucolor="dark"   "for dark version of theme"
+colorscheme ayu
+let g:airline_theme='ayu_dark'
 
 " set signcolumn="yes"
 " set signcolumn=number
@@ -211,7 +217,10 @@ let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 let g:gitgutter_set_sign_backgrounds = 1
 " You gotta add a lint npm script to each package.json you want linting for
 "let g:jsx_ext_required=0
-let g:airline#extensions#hunks#non_zero_only = 1
+let g:airline#extensions#tabline#enabled = 1
+" let g:airline_section_b='%{getcwd()}'
+" let g:airline#extensions#hunks#non_zero_only = 1
+let g:airline#extensions#tabline#formatter = 'default'
 
 " Mappings
 noremap  <buffer> <silent> k gk
@@ -221,7 +230,8 @@ noremap  <buffer> <silent> $ g$
 inoremap jk <Esc>
 
 map <Leader><Space> :noh<CR>
-map <C-o> :NERDTreeToggle<CR>
+" map <C-o> :NERDTreeToggle<CR>
+map <C-o> :RangerWorkingDirectoryNewTab<CR>
 nnoremap <c-s> :w<CR>
 inoremap <c-s> <Esc><Esc>:w<CR>
 " :nmap <c-x> :x<CR>

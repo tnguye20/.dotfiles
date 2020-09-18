@@ -209,6 +209,7 @@ alias tl="tmux ls"
 alias ta="tmux attach -t A"
 alias tb="tmux attach -t B"
 alias suv="sudo vim -u $HOME/.vimrc $@"
+alias dusk="du -sk *| sort -rn"
 # alias feh="swallow feh"
 
 alias gt="git status"
