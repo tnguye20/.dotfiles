@@ -110,6 +110,7 @@ Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'frazrepo/vim-rainbow'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'francoiscabrol/ranger.vim'
+" Plug 'https://github.com/puremourning/vimspector'
 
 " ======== REACT/JSX SUPPORT  ========
 Plug 'vim-airline/vim-airline-themes'
@@ -121,12 +122,12 @@ Plug 'ntpeters/vim-better-whitespace'
 
 " ======== VIM THEMES  =======
 Plug 'rafi/awesome-vim-colorschemes'
-Plug 'https://github.com/joshdick/onedark.vim.git'
-Plug 'https://github.com/rakr/vim-one.git'
-Plug 'drewtempelmeyer/palenight.vim'
-Plug 'ayu-theme/ayu-vim'
-Plug 'arcticicestudio/nord-vim'
-Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'https://github.com/joshdick/onedark.vim.git'
+" Plug 'https://github.com/rakr/vim-one.git'
+" Plug 'drewtempelmeyer/palenight.vim'
+" Plug 'ayu-theme/ayu-vim'
+" Plug 'arcticicestudio/nord-vim'
+" Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 " ============ Prettier on save ===========
@@ -140,20 +141,20 @@ let base16colorspace="256"
 " let NERDTreeShowHidden=1
 " let NERDTreeMapOpenInTab='\t'
 let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
-
+" let g:vimspector_enable_mappings = 'HUMAN'
+" packadd! vimspector
 " colorscheme wal
 " colorscheme gruvbox
 " colorscheme OceanicNext
 " colorscheme one
 " colorscheme onedark
-" colorscheme dracula
 " let g:dracula_colorterm = 0
 " colorscheme palenight
 " colorscheme nord
 " colorscheme base16-default-dark
 " colorscheme base16-solarized-dark
 " let g:airline_theme='solarized'
-" colorscheme base16-darktooth
+colorscheme base16-darktooth
 " colorscheme base16-bespin
 " colorscheme base16-dracula
 " let g:airline_theme='dracula'
@@ -162,9 +163,10 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " let g:airline_theme='jellybeans'
 
 " let ayucolor="mirage" "for mirage version of theme"
-let ayucolor="dark"   "for dark version of theme"
-colorscheme ayu
-let g:airline_theme='ayu_dark'
+" let g:airline_theme='ayu_mirage'
+" let ayucolor="dark"   "for dark version of theme"
+let g:airline_theme='one'
+" colorscheme ayu
 
 " set signcolumn="yes"
 " set signcolumn=number
