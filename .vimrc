@@ -111,6 +111,7 @@ Plug 'frazrepo/vim-rainbow'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'francoiscabrol/ranger.vim'
 " Plug 'https://github.com/puremourning/vimspector'
+" Plug 'airblade/vim-rooter'
 
 " ======== REACT/JSX SUPPORT  ========
 Plug 'vim-airline/vim-airline-themes'
@@ -123,8 +124,8 @@ Plug 'ntpeters/vim-better-whitespace'
 " ======== VIM THEMES  =======
 Plug 'rafi/awesome-vim-colorschemes'
 " Plug 'https://github.com/joshdick/onedark.vim.git'
+Plug 'drewtempelmeyer/palenight.vim'
 " Plug 'https://github.com/rakr/vim-one.git'
-" Plug 'drewtempelmeyer/palenight.vim'
 " Plug 'ayu-theme/ayu-vim'
 " Plug 'arcticicestudio/nord-vim'
 " Plug 'dracula/vim', { 'as': 'dracula' }
@@ -154,7 +155,7 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " colorscheme base16-default-dark
 " colorscheme base16-solarized-dark
 " let g:airline_theme='solarized'
-colorscheme base16-darktooth
+" colorscheme base16-darktooth
 " colorscheme base16-bespin
 " colorscheme base16-dracula
 " let g:airline_theme='dracula'
@@ -162,11 +163,11 @@ colorscheme base16-darktooth
 " let g:airline_theme='base16'
 " let g:airline_theme='jellybeans'
 
-" let ayucolor="mirage" "for mirage version of theme"
-" let g:airline_theme='ayu_mirage'
+let ayucolor="mirage" "for mirage version of theme"
+let g:airline_theme='ayu_mirage'
 " let ayucolor="dark"   "for dark version of theme"
 let g:airline_theme='one'
-" colorscheme ayu
+colorscheme ayu
 
 " set signcolumn="yes"
 " set signcolumn=number
@@ -252,6 +253,7 @@ nnoremap <Leader>S :set spell!<CR>
 nnoremap <Leader><Leader>p :set paste!<CR>
 
 map <c-p> :Files<cr>
+map <c-b> :Buffers<cr>
 map <c-g> :Goyo<cr>
 
 map <Leader>] :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
