@@ -157,6 +157,8 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator os_icon background_job
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
+antigen bundle git
+antigen bundle chrissicool/zsh-256color
 antigen bundle mafredri/zsh-async
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
@@ -261,3 +263,19 @@ export PATH=$PATH:$HOME/packages/flutter/bin
 
 # Increase speed when holding down keys
 xset r rate 300 50
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/tnguye20/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/tnguye20/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/tnguye20/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/tnguye20/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
