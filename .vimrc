@@ -153,8 +153,8 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " colorscheme palenight
 " colorscheme nord
 " colorscheme base16-default-dark
-" colorscheme base16-solarized-dark
-" let g:airline_theme='solarized'
+colorscheme base16-solarized-dark
+let g:airline_theme='solarized'
 " colorscheme base16-darktooth
 " colorscheme base16-bespin
 " colorscheme base16-dracula
@@ -163,11 +163,11 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " let g:airline_theme='base16'
 " let g:airline_theme='jellybeans'
 
-let ayucolor="mirage" "for mirage version of theme"
-let g:airline_theme='ayu_mirage'
+" let ayucolor="mirage" "for mirage version of theme"
+" let g:airline_theme='ayu_mirage'
 " let ayucolor="dark"   "for dark version of theme"
-let g:airline_theme='one'
-colorscheme ayu
+" let g:airline_theme='one'
+" colorscheme ayu
 
 " set signcolumn="yes"
 " set signcolumn=number

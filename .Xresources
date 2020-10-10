@@ -99,6 +99,8 @@ URxvt*saveLines:                  5000
 URxvt*inheritPixmap:            true
 URxvt*transparent:              true
 URxvt*shading:                  5
+/* urxvt*depth: 32 */
+/* urxvt*background: rgba:0000/0000/0200/c800 */
 
 ! Normal copy-paste keybindings without perls
 URxvt.iso14755:                   false

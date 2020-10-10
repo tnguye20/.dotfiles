@@ -35,3 +35,5 @@
 	hookspath = .githooks
 [push]
   default=upstream
+[pull]
+	rebase = true

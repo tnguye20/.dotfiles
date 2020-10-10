@@ -68,6 +68,7 @@ bindsym $mod+w exec --no-startup-id ~/scripts/randomWallpaper
 bindsym $mod+ctrl+d exec --no-startup-id ~/scripts/instantDate
 bindsym $mod+Shift+a exec --no-startup-id /usr/local/android-studio/bin/studio.sh
 bindsym $mod+Shift+w exec ~/scripts/wallpaperChooser
+bindsym $mod+Ctrl+k exec ~/scripts/processKiller
 bindsym $mod+Ctrl+l exec ~/scripts/layoutChooser
 bindsym $mod+r exec urxvt -e ranger
 bindsym $mod+Shift+F2 exec gksu pcmanfm
@@ -329,6 +330,7 @@ bindsym $mod+o resize grow width 15 px or 15 ppt
 
 # Lock screen
 bindsym $mod+9 exec --no-startup-id blurlock
+bindsym $mod+Shift+9 exec --no-startup-id ~/scripts/lockAndSlide
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -341,6 +343,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id copyq
+exec --no-startup-id xcompmgr
 # exec --no-startup-id xautolock -time 15 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
@@ -430,7 +433,7 @@ bindsym $mod+Shift+b bar mode toggle
 # Set inner/outer gaps
 # gaps inner 14
 # gaps outer -2
-gaps inner 9
+gaps inner 0
 gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
