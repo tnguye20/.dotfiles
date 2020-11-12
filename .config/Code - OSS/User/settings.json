@@ -1,6 +1,6 @@
 {
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Ayu Dark Bordered",
+    "workbench.colorTheme": "Activate UMBRA protocol",
     "editor.fontFamily": "Iosevka Medium",
     "editor.lineNumbers": "relative",
     "editor.fontSize": 16,
@@ -38,4 +38,5 @@
     ],
     "vim.overrideCopy": true,
     "liveServer.settings.donotShowInfoMsg": true,
+    "explorer.confirmDelete": false,
 }
