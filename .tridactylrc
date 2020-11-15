@@ -160,13 +160,176 @@ set customthemes.base16-solarized-dark :root {    /* Solarized-dark by Chris Kem
 /* } */
 
 set customthemes.base16-tomorrow-night :root { /* Tomorrow-night by Chris Kempson (http://chriskempson.com) */
+set customthemes.base16-green-screen :root {    /* Green-screen by Chris Kempson (http://chriskempson.com) */
+    --base00: #001100;
+    --base01: #003300;
+    --base02: #005500;
+    --base03: #007700;
+    --base04: #009900;
+    --base05: #00bb00;
+    --base06: #00dd00;
+    --base07: #00ff00;
+    --base08: #007700;
+    --base09: #009900;
+    --base0A: #007700;
+    --base0B: #00bb00;
+    --base0C: #005500;
+    --base0D: #009900;
+    --base0E: #00bb00;
+    --base0F: #005500;
+
+    --tridactyl-fg: var(--base05);
+    --tridactyl-bg: var(--base00);
+    --tridactyl-url-fg: var(--base08);
+    --tridactyl-url-bg: var(--base00);
+    --tridactyl-highlight-box-bg: var(--base0B);
+    --tridactyl-highlight-box-fg: var(--base00);
+
+    /* Hint character tags */
+    --tridactyl-hintspan-fg: var(--base00) !important;
+    --tridactyl-hintspan-bg: var(--base0A) !important;
+
+    /* Element Highlights */
+    --tridactyl-hint-active-fg: none;
+    --tridactyl-hint-active-bg: none;
+    --tridactyl-hint-active-outline: none;
+    --tridactyl-hint-bg: none;
+    --tridactyl-hint-outline: none;
+}
+
+#command-line-holder {    order: 1;
+    border: 2px solid var(--base0B);
+    color: var(--tridactyl-bg);
+}
+
+#tridactyl-input {    padding: 1rem;
+    color: var(--tridactyl-fg);
+    width: 90%;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    background: var(--tridactyl-bg);
+    padding-left: unset;
+    padding: 1rem;
+}
+
+#completions table {    font-size: 0.8rem;
+    font-weight: 200;
+    border-spacing: 0;
+    table-layout: fixed;
+    padding: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#completions > div {    max-height: calc(20 * var(--option-height));
+    min-height: calc(10 * var(--option-height));
+}
+
+/* COMPLETIONS */
+
+#completions {    --option-height: 1.4em;
+    color: var(--tridactyl-fg);
+    background: var(--tridactyl-bg);
+    display: inline-block;
+    font-size: unset;
+    font-weight: 200;
+    overflow: hidden;
+    width: 100%;
+    border-top: unset;
+    order: 2;
+}
+
+/* Olie doesn't know how CSS inheritance works */
+#completions .HistoryCompletionSource {    max-height: unset;
+    min-height: unset;
+}
+
+#completions .HistoryCompletionSource table {    width: 100%;
+    font-size: 9pt;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+/* redundancy 2: redundancy 2: more redundancy */
+#completions .BmarkCompletionSource {    max-height: unset;
+    min-height: unset;
+}
+
+#completions table tr td.prefix,#completions table tr td.privatewindow,#completions table tr td.container,#completions table tr td.icon {    display: none;
+}
+
+#completions .BufferCompletionSource table {    width: unset;
+    font-size: unset;
+    border-spacing: unset;
+    table-layout: unset;
+}
+
+#completions table tr .title {    width: 50%;
+}
+
+#completions table tr {    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#completions .sectionHeader {    background: unset;
+    font-weight: 200;
+    border-bottom: unset;
+    padding: 1rem !important;
+    padding-left: unset;
+    padding-bottom: 0.2rem;
+}
+
+#cmdline_iframe {    position: fixed !important;
+    bottom: unset;
+    top: 25% !important;
+    left: 10% !important;
+    z-index: 2147483647 !important;
+    width: 80% !important;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px !important;
+}
+
+.TridactylStatusIndicator {    position: fixed !important;
+    bottom: 0 !important;
+    background: var(--tridactyl-bg) !important;
+    border: unset !important;
+    border: 1px var(--base0B) solid !important;
+    font-size: 12pt !important;
+    /*font-weight: 200 !important;*/
+    padding: 0.8ex !important;
+}
+
+#completions .focused {    background: var(--base0B);
+    color: var(--base00);
+}
+
+#completions .focused .url {    background: var(--base0B);
+    color: var(--base00);
+}
+/* #Ocean-normal { */
+/*  border-color: green !important; */
+/* } */
+
+/* #Ocean-insert { */
+/*  border-color: yellow !important; */
+/* } */
+
 set modeindicator false
-set theme base16-solarized-dark
-set update.lastchecktime 1602946441622
+set theme base16-green-screen
+set update.lastchecktime 1605471305656
 set update.lastnaggedversion 1.20.2
+set update.nag true
+set update.nagwait 7
+set update.checkintervalsecs 86400
 
 " Binds
 bind --mode=insert <A-l> composite unfocus | mode normal
+bind --mode=insert <Escape> composite unfocus | mode normal
+bind --mode=insert <C-[> composite unfocus | mode normal
+bind --mode=insert <C-i> editor
+bind --mode=insert <AC-Escape> mode normal
+bind --mode=insert <AC-`> mode normal
+bind --mode=insert <S-Escape> mode ignore
 bind $ scrollto 100 x
 bind ,<Space> nohlsearch
 bind . repeat
@@ -202,7 +365,7 @@ bind ;gw hint -qw
 bind ;gy hint -qy
 bind ;i hint -i
 bind ;k hint -k
-bind ;l hint -F e => e.dispatchEvent(new MouseEvent('mouseover', {}))
+bind ;l hint -F e => { e.dispatchEvent(new MouseEvent('mouseover', {})); e.dispatchEvent(new MouseEvent('mouseenter', {})) }
 bind ;m composite hint -pipe img src | js -p tri.excmds.open('images.google.com/searchbyimage?image_url=' + JS_ARG)
 bind ;o hint
 bind ;p hint -p
@@ -300,11 +463,101 @@ bind zm zoom 0.5 true
 bind zo zoom -0.1 true
 bind zr zoom -0.5 true
 bind zz zoom 1
+bind yt clipboard yanktitle
+bind <C-e> scrollline 10
+bind <C-y> scrollline -10
+bind h scrollpx -50
+bind l scrollpx 50
+bind <C-f> scrollpage 1
+bind <C-b> scrollpage -1
+bind <C-v> nmode ignore 1 mode normal
+bind H back
+bind L forward
+bind << tabmove -1
+bind >> tabmove +1
+bind U undo window
+bind g; changelistjump -1
+bind J tabprev
+bind ;h hint -h
+bind v hint -h
+bind ;a hint -a
+bind ;gF hint -qb
 
 " Aliases
 alias fp firefoxsyncpull
 alias fpp firefoxsyncpush
 alias tpu tabpush
+command alias command
+alias au autocmd
+alias aucon autocontain
+alias audel autocmddelete
+alias audelete autocmddelete
+alias blacklistremove autocmddelete DocStart
+alias b tab
+alias clsh clearsearchhighlight
+alias nohlsearch clearsearchhighlight
+alias noh clearsearchhighlight
+alias o open
+alias w winopen
+alias t tabopen
+alias tabnew tabopen
+alias tabm tabmove
+alias tabo tabonly
+alias tn tabnext_gt
+alias bn tabnext_gt
+alias tnext tabnext_gt
+alias bnext tabnext_gt
+alias tp tabprev
+alias tN tabprev
+alias bp tabprev
+alias bN tabprev
+alias tprev tabprev
+alias bprev tabprev
+alias tabfirst tab 1
+alias tablast tab 0
+alias bfirst tabfirst
+alias blast tablast
+alias tfirst tabfirst
+alias tlast tablast
+alias buffer tab
+alias bufferall taball
+alias bd tabclose
+alias bdelete tabclose
+alias quit tabclose
+alias q tabclose
+alias qa qall
+alias sanitize sanitise
+alias tutorial tutor
+alias h help
+alias unmute mute unmute
+alias authors credits
+alias openwith hint -W
+alias ! exclaim
+alias !s exclaim_quiet
+alias containerremove containerdelete
+alias colours colourscheme
+alias colorscheme colourscheme
+alias colors colourscheme
+alias man help
+alias !js fillcmdline_tmp 3000 !js is deprecated. Please use js instead
+alias !jsb fillcmdline_tmp 3000 !jsb is deprecated. Please use jsb instead
+alias get_current_url js document.location.href
+alias current_url composite get_current_url | fillcmdline_notrail 
+alias stop js window.stop()
+alias zo zoom
+alias installnative nativeinstall
+alias nativeupdate updatenative
+alias mkt mktridactylrc
+alias mkt! mktridactylrc -f
+alias mktridactylrc! mktridactylrc -f
+alias mpvsafe js -p tri.excmds.shellescape(JS_ARG).then(url => tri.excmds.exclaim_quiet('mpv ' + url))
+alias exto extoptions
+alias extpreferences extoptions
+alias extp extpreferences
+alias prefset setpref
+alias prefremove removepref
+alias tabclosealltoright tabcloseallto right
+alias tabclosealltoleft tabcloseallto left
 
 " For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
 " vim: set filetype=tridactyl

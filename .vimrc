@@ -218,17 +218,17 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " let g:airline_theme='base16'
 " let g:airline_theme='jellybeans'
 
-" let ayucolor="mirage" "for mirage version of theme"
-" let g:airline_theme='ayu_mirage'
+let ayucolor="mirage" "for mirage version of theme"
+let g:airline_theme='ayu_mirage'
 " let ayucolor="dark"   "for dark version of theme"
 " let g:airline_theme='one'
-" colorscheme ayu
+colorscheme ayu
 
-let g:lightline = { 'colorscheme': 'nightfly' }
-let g:nightflyUnderlineMatchParen = 1
-let g:nightflyCursorColor = 1
-let g:nightflyTerminalColors = 0
-colorscheme nightfly
+" let g:lightline = { 'colorscheme': 'nightfly' }
+" let g:nightflyUnderlineMatchParen = 1
+" let g:nightflyCursorColor = 1
+" let g:nightflyTerminalColors = 0
+" colorscheme nightfly
 
 " set signcolumn="yes"
 " set signcolumn=number
@@ -339,6 +339,34 @@ map <Leader>j :resize -3<CR>
 
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
+
+" Goyo Functions
+" function! s:goyo_enter()
+"   if executable('tmux') && strlen($TMUX)
+"     silent !tmux set status off
+"     silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+"   endif
+"   set noshowmode
+"   set noshowcmd
+"   set scrolloff=999
+"   set laststatus=2
+"   AirlineToggle
+" endfunction
+
+" function! s:goyo_leave()
+"   if executable('tmux') && strlen($TMUX)
+"     silent !tmux set status on
+"     silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+"   endif
+"   set showmode
+"   set showcmd
+"   set scrolloff=5
+"   AirlineToggle
+" endfunction
+" autocmd! User GoyoEnter nested :AirlineToggle
+" autocmd! User GoyoLeave nested call <SID>goyo_leave()
+" autocmd! User GoyoEnter nested set eventignore=FocusGained
+" autocmd! User GoyoLeave nested set eventignore=
 
 " autocommand for sourcing and other tasks
 autocmd BufWritePost ~/.zshrc !source ~/.zshrc
