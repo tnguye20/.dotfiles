@@ -254,6 +254,7 @@ for_window [class="URxvt" instance="calculator"] floating enable center
 for_window [class="URxvt" instance="randomwordpick"] floating enable center
 for_window [class="URxvt" instance="float"] floating enable border pixel 2 move absolute position 15px 15px
 for_window [class="Gvim"] floating enable border pixel 2
+for_window [title="emoji"] floating enable border pixel 2
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -267,6 +268,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+e exec --no-startup-id ~/scripts/emojipicker
+# bindsym $mod+e exec terminology -e ~/scripts/emojipicker2
 bindsym $mod+b exec --no-startup-id ~/scripts/bluetoothPicker
 
 # Rsync Mode for syncing files

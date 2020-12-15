@@ -174,6 +174,7 @@ alias cdp="cd $HOME/packages"
 alias cdm="cd /media"
 alias cdrs="cd $HOME/rsync"
 alias cdt="cd /tmp"
+alias b="bat"
 alias v="vim"
 alias vx="vim $HOME/.Xresources"
 alias v3="vim $HOME/.i3/config"
@@ -236,9 +237,13 @@ export RANGER_LOAD_DEFAULT_RC=false
 export FPP_EDITOR="vim -p"
 export PATH=$PATH:$HOME/scripts
 export PATH=$PATH:$HOME/packages/flutter/bin
+export PATH=$PATH:/usr/local/go/bin
 # neofetch --w3m $HOME/.dotfiles/.wallpaper/mr_robot.jpg --size 350px
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Increase speed when holding down keys
 xset r rate 300 50
+
+# Boot into starship
+# eval "$(starship init zsh)"
