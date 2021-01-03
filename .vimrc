@@ -211,7 +211,7 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " colorscheme base16-default-dark
 " colorscheme base16-solarized-dark
 " let g:airline_theme='solarized'
-" colorscheme base16-darktooth
+colorscheme base16-darktooth
 " colorscheme base16-bespin
 " colorscheme base16-dracula
 
@@ -220,9 +220,9 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 
 " let ayucolor="mirage" "for mirage version of theme"
 " let g:airline_theme='ayu_mirage'
-let ayucolor="dark"   "for dark version of theme"
-let g:airline_theme='one'
-colorscheme ayu
+" let ayucolor="dark"   "for dark version of theme"
+" let g:airline_theme='one'
+" colorscheme ayu
 
 " let g:lightline = { 'colorscheme': 'nightfly' }
 " let g:nightflyUnderlineMatchParen = 1
@@ -278,7 +278,7 @@ let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 let g:gitgutter_set_sign_backgrounds = 1
 " You gotta add a lint npm script to each package.json you want linting for
 "let g:jsx_ext_required=0
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline#extensions#wordcount#enabled = 1
 let g:airline#extensions#wordcount#filetypes = '\vasciidoc|help|mail|markdown|markdown.pandoc|pandoc|org|rst|tex|text'
@@ -353,19 +353,19 @@ function! s:goyo_enter()
   " AirlineToggle
 endfunction
 
-function! s:goyo_leave()
-  if executable('tmux') && strlen($TMUX)
-    silent !tmux set status on
-    silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
-  endif
-  set showmode
-  set showcmd
-  set scrolloff=5
-  quit!
-  " AirlineToggle
-endfunction
+" function! s:goyo_leave()
+"   if executable('tmux') && strlen($TMUX)
+"     silent !tmux set status on
+"     silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+"   endif
+"   set showmode
+"   set showcmd
+"   set scrolloff=5
+"   quit!
+"   " AirlineToggle
+" endfunction
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave()
+" autocmd! User GoyoLeave nested call <SID>goyo_leave()
 " autocmd! User GoyoEnter nested set eventignore=FocusGained
 " autocmd! User GoyoLeave nested set eventignore=
 

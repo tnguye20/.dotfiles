@@ -8,7 +8,7 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 2
+new_window pixel 1
 new_float normal
 
 # Hide borders
@@ -17,11 +17,12 @@ hide_edge_borders none
 # change borders
 # bindsym $mod+Shift+u border none
 # bindsym $mod+Shift+y border pixel 1
-# bindsym $mod+n border normal
+bindsym $mod+n border normal
+bindsym $mod+Shift+n border pixel 1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font xft:URWGothic-Book 11
+font xft:IosevkaLight 11
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -47,7 +48,7 @@ exec --no-startup-id volumeicon
 bindsym $mod+Ctrl+s exec st -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
-#bindsym $mod+Ctrl+m exec pavucontrol
+bindsym $mod+Ctrl+m exec pavucontrol
 
 ################################################################################################
 
@@ -75,13 +76,13 @@ bindsym $mod+Shift+F2 exec gksu pcmanfm
 
 # mpd Music keybinding
 # bindsym $mod+m exec --no-startup-id terminology -e 'ncmpcpp'
-bindsym $mod+m exec --no-startup-id st -e 'ncmpcpp'
-bindsym XF86AudioPlay exec --no-startup-id terminal -e 'mpc toggle'
-bindsym XF86AudioStop exec --no-startup-id terminal -e 'mpc stop'
-bindsym XF86AudioPrev exec --no-startup-id terminal -e 'mpc prev'
-bindsym XF86AudioNext exec --no-startup-id terminal -e 'mpc next'
-bindsym $mod+Ctrl+m exec --no-startup-id terminal -e 'mpc update'
-bindsym $mod+Shift+m exec --no-startup-id terminal -e 'pkill -9 ncmpcpp'
+# bindsym $mod+m exec --no-startup-id st -e 'ncmpcpp'
+# bindsym XF86AudioPlay exec --no-startup-id terminal -e 'mpc toggle'
+# bindsym XF86AudioStop exec --no-startup-id terminal -e 'mpc stop'
+# bindsym XF86AudioPrev exec --no-startup-id terminal -e 'mpc prev'
+# bindsym XF86AudioNext exec --no-startup-id terminal -e 'mpc next'
+# bindsym $mod+Ctrl+m exec --no-startup-id terminal -e 'mpc update'
+# bindsym $mod+Shift+m exec --no-startup-id terminal -e 'pkill -9 ncmpcpp'
 # cmus Music keybinding
 # bindsym $mod+m exec st -e 'nc'
 # bindsym XF86AudioPlay exec st -e 'cmus-remote -p'
@@ -131,7 +132,7 @@ bindsym $mod+Shift+Right move right
 # workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
 # bindsym $mod+b workspace back_and_forth
-# bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
+# bindsym $mod+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
 bindsym $mod+bar split h;exec notify-send 'tile horizontally'
@@ -254,7 +255,7 @@ for_window [class="URxvt" instance="calculator"] floating enable center
 for_window [class="URxvt" instance="randomwordpick"] floating enable center
 for_window [class="URxvt" instance="float"] floating enable border pixel 2 move absolute position 15px 15px
 for_window [class="Gvim"] floating enable border pixel 2
-for_window [title="emoji"] floating enable border pixel 2
+# for_window [title="emoji"] floating enable border pixel 2
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -268,8 +269,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+e exec --no-startup-id ~/scripts/emojipicker
-# bindsym $mod+e exec terminology -e ~/scripts/emojipicker2
-bindsym $mod+b exec --no-startup-id ~/scripts/bluetoothPicker
+# bindsym $mod+e exec --no-startup-id terminology -e ~/scripts/emojipicker2
 
 # Rsync Mode for syncing files
 bindsym $mod+Ctrl+r mode "$mode_rsync"
@@ -279,6 +279,33 @@ mode "$mode_rsync" {
     bindsym t exec --no-startup-id  ~/scripts/rsyncFilesTo, mode "default"
     bindsym Return mode "default"
     bindsym Escape mode "default"
+}
+
+# Mouse mode for moving mouse with Vim keys
+bindsym $mod+m mode "$mode_mouse"
+set $mode_mouse Left(h), Right(l), Up(k), Down(j), (C)lick, Cancel(x)
+mode "$mode_mouse" {
+  bindsym h exec --no-startup-id xdotool mousemove_relative -- -20 0
+  bindsym Shift+h exec --no-startup-id xdotool mousemove_relative -- -70 0
+
+  bindsym l exec --no-startup-id xdotool mousemove_relative -- 20 0
+  bindsym Shift+l exec --no-startup-id xdotool mousemove_relative -- 70 0
+
+  bindsym j exec --no-startup-id xdotool mousemove_relative -- 0 20
+  bindsym Shift+j exec --no-startup-id xdotool mousemove_relative -- 0 70
+  bindsym u exec --no-startup-id xdotool click --repeat 5 -c 5
+
+  bindsym k exec --no-startup-id xdotool mousemove_relative -- 0 -20
+  bindsym Shift+k exec --no-startup-id xdotool mousemove_relative -- 0 -70
+  bindsym i exec --no-startup-id xdotool click --repeat 5 -c 4
+
+  bindsym c exec --no-startup-id xdotool click -c 1
+  bindsym Shift+c exec --no-startup-id xdotool click -c 3
+
+  bindsym x mode "default"
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym mod mode "default"
 }
 
 # Set shut down, restart and locking features
@@ -386,12 +413,12 @@ bar {
   mode hide
 	i3bar_command i3bar
 	# status_command i3status
-  status_command ~/bumblebee-status/bumblebee-status -m xrandr spacer spacer mpd spacer spacer time date spacer disk memory cpu spacer battery spacer kernel caffeine -p interval=1 -t iceberg
+  status_command ~/bumblebee-status/bumblebee-status -m xrandr spacer spacer mpd spacer spacer time date spacer disk memory cpu spacer battery spacer kernel hostname -p interval=1 -t iceberg-contrast
 	position bottom
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 	tray_output primary
-  font pango:Iosevka, Font Awesome 10
+  font pango:Iosevka Light, Font Awesome 10
 
 	bindsym button4 nop
 	bindsym button5 nop
@@ -422,7 +449,7 @@ bindsym $mod+Shift+b bar mode toggle
 # class                   border  backgr. text    indicator child_border
   client.focused_inactive #0d1010 #212121 #d9d9d9 #0d1010   #063340
   client.unfocused        #0d1010 #212121 #d9d9d9 #424242   #063340
-  client.focused          #d9d9d9 #cecece #000000 #d9d9d9   #d9d9d9
+  client.focused          #d9d9d9 #cecece #000000 #d9d9d9   #4E8098
   client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
   client.placeholder      #000000 #0c0c0c #ffffff #000000
 
@@ -433,10 +460,10 @@ bindsym $mod+Shift+b bar mode toggle
 #############################
 
 # Set inner/outer gaps
-# gaps inner 14
-# gaps outer -2
-gaps inner 0
-gaps outer 0
+gaps inner 11
+gaps outer -2
+# gaps inner 0
+# gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -487,8 +514,13 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
+popup_during_fullscreen smart
+
+# Master Window Swap
+bindsym $mod+Shift+m mark "_swapee", focus left, swap with mark "_swapee", focus left, unmark "_swapee"
+
 # Custom Crap from Reddit
 default_orientation vertical #start in opposite orientation from your monitor
 for_window [class=".*"] split toggle #toggles split at each new window
-bindsym $mod+shift+q split toggle restart #kill command resets the split
+bindsym $mod+Shift+q split toggle restart #kill command resets the split
 bindsym $mod+Shift+e layout toggle split # should already exist but use if split orientation  messes up

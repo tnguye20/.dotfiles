@@ -3,7 +3,7 @@
         "rust": "export RUST_BACKTRACE=1 && cd $dir && cargo run the poem.txt"
     },
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Abyss",
+    "workbench.colorTheme": "Ayu Mirage Bordered",
     "editor.fontFamily": "Iosevka Medium",
     "editor.lineNumbers": "relative",
     "editor.fontSize": 16,
@@ -57,5 +57,13 @@
     "editor.largeFileOptimizations": false,
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "python.showStartPage": false,
+    "jupyter.interactiveWindowMode": "perFile"
 }

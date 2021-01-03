@@ -316,8 +316,8 @@ set customthemes.base16-green-screen :root {    /* Green-screen by Chris Kempson
 
 set modeindicator false
 set theme base16-green-screen
-set update.lastchecktime 1605471305656
-set update.lastnaggedversion 1.20.2
+set update.lastchecktime 1609428659208
+set update.lastnaggedversion 1.20.4
 set update.nag true
 set update.nagwait 7
 set update.checkintervalsecs 86400
@@ -482,6 +482,8 @@ bind ;h hint -h
 bind v hint -h
 bind ;a hint -a
 bind ;gF hint -qb
+bind g! jumble
+bind ;K hint -K
 
 " Aliases
 alias fp firefoxsyncpull
@@ -542,7 +544,7 @@ alias man help
 alias !js fillcmdline_tmp 3000 !js is deprecated. Please use js instead
 alias !jsb fillcmdline_tmp 3000 !jsb is deprecated. Please use jsb instead
 alias get_current_url js document.location.href
-alias current_url composite get_current_url | fillcmdline_notrail 
+alias current_url composite get_current_url | fillcmdline_notrail
 alias stop js window.stop()
 alias zo zoom
 alias installnative nativeinstall
@@ -558,6 +560,7 @@ alias prefset setpref
 alias prefremove removepref
 alias tabclosealltoright tabcloseallto right
 alias tabclosealltoleft tabcloseallto left
+alias reibadailty jumble
 
 " For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
 " vim: set filetype=tridactyl
