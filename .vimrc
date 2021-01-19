@@ -179,6 +179,7 @@ Plug 'rafi/awesome-vim-colorschemes'
 " Plug 'https://github.com/joshdick/onedark.vim.git'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'bluz71/vim-nightfly-guicolors'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 " Plug 'https://github.com/rakr/vim-one.git'
 " Plug 'ayu-theme/ayu-vim'
 " Plug 'arcticicestudio/nord-vim'
@@ -198,20 +199,21 @@ let base16colorspace="256"
 let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
 " let g:vimspector_enable_mappings = 'HUMAN'
 " packadd! vimspector
+"
 " colorscheme wal
 " colorscheme gruvbox
 " colorscheme OceanicNext
 " colorscheme one
 " colorscheme onedark
 " let g:dracula_colorterm = 0
-" colorscheme palenight
+colorscheme palenight
 " colorscheme nord
 " colorscheme mountaineer
 " colorscheme base16-horizon-dark
 " colorscheme base16-default-dark
 " colorscheme base16-solarized-dark
 " let g:airline_theme='solarized'
-colorscheme base16-darktooth
+" colorscheme base16-darktooth
 " colorscheme base16-bespin
 " colorscheme base16-dracula
 
@@ -222,6 +224,7 @@ colorscheme base16-darktooth
 " let g:airline_theme='ayu_mirage'
 " let ayucolor="dark"   "for dark version of theme"
 " let g:airline_theme='one'
+" let ayucolor="light"   "for dark light of theme"
 " colorscheme ayu
 
 " let g:lightline = { 'colorscheme': 'nightfly' }
@@ -229,6 +232,11 @@ colorscheme base16-darktooth
 " let g:nightflyCursorColor = 1
 " let g:nightflyTerminalColors = 0
 " colorscheme nightfly
+
+" colorscheme onehalfdark
+" let g:airline_theme='onehalfdark'
+" colorscheme onehalflight
+" let g:airline_theme='onehalflight'
 
 " set signcolumn="yes"
 " set signcolumn=number

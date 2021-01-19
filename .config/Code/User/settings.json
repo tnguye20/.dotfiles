@@ -3,7 +3,7 @@
         "rust": "export RUST_BACKTRACE=1 && cd $dir && cargo run the poem.txt"
     },
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Ayu Mirage Bordered",
+    "workbench.colorTheme": "Ayu Dark Bordered",
     "editor.fontFamily": "Iosevka Medium",
     "editor.lineNumbers": "relative",
     "editor.fontSize": 16,
