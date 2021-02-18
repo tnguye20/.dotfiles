@@ -59,7 +59,7 @@
         "when": "listFocus && !inputFocus"
       },
       {
-        "key": "cw",
+        "key": "ctrl+c",
         "command": "renameFile",
         "when": "explorerViewletVisible && filesExplorerFocus"
       },
@@ -91,5 +91,20 @@
         "key": "ctrl+k",
         "command": "workbench.action.quickOpenSelectPrevious",
         "when": "inQuickOpen"
+      },
+      {
+        "key": "ctrl+n",
+        "command": "explorer.newFile",
+        "when": "!editorFocus"
+      },
+      {
+        "key": "ctrl+shift+n",
+        "command": "explorer.newFolder",
+        "when": "!editorFocus"
+      },
+      {
+        "key": "ctrl+e",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus"
       }
 ]

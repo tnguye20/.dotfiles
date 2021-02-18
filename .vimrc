@@ -206,7 +206,7 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " colorscheme one
 " colorscheme onedark
 " let g:dracula_colorterm = 0
-colorscheme palenight
+" colorscheme palenight
 " colorscheme nord
 " colorscheme mountaineer
 " colorscheme base16-horizon-dark
@@ -227,11 +227,11 @@ colorscheme palenight
 " let ayucolor="light"   "for dark light of theme"
 " colorscheme ayu
 
-" let g:lightline = { 'colorscheme': 'nightfly' }
-" let g:nightflyUnderlineMatchParen = 1
-" let g:nightflyCursorColor = 1
-" let g:nightflyTerminalColors = 0
-" colorscheme nightfly
+let g:lightline = { 'colorscheme': 'nightfly' }
+let g:nightflyUnderlineMatchParen = 1
+let g:nightflyCursorColor = 1
+let g:nightflyTerminalColors = 0
+colorscheme nightfly
 
 " colorscheme onehalfdark
 " let g:airline_theme='onehalfdark'
@@ -347,6 +347,9 @@ map <Leader>j :resize -3<CR>
 
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
+
+" JSON format
+xnoremap <Leader>s :%!python -m json.tool<CR>
 
 " Goyo Functions
 function! s:goyo_enter()
