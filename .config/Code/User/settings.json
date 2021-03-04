@@ -3,7 +3,7 @@
         "rust": "export RUST_BACKTRACE=1 && cd $dir && cargo run the poem.txt"
     },
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Night Owl",
+    "workbench.colorTheme": "Ayu Dark",
     "editor.fontFamily": "Iosevka Medium",
     "editor.lineNumbers": "relative",
     "editor.fontSize": 16,
@@ -56,7 +56,7 @@
     "explorer.confirmDelete": false,
     "editor.largeFileOptimizations": false,
     "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
     "workbench.editorAssociations": [],
     "python.showStartPage": false,
