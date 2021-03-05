@@ -148,7 +148,7 @@ antigen bundle ssh-agent
 # Theme
 # antigen theme afowler
 # antigen theme af-magic
-antigen theme bhilburn/powerlevel9k powerlevel9k
+# antigen theme bhilburn/powerlevel9k powerlevel9k
 # antigen theme amuse
 # antigen theme bira
 
@@ -210,6 +210,8 @@ alias gds="git difftool --staged -y"
 alias gl="git log --oneline $@"
 alias acp=acp $1
 
+alias at="alacritty-themes"
+
 # Vim key on shell
 export KEYTIMEOUT=40
 bindkey -v
@@ -246,4 +248,4 @@ export PATH=$PATH:/usr/local/go/bin
 xset r rate 300 50
 
 # Boot into starship
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"

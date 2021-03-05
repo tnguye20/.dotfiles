@@ -222,16 +222,16 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 
 " let ayucolor="mirage" "for mirage version of theme"
 " let g:airline_theme='ayu_mirage'
-" let ayucolor="dark"   "for dark version of theme"
-" let g:airline_theme='one'
+let ayucolor="dark"   "for dark version of theme"
+let g:airline_theme='one'
 " let ayucolor="light"   "for dark light of theme"
-" colorscheme ayu
+colorscheme ayu
 
-let g:lightline = { 'colorscheme': 'nightfly' }
-let g:nightflyUnderlineMatchParen = 1
-let g:nightflyCursorColor = 1
-let g:nightflyTerminalColors = 0
-colorscheme nightfly
+" let g:lightline = { 'colorscheme': 'nightfly' }
+" let g:nightflyUnderlineMatchParen = 1
+" let g:nightflyCursorColor = 1
+" let g:nightflyTerminalColors = 0
+" colorscheme nightfly
 
 " colorscheme onehalfdark
 " let g:airline_theme='onehalfdark'

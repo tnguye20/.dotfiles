@@ -29,7 +29,7 @@ title_align center
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+Return exec terminology
 
 # kill focused window
@@ -66,13 +66,14 @@ bindsym $mod+Shift+F1 exec firefox --private-window
 bindsym $mod+p exec firefox
 bindsym $mod+Shift+p exec firefox --private-window
 bindsym $mod+F2 exec pcmanfm
+bindsym $mod+Shift+r exec --no-startup-id ~/scripts/repoChooser
 bindsym $mod+w exec --no-startup-id ~/scripts/randomWallpaper
 bindsym $mod+ctrl+d exec --no-startup-id ~/scripts/instantDate
 bindsym $mod+Shift+a exec --no-startup-id /usr/local/android-studio/bin/studio.sh
 bindsym $mod+Shift+w exec ~/scripts/wallpaperChooser
 bindsym $mod+Ctrl+k exec ~/scripts/processKiller
 bindsym $mod+Ctrl+l exec ~/scripts/layoutChooser
-bindsym $mod+r exec urxvt -e ranger
+bindsym $mod+r exec alacritty -e ranger
 bindsym $mod+Shift+F2 exec gksu pcmanfm
 
 # mpd Music keybinding
@@ -265,7 +266,7 @@ for_window [urgent=latest] focus
 bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+# bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
