@@ -286,7 +286,7 @@ let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 let g:gitgutter_set_sign_backgrounds = 1
 " You gotta add a lint npm script to each package.json you want linting for
 "let g:jsx_ext_required=0
-" let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline#extensions#wordcount#enabled = 1
 let g:airline#extensions#wordcount#filetypes = '\vasciidoc|help|mail|markdown|markdown.pandoc|pandoc|org|rst|tex|text'
@@ -409,3 +409,16 @@ autocmd BufReadPost,BufNewFile *.md silent! :set spell
 inoremap <Leader><Leader><Space> <Esc>/<++><Enter>"_c4l
 autocmd FileType pandoc,markdown inoremap ;b ____<Space><++><Esc>F_;i
 autocmd FileType pandoc,markdown inoremap ;i __<Space><++><Esc>F_i
+
+" Tabs
+set sw=2 ts=2 sts=2 " Default
+autocmd FileType html :setlocal sw=2 ts=2 sts=2
+autocmd FileType ruby :setlocal sw=2 ts=2 sts=2
+autocmd FileType javascript :setlocal sw=2 ts=2 sts=2
+autocmd FileType xml :setlocal sw=2 ts=2 sts=2
+autocmd FileType python :setlocal sw=4 ts=4 sts=4
+autocmd FileType go :setlocal sw=4 ts=4 sts=4
+
+" Make vertical separator pretty
+highlight VertSplit cterm=NONE
+set fillchars+=vert:\▏
