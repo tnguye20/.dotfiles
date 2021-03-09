@@ -17,7 +17,14 @@ primary = #F9627D
 secondary = #e60053
 alert = #bd2c40
 unfocused = #3A7E3E
-keyboard = #9EADC8
+
+date = #1D84B5
+
+network = #61210F
+storage = #EA2B1F
+memory = #EDAE49
+cpu = #60C92C
+keyboard = #0D3B66
 
 [modules/xmenu]
 menu-0 = item 1;command
@@ -98,9 +105,9 @@ interval = 0.1
 type = custom/script
 exec = ~/scripts/current_ip
 label = IP: %output%
-label-underline = ${colors.keyboard}
+label-underline = ${colors.network}
 format-prefix = "  "
-format-prefix-underline = ${colors.keyboard}
+format-prefix-underline = ${colors.network}
 interval = 1000
 
 ; End Custom Modules
@@ -133,6 +140,7 @@ mount-0 = /
 ; label-mounted =   %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 ; label-mounted =   %used%% of %total%
 label-mounted =   %free%
+label-mounted-underline = ${colors.storage}
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -226,15 +234,15 @@ card = intel_backlight
 type = internal/cpu
 interval = 2
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-underline = ${colors.cpu}
 label =  %percentage%%
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
-label =   %percentage_used%%
+format-underline = ${colors.memory}
+label =  %percentage_used%%
 
 [module/wlan]
 type = internal/network
@@ -283,7 +291,7 @@ date = "%Y-%m-%d%"
 time = %H:%M
 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+format-underline = ${colors.date}
 
 label =    %date% %time%
 
