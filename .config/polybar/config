@@ -104,7 +104,7 @@ interval = 0.1
 [module/mynetwork]
 type = custom/script
 exec = ~/scripts/current_ip
-label = IP: %output%
+label = %output%
 label-underline = ${colors.network}
 format-prefix = "  "
 format-prefix-underline = ${colors.network}
