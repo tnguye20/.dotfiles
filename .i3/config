@@ -83,6 +83,7 @@ bindsym $mod+Shift+F2 exec gksu pcmanfm
 # bindsym XF86AudioPrev exec st -e 'cmus-remote -r'
 # bindsym XF86AudioNext exec st -e 'cmus-remote -n'
 # bindsym $mod+Shift+m exec st -e 'pkill -9 cmus'
+bindsym $mod+Ctrl+p exec $HOME/packages/polybar-browsermediacontrol/browsermediacontrol --playpause
 
 # Clipboard Manager copyQ
 bindsym $mod+c exec --no-startup-id copyq show
