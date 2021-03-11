@@ -166,10 +166,19 @@ function acp() {
   git add . && git commit -m $msg && git push
 }
 
+function goRepo() {
+  if pacman -Qi fzf &> /dev/null; then
+    repo=$(ls $HOME/repo | fzf)
+    cd "$HOME/repo/$repo"
+  else
+    cd "$HOME/repo/"
+  fi
+}
+
 alias cdf="cd $HOME/.dotfiles"
 alias cds="cd $HOME/scripts"
 alias cdn="cd $HOME/notes"
-alias cdr="cd $HOME/repo"
+alias cdr="goRepo"
 alias cdp="cd $HOME/packages"
 alias cdm="cd /media"
 alias cdrs="cd $HOME/rsync"
