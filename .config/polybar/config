@@ -59,7 +59,8 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Iosevka Medium:pixelsize=11;1
+; font-0 = Iosevka Medium:pixelsize=11;1
+font-0 = Patrick Hand:pixelsize=13;1
 font-1 = RobotoMono Nerd Font:pixelsize=10;1
 
 modules-left = bspwm i3 date
@@ -293,7 +294,7 @@ time = %H:%M
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = ${colors.date}
 
-label =    %date% %time%
+label =    %date%   %time%
 
 [module/volume]
 type = internal/volume

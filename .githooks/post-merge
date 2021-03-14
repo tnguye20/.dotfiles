@@ -15,3 +15,7 @@ files_changed="$(git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD | gr
 for file in $files_changed; do
   [[ $(echo ${arr["$file"]}) ]] && echo "$file changed. Running command ${arr["$file"]}" && eval "${arr["$file"]}"
 done
+
+#Reset polybar
+killall -q polybar
+sh $HOME/scripts/polybar_launcher

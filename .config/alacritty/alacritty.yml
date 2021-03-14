@@ -122,32 +122,32 @@ draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
 colors:
-  name: VisiBlue
-  author: ""
+  name: Ashes (dark)
+  author: Chris Kempson
   primary:
-    background: "#000000"
-    foreground: "#666699"
+    background: "#1c2023"
+    foreground: "#c7ccd1"
   cursor:
-    text: "#000000"
-    cursor: "#666699"
+    text: "#1c2023"
+    cursor: "#c7ccd1"
   normal:
-    black: "#333366"
-    red: "#6666cc"
-    green: "#0099cc"
-    yellow: "#3366cc"
-    blue: "#006699"
-    magenta: "#0066ff"
-    cyan: "#669999"
-    white: "#99cccc"
+    black: "#1c2023"
+    red: "#c7ae95"
+    green: "#95c7ae"
+    yellow: "#aec795"
+    blue: "#ae95c7"
+    magenta: "#c795ae"
+    cyan: "#95aec7"
+    white: "#c7ccd1"
   bright:
-    black: "#333399"
-    red: "#9999ff"
-    green: "#00ccff"
-    yellow: "#6699ff"
-    blue: "#0099cc"
-    magenta: "#0099ff"
-    cyan: "#66cccc"
-    white: "#ccffff"
+    black: "#747c84"
+    red: "#c7ae95"
+    green: "#95c7ae"
+    yellow: "#aec795"
+    blue: "#ae95c7"
+    magenta: "#c795ae"
+    cyan: "#95aec7"
+    white: "#f3f4f5"
 # Bell
 #
 # The bell is rung every time the BEL control character is received.
@@ -832,3 +832,4 @@ key_bindings:
   #log_level: Warn
   # Print all received window events.
   #print_events: false
+_events: false

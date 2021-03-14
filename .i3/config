@@ -84,6 +84,8 @@ bindsym $mod+Shift+F2 exec gksu pcmanfm
 # bindsym XF86AudioNext exec st -e 'cmus-remote -n'
 # bindsym $mod+Shift+m exec st -e 'pkill -9 cmus'
 bindsym $mod+Ctrl+p exec $HOME/packages/polybar-browsermediacontrol/browsermediacontrol --playpause
+bindsym $mod+v exec $HOME/packages/polybar-browsermediacontrol/browsermediacontrol --volume 1
+bindsym $mod+Ctrl+v exec $HOME/packages/polybar-browsermediacontrol/browsermediacontrol --volume -1
 
 # Clipboard Manager copyQ
 bindsym $mod+c exec --no-startup-id copyq show
@@ -106,7 +108,7 @@ bindsym $mod+Shift+a exec --no-startup-id /usr/local/android-studio/bin/studio.s
 bindsym $mod+Shift+w exec $HOME/scripts/wallpaperChooser
 bindsym $mod+Ctrl+k exec $HOME/scripts/processKiller
 bindsym $mod+Ctrl+l exec $HOME/scripts/layoutChooser
-bindsym $mod+r exec alacritty -e ranger
+bindsym $mod+r exec urxvt -e ranger
 bindsym $mod+Shift+9 exec --no-startup-id $HOME/scripts/lockAndSlide
 
 # change focus
