@@ -58,7 +58,12 @@
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "workbench.editorAssociations": [],
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
     "python.showStartPage": false,
     "jupyter.interactiveWindowMode": "perFile",
     "git.ignoreLegacyWarning": true,

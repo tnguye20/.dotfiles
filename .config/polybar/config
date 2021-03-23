@@ -65,7 +65,7 @@ font-1 = RobotoMono Nerd Font:pixelsize=10;1
 
 modules-left = bspwm i3 date
 modules-center = xwindow browsermediacontrol
-modules-right = mynetwork filesystem xbacklight memory cpu wlan eth battery temperature xkeyboard powermenu
+modules-right = hostname mynetwork filesystem xbacklight memory cpu wlan eth battery temperature xkeyboard powermenu
 dim-value= 0.5
 
 ; separator = |
@@ -108,6 +108,15 @@ exec = ~/scripts/current_ip
 label = %output%
 label-underline = ${colors.network}
 format-prefix = "  "
+format-prefix-underline = ${colors.network}
+interval = 1000
+
+[module/hostname]
+type = custom/script
+exec = hostname
+label = %output%
+label-underline = ${colors.network}
+format-prefix = " "
 format-prefix-underline = ${colors.network}
 interval = 1000
 
