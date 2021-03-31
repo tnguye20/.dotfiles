@@ -122,7 +122,7 @@ draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
 colors:
-  name: astromouse
+  name: thwump
   author: ""
   primary:
     background: "#000000"
@@ -131,23 +131,23 @@ colors:
     text: "#000000"
     cursor: "#ffffff"
   normal:
-    black: "#1c1c1c"
-    red: "#d770af"
-    green: "#9acc79"
-    yellow: "#d0d26b"
-    blue: "#77b6c5"
-    magenta: "#a488d9"
-    cyan: "#7fcab3"
-    white: "#8d8d8d"
+    black: "#202020"
+    red: "#a07070"
+    green: "#70a070"
+    yellow: "#a0a070"
+    blue: "#7070a0"
+    magenta: "#a070a0"
+    cyan: "#70a0a0"
+    white: "#a0a0a0"
   bright:
-    black: "#3d3a3a"
-    red: "#d28abf"
-    green: "#8fb676"
-    yellow: "#c8bc45"
-    blue: "#8fa7b9"
-    magenta: "#bd89de"
-    cyan: "#6ec2a8"
-    white: "#dad3d3"
+    black: "#505050"
+    red: "#d07070"
+    green: "#70d070"
+    yellow: "#d0d070"
+    blue: "#7070d0"
+    magenta: "#d070d0"
+    cyan: "#70d0d0"
+    white: "#f0f0f0"
 # Bell
 #
 # The bell is rung every time the BEL control character is received.

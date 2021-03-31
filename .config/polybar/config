@@ -17,6 +17,7 @@ primary = #F9627D
 secondary = #e60053
 alert = #bd2c40
 unfocused = #3A7E3E
+hostname = #bc9cb0
 
 date = #1D84B5
 
@@ -115,9 +116,9 @@ interval = 1000
 type = custom/script
 exec = hostname
 label = %output%
-label-underline = ${colors.network}
+label-underline = ${colors.hostname}
 format-prefix = " "
-format-prefix-underline = ${colors.network}
+format-prefix-underline = ${colors.hostname}
 interval = 1000
 
 ; End Custom Modules
