@@ -122,32 +122,32 @@ draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
 colors:
-  name: thwump
-  author: ""
+  name: Count Von Count
+  author: Baskerville
   primary:
     background: "#000000"
-    foreground: "#ffffff"
+    foreground: "#919191"
   cursor:
     text: "#000000"
-    cursor: "#ffffff"
+    cursor: "#919191"
   normal:
-    black: "#202020"
-    red: "#a07070"
-    green: "#70a070"
-    yellow: "#a0a070"
-    blue: "#7070a0"
-    magenta: "#a070a0"
-    cyan: "#70a0a0"
-    white: "#a0a0a0"
+    black: "#303030"
+    red: "#c10023"
+    green: "#a83334"
+    yellow: "#b51d2c"
+    blue: "#8c4b46"
+    magenta: "#7d534f"
+    cyan: "#9a413d"
+    white: "#c6c6c6"
   bright:
-    black: "#505050"
-    red: "#d07070"
-    green: "#70d070"
-    yellow: "#d0d070"
-    blue: "#7070d0"
-    magenta: "#d070d0"
-    cyan: "#70d0d0"
-    white: "#f0f0f0"
+    black: "#5e5e5e"
+    red: "#ff8781"
+    green: "#ffa095"
+    yellow: "#ff948b"
+    blue: "#feb2aa"
+    magenta: "#ebbbb5"
+    cyan: "#ffaaa0"
+    white: "#ffffff"
 # Bell
 #
 # The bell is rung every time the BEL control character is received.
