@@ -213,7 +213,7 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " colorscheme base16-default-dark
 " colorscheme base16-solarized-dark
 " let g:airline_theme='solarized'
-" colorscheme base16-darktooth
+colorscheme base16-darktooth
 " colorscheme base16-bespin
 " colorscheme base16-dracula
 
@@ -222,10 +222,10 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 
 " let ayucolor="mirage" "for mirage version of theme"
 " let g:airline_theme='ayu_mirage'
-let ayucolor="dark"   "for dark version of theme"
-let g:airline_theme='one'
+" let ayucolor="dark"   "for dark version of theme"
+" let g:airline_theme='one'
 " let ayucolor="light"   "for dark light of theme"
-colorscheme ayu
+" colorscheme ayu
 
 " let g:lightline = { 'colorscheme': 'nightfly' }
 " let g:nightflyUnderlineMatchParen = 1

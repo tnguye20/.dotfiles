@@ -122,31 +122,31 @@ draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
 colors:
-  name: Count Von Count
-  author: Baskerville
+  name: Dark Ocean
+  author: DOOMICIDE
   primary:
     background: "#000000"
-    foreground: "#919191"
+    foreground: "#ffffff"
   cursor:
     text: "#000000"
-    cursor: "#919191"
+    cursor: "#ffffff"
   normal:
-    black: "#303030"
-    red: "#c10023"
-    green: "#a83334"
-    yellow: "#b51d2c"
-    blue: "#8c4b46"
-    magenta: "#7d534f"
-    cyan: "#9a413d"
-    white: "#c6c6c6"
+    black: "#000000"
+    red: "#571dc2"
+    green: "#14db49"
+    yellow: "#403d70"
+    blue: "#385a70"
+    magenta: "#384894"
+    cyan: "#4f3a5e"
+    white: "#999999"
   bright:
-    black: "#5e5e5e"
-    red: "#ff8781"
-    green: "#ffa095"
-    yellow: "#ff948b"
-    blue: "#feb2aa"
-    magenta: "#ebbbb5"
-    cyan: "#ffaaa0"
+    black: "#38372c"
+    red: "#7c54b0"
+    green: "#a2e655"
+    yellow: "#9c6f59"
+    blue: "#323f5c"
+    magenta: "#5e6c99"
+    cyan: "#667d77"
     white: "#ffffff"
 # Bell
 #
