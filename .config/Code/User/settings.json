@@ -68,5 +68,4 @@
     "jupyter.interactiveWindowMode": "perFile",
     "git.ignoreLegacyWarning": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "window.zoomLevel": 0
 }
