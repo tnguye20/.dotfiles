@@ -91,7 +91,7 @@ bindsym $mod+Ctrl+v exec $HOME/packages/polybar-browsermediacontrol/browsermedia
 bindsym $mod+c exec --no-startup-id copyq show
 
 # Calculator using Pyhton3
-bindsym $mod+Ctrl+c exec --no-startup-id urxvt -name calculator -e "python3"
+bindsym $mod+Ctrl+c exec --no-startup-id urxvt -name calculator -e "node"
 
 # bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b

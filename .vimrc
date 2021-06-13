@@ -165,6 +165,7 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'francoiscabrol/ranger.vim'
 " Plug 'https://github.com/puremourning/vimspector'
 " Plug 'airblade/vim-rooter'
+" Plug 'codota/tabnine-vim'
 
 " ======== REACT/JSX SUPPORT  ========
 Plug 'vim-airline/vim-airline-themes'
