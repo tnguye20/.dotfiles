@@ -253,7 +253,7 @@ export PATH=$PATH:/usr/local/go/bin
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Increase speed when holding down keys
-xset r rate 300 50
+xset r rate 300 50 > /dev/null 2> /dev/null
 
 # Boot into starship
 eval "$(starship init zsh)"
