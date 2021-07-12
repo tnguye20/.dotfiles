@@ -3,7 +3,7 @@
   "notes": "",
   "documentation": "\"This file is a QMK Configurator export. You can import this at <https://config.qmk.fm>. It can also be used directly with QMK's source code.\n\nTo setup your QMK environment check out the tutorial: <https://docs.qmk.fm/#/newbs>\n\nYou can convert this file to a keymap.c using this command: `qmk json2c {keymap}`\n\nYou can compile this keymap using this command: `qmk compile {keymap}`\"\n",
   "keyboard": "preonic/rev3",
-  "keymap": "moonlander",
+  "keymap": "preonic",
   "layout": "LAYOUT_ortho_5x12",
   "layers": [
     [
@@ -153,7 +153,7 @@
       "KC_PGUP",
       "KC_PGDN",
       "KC_NO",
-      "KC_NO",
+      "KC_PSCR",
       "KC_NO",
       "KC_NO",
       "KC_NO",
