@@ -126,8 +126,8 @@
       "RCTL(KC_LEFT)",
       "KC_BSPC",
       "RCTL(KC_BSPC)",
-      "KC_EQL",
-      "KC_EQL",
+      "KC_PLUS",
+      "KC_PLUS",
       "KC_NO"
     ],
     [
@@ -227,7 +227,7 @@
       "KC_4",
       "KC_5",
       "KC_6",
-      "KC_EQL",
+      "KC_PLUS",
       "KC_NO",
       "KC_TRNS",
       "KC_NO",
