@@ -1,6 +1,7 @@
 {
     "code-runner.executorMap": {
-        "rust": "export RUST_BACKTRACE=1 && cd $dir && cargo run the poem.txt"
+        "rust": "export RUST_BACKTRACE=1 && cd $dir && cargo run the poem.txt",
+        "typescript": "npx ts-node"
     },
     "workbench.startupEditor": "newUntitledFile",
     "workbench.colorTheme": "Ocean Dark Extended",
@@ -58,12 +59,9 @@
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
     "python.showStartPage": false,
     "jupyter.interactiveWindowMode": "perFile",
     "git.ignoreLegacyWarning": true,

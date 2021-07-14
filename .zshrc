@@ -177,7 +177,7 @@ function goRepo() {
 
 alias cdf="cd $HOME/.dotfiles"
 alias cds="cd $HOME/scripts"
-alias cdn="cd $HOME/notes"
+alias cdn="cd $HOME/rsync/notes"
 alias cdr="goRepo"
 alias cdp="cd $HOME/packages"
 alias cdm="cd /media"

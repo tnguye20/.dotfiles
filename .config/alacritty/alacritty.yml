@@ -122,32 +122,32 @@ draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
 colors:
-  name: VisiBone
+  name: Grandshell
   author: ""
   primary:
     background: "#000000"
-    foreground: "#ffffff"
+    foreground: "#bebebe"
   cursor:
     text: "#000000"
-    cursor: "#ffffff"
+    cursor: "#bebebe"
   normal:
-    black: "#666666"
-    red: "#cc6666"
-    green: "#66cc99"
-    yellow: "#cc9966"
-    blue: "#6699cc"
-    magenta: "#cc6699"
-    cyan: "#66cccc"
-    white: "#cccccc"
+    black: "#000000"
+    red: "#f25a5a"
+    green: "#77bb33"
+    yellow: "#efc334"
+    blue: "#5555dd"
+    magenta: "#c350ff"
+    cyan: "#5af2ee"
+    white: "#bebebe"
   bright:
-    black: "#999999"
-    red: "#ff9999"
-    green: "#99ffcc"
-    yellow: "#ffcc99"
-    blue: "#99ccff"
-    magenta: "#ff99cc"
-    cyan: "#99ffff"
-    white: "#ffffff"
+    black: "#222222"
+    red: "#ffbbbb"
+    green: "#dcf692"
+    yellow: "#f6df92"
+    blue: "#b2baf6"
+    magenta: "#f09fff"
+    cyan: "#5af2ee"
+    white: "#eeeeee"
 # Bell
 #
 # The bell is rung every time the BEL control character is received.
