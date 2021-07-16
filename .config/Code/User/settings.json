@@ -4,7 +4,7 @@
         "typescript": "npx ts-node"
     },
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Ocean Dark Extended",
+    "workbench.colorTheme": "Solarized Dark",
     "editor.fontFamily": "Iosevka Medium",
     "editor.lineNumbers": "relative",
     "editor.fontSize": 16,
