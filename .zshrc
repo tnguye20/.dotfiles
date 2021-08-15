@@ -248,7 +248,11 @@ export FPP_EDITOR="vim -p"
 export PATH=$PATH:$HOME/scripts
 export PATH=$PATH:$HOME/packages/flutter/bin
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/home/tnguye20/anaconda3/bin
 # neofetch --w3m $HOME/.dotfiles/.wallpaper/mr_robot.jpg --size 350px
+export FIRESTORE_EMULATOR_HOST="localhost:8080"
+export FIREBASE_STORAGE_EMULATOR_HOST="localhost:9199"
+export FIREBASE_AUTH_EMULATOR_HOST="localhost:9099"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

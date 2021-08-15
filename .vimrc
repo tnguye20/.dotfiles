@@ -214,7 +214,7 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " colorscheme base16-default-dark
 " colorscheme base16-solarized-dark
 " let g:airline_theme='solarized'
-" colorscheme base16-darktooth
+colorscheme base16-darktooth
 " colorscheme base16-bespin
 " colorscheme base16-dracula
 
@@ -228,11 +228,11 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " let ayucolor="light"   "for dark light of theme"
 " colorscheme ayu
 
-let g:lightline = { 'colorscheme': 'nightfly' }
-let g:nightflyUnderlineMatchParen = 1
-let g:nightflyCursorColor = 1
-let g:nightflyTerminalColors = 0
-colorscheme nightfly
+" let g:lightline = { 'colorscheme': 'nightfly' }
+" let g:nightflyUnderlineMatchParen = 1
+" let g:nightflyCursorColor = 1
+" let g:nightflyTerminalColors = 0
+" colorscheme nightfly
 
 " colorscheme onehalfdark
 " let g:airline_theme='onehalfdark'

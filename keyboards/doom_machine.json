@@ -3,7 +3,7 @@
   "notes": "",
   "documentation": "\"This file is a QMK Configurator export. You can import this at <https://config.qmk.fm>. It can also be used directly with QMK's source code.\n\nTo setup your QMK environment check out the tutorial: <https://docs.qmk.fm/#/newbs>\n\nYou can convert this file to a keymap.c using this command: `qmk json2c {keymap}`\n\nYou can compile this keymap using this command: `qmk compile {keymap}`\"\n",
   "keyboard": "preonic/rev3",
-  "keymap": "preonic",
+  "keymap": "doom_machine",
   "layout": "LAYOUT_ortho_5x12",
   "layers": [
     [
@@ -20,9 +20,9 @@
       "KC_0",
       "KC_BSPC",
       "MO(2)",
-      "LT(2,KC_Q)",
-      "LT(3,KC_W)",
-      "KC_E",
+      "KC_Q",
+      "LT(2,KC_W)",
+      "LT(3,KC_E)",
       "KC_R",
       "KC_T",
       "KC_Y",
