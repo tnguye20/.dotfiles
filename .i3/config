@@ -290,18 +290,18 @@ mode "$mode_rsync" {
 bindsym $mod+m mode "$mode_mouse"
 set $mode_mouse Left(h), Right(l), Up(k), Down(j), (C)lick, (D)rag, Cancel(x)
 mode "$mode_mouse" {
-  bindsym h exec --no-startup-id xdotool mousemove_relative --sync -- -20 0
-  bindsym Shift+h exec --no-startup-id xdotool mousemove_relative -- -70 0
+  bindsym h exec --no-startup-id xdotool mousemove_relative --sync -- -80 0
+  bindsym Shift+h exec --no-startup-id xdotool mousemove_relative -- -20 0
 
-  bindsym l exec --no-startup-id xdotool mousemove_relative --sync -- 20 0
-  bindsym Shift+l exec --no-startup-id xdotool mousemove_relative --sync -- 70 0
+  bindsym l exec --no-startup-id xdotool mousemove_relative --sync -- 80 0
+  bindsym Shift+l exec --no-startup-id xdotool mousemove_relative --sync -- 20 0
 
-  bindsym j exec --no-startup-id xdotool mousemove_relative --sync -- 0 20
-  bindsym Shift+j exec --no-startup-id xdotool mousemove_relative --sync -- 0 70
+  bindsym j exec --no-startup-id xdotool mousemove_relative --sync -- 0 80
+  bindsym Shift+j exec --no-startup-id xdotool mousemove_relative --sync -- 0 20
   bindsym u exec --no-startup-id xdotool click --repeat 5 -c 5
 
-  bindsym k exec --no-startup-id xdotool mousemove_relative --sync -- 0 -20
-  bindsym Shift+k exec --no-startup-id xdotool mousemove_relative --sync -- 0 -70
+  bindsym k exec --no-startup-id xdotool mousemove_relative --sync -- 0 -80
+  bindsym Shift+k exec --no-startup-id xdotool mousemove_relative --sync -- 0 -20
   bindsym i exec --no-startup-id xdotool click --repeat 5 -c 4
 
   bindsym c exec --no-startup-id xdotool click -c 1
