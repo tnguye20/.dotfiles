@@ -83,9 +83,9 @@ bindsym $mod+Shift+F2 exec gksu pcmanfm
 # bindsym XF86AudioPrev exec st -e 'cmus-remote -r'
 # bindsym XF86AudioNext exec st -e 'cmus-remote -n'
 # bindsym $mod+Shift+m exec st -e 'pkill -9 cmus'
-# bindsym $mod+Ctrl+p exec $HOME/packages/polybar-browsermediacontrol/browsermediacontrol --playpause
-# bindsym $mod+v exec $HOME/packages/polybar-browsermediacontrol/browsermediacontrol --volume 1
-# bindsym $mod+Ctrl+v exec $HOME/packages/polybar-browsermediacontrol/browsermediacontrol --volume -1
+bindsym $mod+Ctrl+p exec $HOME/packages/polybar-browsermediacontrol/browsermediacontrol --playpause
+bindsym $mod+v exec $HOME/packages/polybar-browsermediacontrol/browsermediacontrol --volume 1
+bindsym $mod+Ctrl+v exec $HOME/packages/polybar-browsermediacontrol/browsermediacontrol --volume -1
 
 # Clipboard Manager copyQ
 bindsym $mod+c exec --no-startup-id copyq show
@@ -220,8 +220,8 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Set workspace on startup
-workspace 1 output primary HDMI1
-workspace 2 output HDMI2
+# workspace 1 output primary HDMI1
+# workspace 2 output HDMI2
 # workspace 3 output DP1
 
 # Open applications on specific workspaces
@@ -351,7 +351,7 @@ exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id $HOME/.screenlayout/layout.sh
 exec --no-startup-id $HOME/scripts/randomWallpaper
 exec --no-startup-id $HOME/scripts/rsyncFilesFrom
-# exec --no-startup-id $HOME/scripts/polybar_launcher
+exec --no-startup-id $HOME/scripts/polybar_launcher
 exec --no-startup-id mpd
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
@@ -395,12 +395,12 @@ set_from_resource $term_color15    color15
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-  # mode invisible
+  mode invisible
 	# i3bar_command i3bar
 	# status_command i3status
-  status_command $HOME/bumblebee-status/bumblebee-status -m xrandr spacer spacer mpd spacer spacer time date spacer disk memory cpu spacer battery spacer kernel hostname -p interval=1 -t iceberg-contrast
-	position bottom
-  mode hide
+  # status_command $HOME/bumblebee-status/bumblebee-status -m xrandr spacer spacer mpd spacer spacer time date spacer disk memory cpu spacer battery spacer kernel hostname -p interval=1 -t iceberg-contrast
+	# position bottom
+  # mode hide
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 	tray_output primary
