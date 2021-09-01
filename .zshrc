@@ -246,6 +246,7 @@ export COMPOSE_HTTP_TIMEOUT=5000
 export RANGER_LOAD_DEFAULT_RC=false
 export FPP_EDITOR="vim -p"
 export PATH=$PATH:$HOME/scripts
+export PATH=$PATH:$HOME/scripts/yabai
 export PATH=$PATH:$HOME/packages/flutter/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/tnguye20/anaconda3/bin
