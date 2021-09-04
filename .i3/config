@@ -9,16 +9,16 @@ set $mod Mod4
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 # new_window pixel 1
-new_float normal
+new_float none
 
 # Hide borders
-hide_edge_borders none
+# hide_edge_borders none
 
 # change borders
 # bindsym $mod+Shift+u border none
 # bindsym $mod+Shift+y border pixel 1
 bindsym $mod+n border normal
-bindsym $mod+Shift+n border pixel 1
+bindsym $mod+Shift+n border pixel 2
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -346,6 +346,7 @@ bindsym $mod+o resize grow width 15 px or 15 ppt
 bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
+exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd #notify daemon to handle notification
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id $HOME/.screenlayout/layout.sh
@@ -429,15 +430,15 @@ bindsym $mod+Shift+b bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  # client.focused          #556064 #556064 #80FFF9 #FDF6E3
-  # client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-  # client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-# class                   border  backgr. text    indicator child_border
-  client.focused_inactive #0d1010 #212121 #d9d9d9 #0d1010   #063340
-  client.unfocused        #0d1010 #212121 #d9d9d9 #424242   #063340
-  client.focused          #d9d9d9 #cecece #000000 #d9d9d9   #4E8098
-  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000
+  client.focused          #556064 #90be6d #000000 #000000
+  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
+  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
+  # class                 border  backgr. text    indicator child_border
+  # client.focused_inactive #0d1010 #212121 #d9d9d9 #0d1010   #063340
+  # client.unfocused        #0d1010 #212121 #d9d9d9 #424242   #063340
+  # client.focused          #d9d9d9 #cecece #000000 #d9d9d9   #4E8098
+  # client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
+  # client.placeholder      #000000 #0c0c0c #ffffff #000000
 
   client.background       #2B2C2B
 
@@ -448,7 +449,8 @@ bindsym $mod+Shift+b bar mode toggle
 # Set inner/outer gaps
 # gaps inner 11
 # gaps outer -2
-for_window[class=".*"] border pixel 0
+# for_window[class=".*"] border pixel 0
+for_window[class=".*"] border pixel 3
 gaps inner 11
 gaps outer 1
 
@@ -464,7 +466,7 @@ gaps outer 1
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
 smart_borders on
 smart_borders no_gaps
-border_radius 15
+# border_radius 10
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
