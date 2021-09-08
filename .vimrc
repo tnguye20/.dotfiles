@@ -33,7 +33,7 @@ set autoindent
 set splitbelow splitright
 set t_Co=256
 set termguicolors
-set term=screen-256color
+" set term=screen-256color
 set rtp+=~/.fzf
 set cursorline  " highlight current line
 set background=dark
@@ -120,26 +120,13 @@ filetype indent on
 
 
 " ======== INTERFACE SUPPORT  ========
-Plug 'chriskempson/base16-vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'nelstrom/vim-visual-star-search'
-" Plug 'justinmk/vim-sneak'
-" Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-commentary'
 Plug '~/.fzf'
-" Plug 'mattn/emmet-vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-" Plug 'Shougo/neocomplete.vim'
-" if has('nvim')
-"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" else
-"   Plug 'Shougo/deoplete.nvim'
-"   Plug 'roxma/nvim-yarp'
-"   Plug 'roxma/vim-hug-neovim-rpc'
-" endif
-" let g:deoplete#enable_at_startup = 1
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Townk/vim-autoclose'
 Plug 'majutsushi/tagbar'
@@ -151,40 +138,37 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'dylanaraps/wal.vim'
-" Plug 'scrooloose/nerdtree'
 Plug 'junegunn/goyo.vim'
 Plug 'terryma/vim-multiple-cursors'
-" Plug 'easymotion/vim-easymotion'
+Plug 'easymotion/vim-easymotion'
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'iamcco/markdown-preview.vim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
-" Plug 'mhinz/vim-grepper'
 Plug 'frazrepo/vim-rainbow'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'francoiscabrol/ranger.vim'
+Plug 'airblade/vim-rooter'
 " Plug 'https://github.com/puremourning/vimspector'
-" Plug 'airblade/vim-rooter'
 " Plug 'codota/tabnine-vim'
+" Plug 'mhinz/vim-grepper'
 
 " ======== REACT/JSX SUPPORT  ========
 Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'epilande/vim-react-snippets'
-" Plug 'christoomey/vim-tmux-navigator'
 Plug 'ntpeters/vim-better-whitespace'
 
 " ======== VIM THEMES  =======
+Plug 'chriskempson/base16-vim'
 Plug 'rafi/awesome-vim-colorschemes'
-" Plug 'https://github.com/joshdick/onedark.vim.git'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'bluz71/vim-nightfly-guicolors'
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
-" Plug 'https://github.com/rakr/vim-one.git'
-" Plug 'ayu-theme/ayu-vim'
-" Plug 'arcticicestudio/nord-vim'
-" Plug 'dracula/vim', { 'as': 'dracula' }
+
+" ======== TOOLING  =======
+Plug 'vimwiki/vimwiki'
+
 call plug#end()
 
 " ============ Prettier on save ===========
@@ -195,12 +179,14 @@ call plug#end()
 " ============ general settings ===========
 let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint', 'coc-json', 'coc-json', 'coc-prettier', 'coc-css', 'coc-ultisnips', 'coc-snippets', 'coc-rls']
 let base16colorspace="256"
-" let NERDTreeShowHidden=1
-" let NERDTreeMapOpenInTab='\t'
 let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
 " let g:vimspector_enable_mappings = 'HUMAN'
 " packadd! vimspector
-"
+
+" ============ vimwiki settings ===========
+let g:vimwiki_list = [{'path': '~/rsync/wiki/', 'syntax': 'markdown', 'ext': 'md'}]
+
+" ============ colorscheme settings ===========
 " colorscheme wal
 " colorscheme gruvbox
 " colorscheme OceanicNext
@@ -210,13 +196,15 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " colorscheme palenight
 " colorscheme nord
 " colorscheme mountaineer
-" colorscheme base16-horizon-dark
-" colorscheme base16-default-dark
 " colorscheme base16-solarized-dark
 " let g:airline_theme='solarized'
-colorscheme base16-darktooth
+" colorscheme base16-darktooth
 " colorscheme base16-bespin
 " colorscheme base16-dracula
+" colorscheme base16-black-metal-venom
+colorscheme base16-gruvbox-dark-soft
+" colorscheme base16-hopscotch
+" colorscheme base16-icy
 
 " let g:airline_theme='base16'
 " let g:airline_theme='jellybeans'
@@ -234,15 +222,12 @@ colorscheme base16-darktooth
 " let g:nightflyTerminalColors = 0
 " colorscheme nightfly
 
-" colorscheme onehalfdark
-" let g:airline_theme='onehalfdark'
-" colorscheme onehalflight
-" let g:airline_theme='onehalflight'
-
 " set signcolumn="yes"
 " set signcolumn=number
-highlight clear LineNr
-highlight clear SignColumn
+
+" highlight clear LineNr
+" highlight clear SignColumn
+
 
 " ====== RAINBOW SETTINGS =======
 let g:rainbow_active = 1
@@ -423,3 +408,6 @@ autocmd FileType go :setlocal sw=4 ts=4 sts=4
 " Make vertical separator pretty
 highlight VertSplit cterm=NONE
 set fillchars+=vert:\▏
+
+" GUI Setting
+set guifont=Iosevka
