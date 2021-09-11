@@ -152,6 +152,8 @@ Plug 'airblade/vim-rooter'
 " Plug 'https://github.com/puremourning/vimspector'
 " Plug 'codota/tabnine-vim'
 " Plug 'mhinz/vim-grepper'
+Plug 'mattn/calendar-vim'
+" Plug 'tpope/vim-markdown'
 
 " ======== REACT/JSX SUPPORT  ========
 Plug 'vim-airline/vim-airline-themes'
@@ -184,7 +186,23 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " packadd! vimspector
 
 " ============ vimwiki settings ===========
-let g:vimwiki_list = [{'path': '~/rsync/wiki/', 'syntax': 'markdown', 'ext': 'md'}]
+let g:vimwiki_list = [
+  \{'path': '~/rsync/wiki/', 'syntax': 'markdown', 'ext': 'md'},
+  \{'path': '~/rsync/wiki/mindsumo', 'syntax': 'markdown', 'ext': 'md'},
+  \{'path': '~/rsync/wiki/cover_letters', 'syntax': 'markdown', 'ext': 'md'},
+  \{'path': '~/rsync/wiki/academia', 'syntax': 'markdown', 'ext': 'md'}]
+command! Diary VimwikiDiaryIndex
+augroup vimwikigroup
+    autocmd!
+    " automatically update links on read diary
+    autocmd BufRead,BufNewFile diary.wiki VimwikiDiaryGenerateLinks
+augroup end
+syn region markdownLinkText matchgroup=markdownLinkTextDelimiter
+  \ start="!\=\[\%(\_[^]]*]\%( \=[[(]\)\)\@=" end="\]\%( \=[[(]\)\@="
+  \ nextgroup=markdownLink,markdownId skipwhite
+  \ contains=@markdownInline,markdownLineStart
+  \ concealends
+
 
 " ============ colorscheme settings ===========
 " colorscheme wal
@@ -202,9 +220,9 @@ let g:vimwiki_list = [{'path': '~/rsync/wiki/', 'syntax': 'markdown', 'ext': 'md
 " colorscheme base16-bespin
 " colorscheme base16-dracula
 " colorscheme base16-black-metal-venom
-colorscheme base16-gruvbox-dark-soft
+" colorscheme base16-gruvbox-dark-soft
 " colorscheme base16-hopscotch
-" colorscheme base16-icy
+colorscheme base16-icy
 
 " let g:airline_theme='base16'
 " let g:airline_theme='jellybeans'
@@ -338,17 +356,17 @@ nmap sk :SplitjoinJoin<cr>
 xnoremap <Leader>s :%!python -m json.tool<CR>
 
 " Goyo Functions
-function! s:goyo_enter()
-  if executable('tmux') && strlen($TMUX)
-    silent !tmux set status off
-    silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
-  endif
-  set noshowmode
-  set noshowcmd
-  set scrolloff=999
-  set laststatus=2
-  " AirlineToggle
-endfunction
+" function! s:goyo_enter()
+"   if executable('tmux') && strlen($TMUX)
+"     silent !tmux set status off
+"     silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+"   endif
+"   set noshowmode
+"   set noshowcmd
+"   set scrolloff=999
+"   set laststatus=2
+"   " AirlineToggle
+" endfunction
 
 " function! s:goyo_leave()
 "   if executable('tmux') && strlen($TMUX)
@@ -361,7 +379,7 @@ endfunction
 "   quit!
 "   " AirlineToggle
 " endfunction
-autocmd! User GoyoEnter nested call <SID>goyo_enter()
+" autocmd! User GoyoEnter nested call <SID>goyo_enter()
 " autocmd! User GoyoLeave nested call <SID>goyo_leave()
 " autocmd! User GoyoEnter nested set eventignore=FocusGained
 " autocmd! User GoyoLeave nested set eventignore=
@@ -379,8 +397,8 @@ autocmd BufWritePost ~/.Xresources !xrdb ~/.Xresources
 autocmd BufWritePost *.tex !pdflatex *.tex
 
 " Put Markdown in Goyo and Disable Coc
-autocmd BufReadPost,BufNewFile *.md silent! :CocDisable
-autocmd BufReadPost,BufNewFile *.md silent! :Goyo
+" autocmd BufReadPost,BufNewFile *.md silent! :CocDisable
+" autocmd BufReadPost,BufNewFile *.md silent! :Goyo
 autocmd BufReadPost,BufNewFile *.md silent! :set spell
 
 " augroup remember_folds
@@ -411,3 +429,4 @@ set fillchars+=vert:\▏
 
 " GUI Setting
 set guifont=Iosevka
+au BufNewFile,BufFilePre,BufRead,BufWinEnter *.md setlocal filetype=markdown
