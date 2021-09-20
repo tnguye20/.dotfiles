@@ -1,2 +1,4 @@
 tags
 *.orig
+keyboards/keymap.*
+
