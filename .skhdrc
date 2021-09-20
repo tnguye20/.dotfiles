@@ -76,6 +76,8 @@
 # A REFERENCE ONLY, WHEN MAKING YOUR OWN CONFIGURATION..          #
 # ############################################################### #
 
+alt - q : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)
+
 # focus window
 # alt - h : yabai -m window --focus west
 alt - h : yabai -m window --focus west; xx="$(echo $?)"; [[ "$xx" = "1" ]] && yabai -m display --focus next
@@ -151,7 +153,7 @@ ctrl + alt - j : yabai -m window --move rel:0:20
 # ctrl + alt - h : yabai -m window --insert west
 
 # toggle window zoom
-alt - d : yabai -m window --toggle zoom-parent
+# alt - d : yabai -m window --toggle zoom-parent
 alt - f : yabai -m window --toggle zoom-fullscreen
 
 # toggle window split type
@@ -177,3 +179,11 @@ hyper - return : open -na Alacritty
 
 # Open Browser of choice
 hyper - p : open -na FireFox
+
+# Open Alfred
+alt - d : open -a /Applications/Alfred\ 4.app
+
+alt + shift - s: yabai -m window --stack next
+
+# Stack Surfing
+alt - u: yabai -m window --focus stack.next || yabai -m window --focus stack.first
