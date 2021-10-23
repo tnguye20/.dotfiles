@@ -122,32 +122,32 @@ draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
 colors:
-  # Default colors
+  name: 3024 (dark)
+  author: Chris Kempson
   primary:
-    background: '#101421'
-    foreground: '#fffbf6'
-
-  # Normal colors
+    background: "#090300"
+    foreground: "#a5a2a2"
+  cursor:
+    text: "#090300"
+    cursor: "#a5a2a2"
   normal:
-    black: '#2e2e2e'
-    red: '#eb4129'
-    green: '#abe047'
-    yellow: '#f6c744'
-    blue: '#47a0f3'
-    magenta: '#7b5cb0'
-    cyan: '#64dbed'
-    white: '#e5e9f0'
-
-  # Bright colors
+    black: "#090300"
+    red: "#db2d20"
+    green: "#01a252"
+    yellow: "#fded02"
+    blue: "#01a0e4"
+    magenta: "#a16a94"
+    cyan: "#b5e4f4"
+    white: "#a5a2a2"
   bright:
-    black: '#565656'
-    red: '#ec5357'
-    green: '#c0e17d'
-    yellow: '#f9da6a'
-    blue: '#49a4f8'
-    magenta: '#a47de9'
-    cyan: '#99faf2'
-    white: '#ffffff'
+    black: "#5c5855"
+    red: "#db2d20"
+    green: "#01a252"
+    yellow: "#fded02"
+    blue: "#01a0e4"
+    magenta: "#a16a94"
+    cyan: "#b5e4f4"
+    white: "#f7f7f7"
 # Bell
 #
 # The bell is rung every time the BEL control character is received.
