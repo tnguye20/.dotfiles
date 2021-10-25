@@ -187,3 +187,8 @@ alt + shift - s: yabai -m window --stack next
 
 # Stack Surfing
 alt - u: yabai -m window --focus stack.next || yabai -m window --focus stack.first
+
+# go to each window WITHOUT going into a stack
+ctrl + alt + cmd + lshift - h : yabai -m query --spaces | jq -re ".[] | select(.visible == 1).index" | xargs -I{} yabai -m query --windows --space {} | jq -re "[.[] | select(.app != \"Hammerspoon\")]" | jq -sre "add | sort_by(.display, .frame.x, .frame.y, .id) | nth(index(map(select(.focused == 1))) - 1).id" | xargs -I{} yabai -m window --focus {}
+# go to each window WITHOUT going into a stack
+ctrl + alt + cmd + lshift - l : yabai -m query --spaces | jq -re ".[] | select(.visible == 1).index" | xargs -I{} yabai -m query --windows --space {} | jq -re "[.[] | select(.app != \"Hammerspoon\")]" | jq -sre "add | sort_by(.display, .frame.x, .frame.y, .id) | reverse | nth(index(map(select(.focused == 1))) - 1).id" | xargs -I{} yabai -m window --focus {}
