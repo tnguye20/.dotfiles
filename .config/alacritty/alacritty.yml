@@ -122,32 +122,32 @@ draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
 colors:
-  name: Ashes (dark)
-  author: Chris Kempson
+  name: Trim Yer Beard
+  author: franksn
   primary:
-    background: "#1c2023"
-    foreground: "#c7ccd1"
+    background: "#191716"
+    foreground: "#DABA8B"
   cursor:
-    text: "#1c2023"
-    cursor: "#c7ccd1"
+    text: "#191716"
+    cursor: "#DABA8B"
   normal:
-    black: "#1c2023"
-    red: "#c7ae95"
-    green: "#95c7ae"
-    yellow: "#aec795"
-    blue: "#ae95c7"
-    magenta: "#c795ae"
-    cyan: "#95aec7"
-    white: "#c7ccd1"
+    black: "#0F0E0D"
+    red: "#845336"
+    green: "#57553C"
+    yellow: "#A17E3E"
+    blue: "#43454F"
+    magenta: "#604848"
+    cyan: "#5C6652"
+    white: "#A18B62"
   bright:
-    black: "#747c84"
-    red: "#c7ae95"
-    green: "#95c7ae"
-    yellow: "#aec795"
-    blue: "#ae95c7"
-    magenta: "#c795ae"
-    cyan: "#95aec7"
-    white: "#f3f4f5"
+    black: "#383332"
+    red: "#8C4F4A"
+    green: "#898471"
+    yellow: "#C8B491"
+    blue: "#65788F"
+    magenta: "#755E4A"
+    cyan: "#718062"
+    white: "#BC9D66"
 # Bell
 #
 # The bell is rung every time the BEL control character is received.
