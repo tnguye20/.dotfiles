@@ -122,32 +122,32 @@ draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
 colors:
-  name: Trim Yer Beard
-  author: franksn
+  name: Greenscreen (dark)
+  author: Chris Kempson
   primary:
-    background: "#191716"
-    foreground: "#DABA8B"
+    background: "#001100"
+    foreground: "#00bb00"
   cursor:
-    text: "#191716"
-    cursor: "#DABA8B"
+    text: "#001100"
+    cursor: "#00bb00"
   normal:
-    black: "#0F0E0D"
-    red: "#845336"
-    green: "#57553C"
-    yellow: "#A17E3E"
-    blue: "#43454F"
-    magenta: "#604848"
-    cyan: "#5C6652"
-    white: "#A18B62"
+    black: "#001100"
+    red: "#007700"
+    green: "#00bb00"
+    yellow: "#007700"
+    blue: "#009900"
+    magenta: "#00bb00"
+    cyan: "#005500"
+    white: "#00bb00"
   bright:
-    black: "#383332"
-    red: "#8C4F4A"
-    green: "#898471"
-    yellow: "#C8B491"
-    blue: "#65788F"
-    magenta: "#755E4A"
-    cyan: "#718062"
-    white: "#BC9D66"
+    black: "#007700"
+    red: "#007700"
+    green: "#00bb00"
+    yellow: "#007700"
+    blue: "#009900"
+    magenta: "#00bb00"
+    cyan: "#005500"
+    white: "#00ff00"
 # Bell
 #
 # The bell is rung every time the BEL control character is received.
@@ -833,3 +833,4 @@ key_bindings:
   # Print all received window events.
   #print_events: false
 _events: false
+theme: Greenscreen.dark
