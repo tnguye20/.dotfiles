@@ -236,7 +236,7 @@ colorscheme base16-icy
 " let ayucolor="light"   "for dark light of theme"
 " colorscheme ayu
 
-" let g:lightline = { 'colorscheme': 'nightfly' }
+let g:lightline = { 'colorscheme': 'nightfly' }
 " let g:nightflyUnderlineMatchParen = 1
 " let g:nightflyCursorColor = 1
 " let g:nightflyTerminalColors = 0
