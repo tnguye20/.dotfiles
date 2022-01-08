@@ -122,32 +122,32 @@ draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
 colors:
-  name: Greenscreen (dark)
+  name: Atelierlakeside (dark)
   author: Chris Kempson
   primary:
-    background: "#001100"
-    foreground: "#00bb00"
+    background: "#161b1d"
+    foreground: "#7ea2b4"
   cursor:
-    text: "#001100"
-    cursor: "#00bb00"
+    text: "#161b1d"
+    cursor: "#7ea2b4"
   normal:
-    black: "#001100"
-    red: "#007700"
-    green: "#00bb00"
-    yellow: "#007700"
-    blue: "#009900"
-    magenta: "#00bb00"
-    cyan: "#005500"
-    white: "#00bb00"
+    black: "#161b1d"
+    red: "#d22d72"
+    green: "#568c3b"
+    yellow: "#8a8a0f"
+    blue: "#257fad"
+    magenta: "#5d5db1"
+    cyan: "#2d8f6f"
+    white: "#7ea2b4"
   bright:
-    black: "#007700"
-    red: "#007700"
-    green: "#00bb00"
-    yellow: "#007700"
-    blue: "#009900"
-    magenta: "#00bb00"
-    cyan: "#005500"
-    white: "#00ff00"
+    black: "#5a7b8c"
+    red: "#d22d72"
+    green: "#568c3b"
+    yellow: "#8a8a0f"
+    blue: "#257fad"
+    magenta: "#5d5db1"
+    cyan: "#2d8f6f"
+    white: "#ebf8ff"
 # Bell
 #
 # The bell is rung every time the BEL control character is received.
@@ -833,4 +833,4 @@ key_bindings:
   # Print all received window events.
   #print_events: false
 _events: false
-theme: Greenscreen.dark
+theme: Atelierlakeside.dark

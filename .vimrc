@@ -222,8 +222,10 @@ syn region markdownLinkText matchgroup=markdownLinkTextDelimiter
 " colorscheme base16-dracula
 " colorscheme base16-black-metal-venom
 " colorscheme base16-gruvbox-dark-soft
+colorscheme base16-atelier-lakeside
+" colorscheme base16-atelier-seaside
 " colorscheme base16-hopscotch
-colorscheme base16-icy
+" colorscheme base16-icy
 " colorscheme base16-greenscreen
 
 " let g:airline_theme='base16'
@@ -242,10 +244,10 @@ let g:lightline = { 'colorscheme': 'nightfly' }
 " let g:nightflyTerminalColors = 0
 " colorscheme nightfly
 
-" set signcolumn="yes"
-" set signcolumn=number
+set signcolumn="yes"
+set signcolumn=number
 
-" highlight clear LineNr
+highlight clear LineNr
 highlight clear SignColumn
 
 " Transparency
