@@ -212,7 +212,7 @@ syn region markdownLinkText matchgroup=markdownLinkTextDelimiter
 " colorscheme one
 " colorscheme onedark
 " let g:dracula_colorterm = 0
-" colorscheme palenight
+colorscheme palenight
 " colorscheme nord
 " colorscheme mountaineer
 " colorscheme base16-solarized-dark
@@ -222,7 +222,7 @@ syn region markdownLinkText matchgroup=markdownLinkTextDelimiter
 " colorscheme base16-dracula
 " colorscheme base16-black-metal-venom
 " colorscheme base16-gruvbox-dark-soft
-colorscheme base16-atelier-lakeside
+" colorscheme base16-atelier-lakeside
 " colorscheme base16-atelier-seaside
 " colorscheme base16-hopscotch
 " colorscheme base16-icy
@@ -232,23 +232,23 @@ colorscheme base16-atelier-lakeside
 " let g:airline_theme='jellybeans'
 
 " let ayucolor="mirage" "for mirage version of theme"
-" let g:airline_theme='ayu_mirage'
+let g:airline_theme='ayu_mirage'
 " let ayucolor="dark"   "for dark version of theme"
 " let g:airline_theme='one'
 " let ayucolor="light"   "for dark light of theme"
 " colorscheme ayu
 
 let g:lightline = { 'colorscheme': 'nightfly' }
-" let g:nightflyUnderlineMatchParen = 1
-" let g:nightflyCursorColor = 1
-" let g:nightflyTerminalColors = 0
+let g:nightflyUnderlineMatchParen = 1
+let g:nightflyCursorColor = 1
+let g:nightflyTerminalColors = 0
 " colorscheme nightfly
 
-set signcolumn="yes"
-set signcolumn=number
+" set signcolumn="yes"
+" set signcolumn=number
 
-highlight clear LineNr
-highlight clear SignColumn
+" highlight clear LineNr
+" highlight clear SignColumn
 
 " Transparency
 hi Normal guibg=NONE ctermbg=NONE
