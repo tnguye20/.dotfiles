@@ -82,7 +82,7 @@ yabai -m config window_gap                   06
 
 
 # Load Limelight
-killall limelight &> /dev/null
-limelight --config ~/limelightrc &> /dev/null &
+# killall limelight &> /dev/null
+# limelight --config ~/limelightrc &> /dev/null &
 
 echo "yabai configuration loaded.."

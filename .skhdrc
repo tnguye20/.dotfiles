@@ -81,6 +81,7 @@ alt - q : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") 
 # focus window
 # alt - h : yabai -m window --focus west
 alt - h : yabai -m window --focus west; xx="$(echo $?)"; [[ "$xx" = "1" ]] && yabai -m display --focus next
+alt - m : yabai -m window --focus west; xx="$(echo $?)"; [[ "$xx" = "1" ]] && yabai -m display --focus next
 # alt - l : yabai -m window --focus east
 alt - l : yabai -m window --focus east; xx="$(echo $?)"; [[ "$xx" = "1" ]] && yabai -m display --focus prev
 alt - j : yabai -m window --focus south
