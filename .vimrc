@@ -245,7 +245,7 @@ let g:nightflyTerminalColors = 0
 " colorscheme nightfly
 
 " set signcolumn="yes"
-" set signcolumn=number
+set signcolumn=number
 
 " highlight clear LineNr
 " highlight clear SignColumn
@@ -272,19 +272,19 @@ let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 " ====== FOLD SETTINGS (indent/syntax) =======
 " set foldmethod=indent
 " set foldnestmax=2
-set foldcolumn=2
-set foldmethod=syntax
-set foldlevelstart=1
-let javaScript_fold=1         " JavaScript
-let perl_fold=1               " Perl
-let php_folding=1             " PHP
-let r_syntax_folding=1        " R
-let ruby_fold=1               " Ruby
-let sh_fold_enabled=1         " sh
-let vimsyn_folding='af'       " Vim script
-let xml_syntax_folding=1      " XML
-let markdown_folding=1        " markdown
-let markdown_enable_folding=1 " markdown
+" set foldcolumn=2
+" set foldmethod=syntax
+" set foldlevelstart=1
+" let javaScript_fold=1         " JavaScript
+" let perl_fold=1               " Perl
+" let php_folding=1             " PHP
+" let r_syntax_folding=1        " R
+" let ruby_fold=1               " Ruby
+" let sh_fold_enabled=1         " sh
+" let vimsyn_folding='af'       " Vim script
+" let xml_syntax_folding=1      " XML
+" let markdown_folding=1        " markdown
+" let markdown_enable_folding=1 " markdown
 
 " ====== SYNTASTIC / GIT GUTTER SETTINGS =======
 let g:syntastic_always_populate_loc_list = 1
