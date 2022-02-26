@@ -122,33 +122,33 @@ font:
 draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
-colors:
-  name: Atelierlakeside (dark)
-  author: Chris Kempson
-  primary:
-    background: "#161b1d"
-    foreground: "#7ea2b4"
-  cursor:
-    text: "#161b1d"
-    cursor: "#7ea2b4"
-  normal:
-    black: "#161b1d"
-    red: "#d22d72"
-    green: "#568c3b"
-    yellow: "#8a8a0f"
-    blue: "#257fad"
-    magenta: "#5d5db1"
-    cyan: "#2d8f6f"
-    white: "#7ea2b4"
-  bright:
-    black: "#5a7b8c"
-    red: "#d22d72"
-    green: "#568c3b"
-    yellow: "#8a8a0f"
-    blue: "#257fad"
-    magenta: "#5d5db1"
-    cyan: "#2d8f6f"
-    white: "#ebf8ff"
+# colors:
+#   name: Atelierlakeside (dark)
+#   author: Chris Kempson
+#   primary:
+#     background: "#161b1d"
+#     foreground: "#7ea2b4"
+#   cursor:
+#     text: "#161b1d"
+#     cursor: "#7ea2b4"
+#   normal:
+#     black: "#161b1d"
+#     red: "#d22d72"
+#     green: "#568c3b"
+#     yellow: "#8a8a0f"
+#     blue: "#257fad"
+#     magenta: "#5d5db1"
+#     cyan: "#2d8f6f"
+#     white: "#7ea2b4"
+#   bright:
+#     black: "#5a7b8c"
+#     red: "#d22d72"
+#     green: "#568c3b"
+#     yellow: "#8a8a0f"
+#     blue: "#257fad"
+#     magenta: "#5d5db1"
+#     cyan: "#2d8f6f"
+#     white: "#ebf8ff"
 # Bell
 #
 # The bell is rung every time the BEL control character is received.
@@ -828,4 +828,31 @@ key_bindings:
   # Print all received window events.
   #print_events: false
 _events: false
-theme: Atelierlakeside.dark
+# theme: Atelierlakeside.dark
+# BEGIN ACE
+colors:
+  primary:
+    background: '#292522'
+    foreground: '#f3e2d8'
+  cursor:
+    text:       '#292522'
+    cursor:     '#f3e2d8'
+  normal:
+    black:      '#292522'
+    red:        '#778E83'
+    green:      '#A29A8F'
+    yellow:     '#DDB0A0'
+    blue:       '#BDC1B5'
+    magenta:    '#D1C6B6'
+    cyan:       '#F8CBB9'
+    white:      '#f3e2d8'
+  bright:
+    black:      '#aa9e97'
+    red:        '#778E83'
+    green:      '#A29A8F'
+    yellow:     '#DDB0A0'
+    blue:       '#BDC1B5'
+    magenta:    '#D1C6B6'
+    cyan:       '#F8CBB9'
+    white:      '#f3e2d8'
+# END ACE

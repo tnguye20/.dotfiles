@@ -84,7 +84,7 @@ bindsym $mod+Shift+F2 exec gksu pcmanfm
 # bindsym XF86AudioNext exec st -e 'cmus-remote -n'
 # bindsym $mod+Shift+m exec st -e 'pkill -9 cmus'
 bindsym $mod+Ctrl+p exec $HOME/packages/polybar-browsermediacontrol/browsermediacontrol --playpause
-bindsym $mod+v exec $HOME/packages/polybar-browsermediacontrol/browsermediacontrol --volume 1
+bindsym $mod+Shift+v exec $HOME/packages/polybar-browsermediacontrol/browsermediacontrol --volume 1
 bindsym $mod+Ctrl+v exec $HOME/packages/polybar-browsermediacontrol/browsermediacontrol --volume -1
 
 # Clipboard Manager copyQ
@@ -143,7 +143,7 @@ workspace_auto_back_and_forth yes
 
 # split orientation
 bindsym $mod+bar split h;exec notify-send 'tile horizontally'
-bindsym $mod+shift+v split v;exec notify-send 'tile vertically'
+bindsym $mod+v split v;exec notify-send 'tile vertically'
 # bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
@@ -350,9 +350,10 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd #notify daemon to hand
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id $HOME/.screenlayout/layout.sh
+exec --no-startup-id $HOME/scripts/polybar_launcher
+exec --no-startup-id $HOME/scripts/randomWallpaper
 # exec --no-startup-id $HOME/scripts/startRandomWallpaperLoop
 # exec --no-startup-id $HOME/scripts/rsyncFilesFrom
-exec --no-startup-id $HOME/scripts/polybar_launcher
 exec --no-startup-id mpd
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
