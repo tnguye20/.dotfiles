@@ -109,7 +109,7 @@ bindsym $mod+Shift+a exec --no-startup-id /usr/local/android-studio/bin/studio.s
 bindsym $mod+Shift+w exec $HOME/scripts/wallpaperChooser
 bindsym $mod+Ctrl+k exec $HOME/scripts/processKiller
 bindsym $mod+Ctrl+l exec $HOME/scripts/layoutChooser
-bindsym $mod+r exec urxvt -e ranger
+bindsym $mod+r exec alacritty -e ranger
 bindsym $mod+Shift+9 exec --no-startup-id $HOME/scripts/lockAndSlide
 
 # change focus
@@ -247,7 +247,6 @@ for_window [title="MuseScore: Play Panel"] floating enable
 for_window [class="Nitrogen"] floating enable sticky enable border normal
 for_window [class="Oblogout"] fullscreen enable
 for_window [class="octopi"] floating enable
-for_window [title="About Pale Moon"] floating enable
 for_window [class="Pamac-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="qt5ct"] floating enable sticky enable border normal
@@ -257,12 +256,12 @@ for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="Xfburn"] floating enable
-for_window [class="copyq"] floating enable center
+for_window [class="copyq"] floating enable, move position center
 for_window [class="URxvt" instance="calculator"] floating enable center
 for_window [class="URxvt" instance="randomwordpick"] floating enable center
 for_window [class="URxvt" instance="float"] floating enable border pixel 2 move absolute position 15px 15px
 for_window [class="Gvim"] floating enable border pixel 2
-for_window [instance="AlacrittyFuzzy"] floating enable center resize set 300 300
+for_window [instance="AlacrittyFuzzy"] floating enable, resize set 330 220, move position center
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -279,13 +278,13 @@ bindsym $mod+e exec --no-startup-id $HOME/scripts/emojipicker
 
 # Rsync Mode for syncing files
 bindsym $mod+Ctrl+r mode "$mode_rsync"
-set $mode_rsync Rsync (F)rom w3, Rsync (T)o w3
-mode "$mode_rsync" {
-    bindsym f exec --no-startup-id  $HOME/scripts/rsyncFilesFrom, mode "default"
-    bindsym t exec --no-startup-id  $HOME/scripts/rsyncFilesTo, mode "default"
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
+# set $mode_rsync Rsync (F)rom w3, Rsync (T)o w3
+# mode "$mode_rsync" {
+#     bindsym f exec --no-startup-id  $HOME/scripts/rsyncFilesFrom, mode "default"
+#     bindsym t exec --no-startup-id  $HOME/scripts/rsyncFilesTo, mode "default"
+#     bindsym Return mode "default"
+#     bindsym Escape mode "default"
+# }
 
 # Mouse mode for moving mouse with Vim keys
 bindsym $mod+m mode "$mode_mouse"
@@ -402,7 +401,6 @@ bar {
 	# status_command i3status
   # status_command $HOME/bumblebee-status/bumblebee-status -m xrandr spacer spacer mpd spacer spacer time date spacer disk memory cpu spacer battery spacer kernel hostname -p interval=1 -t iceberg-contrast
 	# position bottom
-  # mode hide
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 	tray_output primary
