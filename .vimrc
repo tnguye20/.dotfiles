@@ -231,18 +231,18 @@ syn region markdownLinkText matchgroup=markdownLinkTextDelimiter
 " let g:airline_theme='base16'
 " let g:airline_theme='jellybeans'
 
-" let ayucolor="mirage" "for mirage version of theme"
-" let g:airline_theme='ayu_mirage'
+let ayucolor="mirage" "for mirage version of theme"
+let g:airline_theme='ayu_mirage'
 " let ayucolor="dark"   "for dark version of theme"
 " let g:airline_theme='one'
 " let ayucolor="light"   "for dark light of theme"
-" colorscheme ayu
+colorscheme ayu
 
-let g:lightline = { 'colorscheme': 'nightfly' }
-let g:nightflyUnderlineMatchParen = 1
-let g:nightflyCursorColor = 1
-let g:nightflyTerminalColors = 0
-colorscheme nightfly
+" let g:lightline = { 'colorscheme': 'nightfly' }
+" let g:nightflyUnderlineMatchParen = 1
+" let g:nightflyCursorColor = 1
+" let g:nightflyTerminalColors = 0
+" colorscheme nightfly
 
 " set signcolumn="yes"
 set signcolumn=number
@@ -251,7 +251,7 @@ highlight clear LineNr
 highlight clear SignColumn
 
 " Transparency
-hi Normal guibg=NONE ctermbg=NONE
+" hi Normal guibg=NONE ctermbg=NONE
 
 " ====== RAINBOW SETTINGS =======
 let g:rainbow_active = 1
