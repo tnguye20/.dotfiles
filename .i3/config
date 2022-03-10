@@ -274,7 +274,7 @@ for_window [urgent=latest] focus
 
 # exit i3 (logs you out of your X session)
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+e exec --no-startup-id $HOME/scripts/emojipicker
+bindsym $mod+e exec --no-startup-id $HOME/scripts/emojipicker2
 
 # Rsync Mode for syncing files
 bindsym $mod+Ctrl+r mode "$mode_rsync"
