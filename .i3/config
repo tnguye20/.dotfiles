@@ -445,8 +445,8 @@ bindsym $mod+Shift+b bar mode toggle
 # Set inner/outer gaps
 # gaps inner 11
 # gaps outer -2
-for_window[class=".*"] border pixel 0
-# for_window[class=".*"] border pixel 3
+# for_window[class=".*"] border pixel 0
+for_window[class=".*"] border pixel 2
 gaps inner 4
 gaps outer 0
 
