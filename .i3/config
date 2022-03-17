@@ -17,8 +17,8 @@ new_float none
 # change borders
 # bindsym $mod+Shift+u border none
 # bindsym $mod+Shift+y border pixel 1
-bindsym $mod+n border normal
-bindsym $mod+Shift+n border pixel 2
+# bindsym $mod+n border normal
+# bindsym $mod+Shift+n border pixel 2
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -256,6 +256,7 @@ for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+for_window [class="Pcsx2"] floating enable
 for_window [class="copyq"] floating enable, move position center
 for_window [class="URxvt" instance="calculator"] floating enable center
 for_window [class="URxvt" instance="randomwordpick"] floating enable center
@@ -443,12 +444,12 @@ bindsym $mod+Shift+b bar mode toggle
 #############################
 
 # Set inner/outer gaps
-# gaps inner 11
-# gaps outer -2
-# for_window[class=".*"] border pixel 0
-for_window[class=".*"] border pixel 2
-gaps inner 4
-gaps outer 0
+gaps inner 11
+gaps outer -5
+for_window[class=".*"] border pixel 0
+# for_window[class=".*"] border pixel 2
+# gaps inner 4
+# gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
