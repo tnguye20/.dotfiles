@@ -148,7 +148,7 @@ antigen bundle ssh-agent
 # Theme
 # antigen theme afowler
 # antigen theme af-magic
-# antigen theme bhilburn/powerlevel9k powerlevel9k
+antigen theme bhilburn/powerlevel9k powerlevel9k
 # antigen theme amuse
 # antigen theme bira
 
@@ -261,7 +261,7 @@ export FIREBASE_AUTH_EMULATOR_HOST="localhost:9099"
 xset r rate 300 50 > /dev/null 2> /dev/null
 
 # Boot into starship
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
