@@ -207,7 +207,7 @@ syn region markdownLinkText matchgroup=markdownLinkTextDelimiter
 
 " ============ colorscheme settings ===========
 " colorscheme wal
-" colorscheme gruvbox
+colorscheme gruvbox
 " colorscheme OceanicNext
 " colorscheme one
 " colorscheme onedark
@@ -232,11 +232,11 @@ syn region markdownLinkText matchgroup=markdownLinkTextDelimiter
 " let g:airline_theme='jellybeans'
 
 " let ayucolor="mirage" "for mirage version of theme"
-let g:airline_theme='ayu_mirage'
-let ayucolor="dark"   "for dark version of theme"
+" let g:airline_theme='ayu_mirage'
+" let ayucolor="dark"   "for dark version of theme"
 " let g:airline_theme='one'
 " let ayucolor="light"   "for dark light of theme"
-colorscheme ayu
+" colorscheme ayu
 
 " let g:lightline = { 'colorscheme': 'nightfly' }
 " let g:nightflyUnderlineMatchParen = 1

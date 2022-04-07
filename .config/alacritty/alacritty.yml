@@ -207,7 +207,7 @@ cursor:
     #   - ▇ Block
     #   - _ Underline
     #   - | Beam
-    shape: Underline
+    shape: Block
 
     # Cursor blinking state
     #
@@ -832,27 +832,27 @@ _events: false
 # BEGIN ACE
 colors:
   primary:
-    background: '#0d0a09'
-    foreground: '#a1cedf'
+    background: '#181818'
+    foreground: '#e2dbc8'
   cursor:
-    text:       '#0d0a09'
-    cursor:     '#a1cedf'
+    text:       '#181818'
+    cursor:     '#e2dbc8'
   normal:
-    black:      '#0d0a09'
-    red:        '#2C4B6D'
-    green:      '#A43C53'
-    yellow:     '#356193'
-    blue:       '#5066A8'
-    magenta:    '#5161BD'
-    cyan:       '#975898'
-    white:      '#a1cedf'
+    black:      '#181818'
+    red:        '#699B6A'
+    green:      '#D69821'
+    yellow:     '#998E72'
+    blue:       '#437E80'
+    magenta:    '#458588'
+    cyan:       '#BAAE90'
+    white:      '#e2dbc8'
   bright:
-    black:      '#70909c'
-    red:        '#2C4B6D'
-    green:      '#A43C53'
-    yellow:     '#356193'
-    blue:       '#5066A8'
-    magenta:    '#5161BD'
-    cyan:       '#975898'
-    white:      '#a1cedf'
+    black:      '#9e998c'
+    red:        '#699B6A'
+    green:      '#D69821'
+    yellow:     '#998E72'
+    blue:       '#437E80'
+    magenta:    '#458588'
+    cyan:       '#BAAE90'
+    white:      '#e2dbc8'
 # END ACE
