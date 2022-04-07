@@ -14,4 +14,5 @@ configuration {
 //@theme "/home/tnguye20/.local/share/rofi/themes/rounded-gray-dark.rasi"
 //@theme "/home/tnguye20/.local/share/rofi/themes/squared-everforest.rasi"
 //@theme "/usr/share/rofi/themes/paper-float.rasi"
-@theme "/usr/share/rofi/themes/Paper.rasi"
+//@theme "/usr/share/rofi/themes/Paper.rasi"
+@theme "/home/tnguye20/.local/share/rofi/themes/squared-everforest.rasi"
