@@ -4,3 +4,9 @@ configuration {
   show-icons:         true;
   icon-theme:         "Papirus";
 }
+//@theme "/home/tnguye20/.local/share/rofi/themes/spotlight.rasi"
+//@theme "/home/tnguye20/.local/share/rofi/themes/windows11-list-dark.rasi"
+//@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
+//@theme "/home/tnguye20/.local/share/rofi/themes/squared-nord.rasi"
+//@theme "/home/tnguye20/.local/share/rofi/themes/spotlight.rasi"
+@theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
