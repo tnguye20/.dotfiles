@@ -278,3 +278,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+if [ -d ~/.ixis/ ]; then
+  source ~/.ixis/.zshrc
+fi

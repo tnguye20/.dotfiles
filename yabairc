@@ -60,6 +60,7 @@ yabai -m rule --add app="^Path Finder$" manage=off
 yabai -m rule --add app="^TeamViewer$" sticky=off layer=above manage=off
 yabai -m rule --add app="Fantastical" manage=off
 yabai -m rule --add app="Calculator" manage=off
+yabai -m rule --add app="VMWare Fusion" manage=off
 # yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="^iTerm2$" manage=off
 yabai -m rule --add app="^Flux$" manage=off
