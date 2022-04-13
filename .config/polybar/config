@@ -9,7 +9,7 @@
 
 [colors]
 ; background = ${xrdb:color0:#00222}
-background = #991e1e1e
+; background = #991e1e1e
 background-alt = #B5e1e1e
 foreground = #dfdfdf
 foreground-alt = #dfdfdf
@@ -60,13 +60,13 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-; font-0 = Iosevka Medium:pixelsize=11;1
-font-0 = Patrick Hand:pixelsize=9;1
+font-0 = Iosevka Medium:pixelsize=11;1
+; font-0 = Patrick Hand:pixelsize=9;1
 font-1 = RobotoMono Nerd Font:pixelsize=10;1
 
-modules-left = bspwm i3 date
-modules-center = xwindow browsermediacontrol
-modules-right = hostname mynetwork filesystem memory cpu wlan eth battery temperature xkeyboard powermenu
+modules-left = bspwm i3 xwindow
+modules-center = browsermediacontrol
+modules-right = date hostname mynetwork filesystem memory cpu wlan eth battery temperature xkeyboard powermenu
 dim-value= 0.5
 
 ; separator = |
@@ -125,7 +125,8 @@ interval = 100000
 
 [module/xwindow]
 type = internal/xwindow
-label =   %title:0:45:...%
+; label =   %title:0:45:...%
+label =  %title:0:45:...%
 
 [module/xkeyboard]
 type = internal/xkeyboard
