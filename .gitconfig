@@ -1,15 +1,15 @@
 [user]
-	email = tnguye20@uvm.edu
+	email = thangnguyenuvm@gmail.com
 	name = Thang Nguyen
 
-; [diff]
-; 	tool = meld
-; [difftool "meld"]
-; 	path = /usr/bin/meld
-; 	cmd = meld \"$LOCAL\" \"$REMOTE\"
 [diff]
-	tool = vimdiff
-	conflictstyle = diff3
+	tool = meld
+[difftool "meld"]
+	path = /usr/bin/meld
+	cmd = meld \"$LOCAL\" \"$REMOTE\"
+; [diff]
+; 	tool = vimdiff
+; 	conflictstyle = diff3
 
 [difftool]
 	prompt = false
