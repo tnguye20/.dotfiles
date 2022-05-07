@@ -93,7 +93,7 @@ font:
   # Normal (roman) font face
   normal:
     family: Iosevka
-    style: Medium
+    style: Light
 
   # Point size
   size: 15.0

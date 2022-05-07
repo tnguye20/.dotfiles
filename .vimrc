@@ -168,6 +168,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'bluz71/vim-nightfly-guicolors'
+Plug 'sainnhe/everforest'
 
 " ======== TOOLING  =======
 " Plug 'vimwiki/vimwiki'
@@ -175,8 +176,8 @@ Plug 'bluz71/vim-nightfly-guicolors'
 call plug#end()
 
 " ============ Prettier on save ===========
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+" let g:prettier#autoformat = 0
+" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 let g:prettier#config#bracket_spacing = 'true'
 
 " ============ general settings ===========
@@ -212,7 +213,7 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " colorscheme one
 " colorscheme onedark
 " let g:dracula_colorterm = 0
-colorscheme palenight
+" colorscheme palenight
 " colorscheme nord
 " colorscheme mountaineer
 " colorscheme base16-solarized-dark
@@ -242,6 +243,16 @@ colorscheme palenight
 " let g:nightflyCursorColor = 1
 " let g:nightflyTerminalColors = 0
 " colorscheme nightfly
+
+" Set contrast.
+" This configuration option should be placed before `colorscheme everforest`.
+" Available values: 'hard', 'medium'(default), 'soft'
+let g:everforest_better_performance = 1
+let g:everforest_background = 'soft'
+let g:airline_theme = 'everforest'
+" let g:everforest_transparent_background = 1
+" let g:everforest_sign_column_background = 'none'
+colorscheme everforest
 
 set signcolumn=number
 highlight clear LineNr
@@ -415,11 +426,16 @@ autocmd BufWritePost *.tex !pdflatex *.tex
 autocmd BufReadPost,BufNewFile *.md silent! :Goyo
 autocmd BufReadPost,BufNewFile *.md silent! :set spell
 
-" augroup remember_folds
-"   autocmd!
-"   autocmd BufWinLeave * mkview
-"   autocmd BufWinEnter * silent! loadview
-" augroup END
+" FOLD On Save
+augroup AutoSaveGroup
+  autocmd!
+  " view files are about 500 bytes
+  " bufleave but not bufwinleave captures closing 2nd tab
+  " nested is needed by bufwrite* (if triggered via other autocmd)
+  " BufHidden for compatibility with `set hidden`
+  autocmd BufWinLeave,BufLeave,BufWritePost,BufHidden,QuitPre ?* nested silent! mkview!
+  autocmd BufWinEnter ?* silent! loadview
+augroup end
 
 " Key Mappings
 " Markdown
