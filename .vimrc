@@ -4,6 +4,7 @@
 
 " General Config
 set nocompatible
+set lazyredraw
 set ruler
 set hidden
 set history=10000
@@ -27,13 +28,11 @@ set timeout timeoutlen=1000
 set mouse=a
 set laststatus=2
 set noswapfile
-"set shell=bash
 set encoding=UTF-8
 set autoindent
 set splitbelow splitright
 set t_Co=256
 set termguicolors
-" set term=screen-256color
 set rtp+=~/.fzf
 set cursorline  " highlight current line
 set background=dark
@@ -51,13 +50,15 @@ set hlsearch " highlight matches
 set ignorecase
 set smartcase
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/* " lol
-" if &term =~ '256color'
-"   set t_ut=256
-" endif
-" set smartindent
-syntax on
+set smartindent
+syntax enable
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+set t_BE=
+set exrc
+
+" Turn off paste mode when leaving insert
+" autocmd InsertLeave * set nopaste
 
 " COC CONFIG
 set updatetime=300
@@ -170,7 +171,7 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'bluz71/vim-nightfly-guicolors'
 
 " ======== TOOLING  =======
-Plug 'vimwiki/vimwiki'
+" Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
@@ -180,35 +181,35 @@ call plug#end()
 " let g:prettier#config#bracket_spacing = 'true'
 
 " ============ general settings ===========
-let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint', 'coc-json', 'coc-json', 'coc-prettier', 'coc-css', 'coc-ultisnips', 'coc-snippets', 'coc-rls']
+let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint', 'coc-json', 'coc-json', 'coc-prettier', 'coc-css', 'coc-ultisnips', 'coc-snippets', 'coc-rls', 'coc-pyright']
 let base16colorspace="256"
 let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
 " let g:vimspector_enable_mappings = 'HUMAN'
 " packadd! vimspector
 
 " ============ vimwiki settings ===========
-let g:vimwiki_list = [
-  \{'path': '~/rsync/wiki/', 'syntax': 'markdown', 'ext': 'md'},
-  \{'path': '~/rsync/wiki/mindsumo', 'syntax': 'markdown', 'ext': 'md'},
-  \{'path': '~/rsync/wiki/cover_letters', 'syntax': 'markdown', 'ext': 'md'},
-  \{'path': '~/rsync/wiki/academia', 'syntax': 'markdown', 'ext': 'md'}]
-command! Diary VimwikiDiaryIndex
-augroup vimwikigroup
-    autocmd!
-    " automatically update links on read diary
-    autocmd BufRead,BufNewFile diary.wiki VimwikiDiaryGenerateLinks
-augroup end
-syn region markdownLinkText matchgroup=markdownLinkTextDelimiter
-  \ start="!\=\[\%(\_[^]]*]\%( \=[[(]\)\)\@=" end="\]\%( \=[[(]\)\@="
-  \ nextgroup=markdownLink,markdownId skipwhite
-  \ contains=@markdownInline,markdownLineStart
-  \ concealends
+" let g:vimwiki_list = [
+"   \{'path': '~/rsync/wiki/', 'syntax': 'markdown', 'ext': 'md'},
+"   \{'path': '~/rsync/wiki/mindsumo', 'syntax': 'markdown', 'ext': 'md'},
+"   \{'path': '~/rsync/wiki/cover_letters', 'syntax': 'markdown', 'ext': 'md'},
+"   \{'path': '~/rsync/wiki/academia', 'syntax': 'markdown', 'ext': 'md'}]
+" command! Diary VimwikiDiaryIndex
+" augroup vimwikigroup
+"     autocmd!
+"     " automatically update links on read diary
+"     autocmd BufRead,BufNewFile diary.wiki VimwikiDiaryGenerateLinks
+" augroup end
+" syn region markdownLinkText matchgroup=markdownLinkTextDelimiter
+"   \ start="!\=\[\%(\_[^]]*]\%( \=[[(]\)\)\@=" end="\]\%( \=[[(]\)\@="
+"   \ nextgroup=markdownLink,markdownId skipwhite
+"   \ contains=@markdownInline,markdownLineStart
+"   \ concealends
 
 
 " ============ colorscheme settings ===========
 " colorscheme wal
 " colorscheme gruvbox
-colorscheme OceanicNext
+" colorscheme OceanicNext
 " colorscheme one
 " colorscheme onedark
 " let g:dracula_colorterm = 0
@@ -232,11 +233,10 @@ colorscheme OceanicNext
 " let g:airline_theme='jellybeans'
 
 " let ayucolor="mirage" "for mirage version of theme"
-" let g:airline_theme='ayu_mirage'
-" let ayucolor="dark"   "for dark version of theme"
-" let g:airline_theme='one'
+let g:airline_theme='ayu_mirage'
+let ayucolor="dark"   "for dark version of theme"
 " let ayucolor="light"   "for dark light of theme"
-" colorscheme ayu
+colorscheme ayu
 
 " let g:lightline = { 'colorscheme': 'nightfly' }
 " let g:nightflyUnderlineMatchParen = 1
@@ -244,9 +244,7 @@ colorscheme OceanicNext
 " let g:nightflyTerminalColors = 0
 " colorscheme nightfly
 
-" set signcolumn="yes"
 set signcolumn=number
-
 highlight clear LineNr
 highlight clear SignColumn
 
@@ -270,21 +268,21 @@ let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 " let g:table_mode_header_fillchar='='
 
 " ====== FOLD SETTINGS (indent/syntax) =======
-" set foldmethod=indent
-" set foldnestmax=2
-" set foldcolumn=2
-" set foldmethod=syntax
-" set foldlevelstart=1
-" let javaScript_fold=1         " JavaScript
-" let perl_fold=1               " Perl
-" let php_folding=1             " PHP
-" let r_syntax_folding=1        " R
-" let ruby_fold=1               " Ruby
-" let sh_fold_enabled=1         " sh
-" let vimsyn_folding='af'       " Vim script
-" let xml_syntax_folding=1      " XML
-" let markdown_folding=1        " markdown
-" let markdown_enable_folding=1 " markdown
+set foldmethod=indent
+set foldnestmax=2
+set foldcolumn=2
+set foldmethod=syntax
+set foldlevelstart=1
+let javaScript_fold=1         " JavaScript
+let perl_fold=1               " Perl
+let php_folding=1             " PHP
+let r_syntax_folding=1        " R
+let ruby_fold=1               " Ruby
+let sh_fold_enabled=1         " sh
+let vimsyn_folding='af'       " Vim script
+let xml_syntax_folding=1      " XML
+let markdown_folding=1        " markdown
+let markdown_enable_folding=1 " markdown
 
 " ====== SYNTASTIC / GIT GUTTER SETTINGS =======
 let g:syntastic_always_populate_loc_list = 1
@@ -294,12 +292,23 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers= ['eslint']
 let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 let g:gitgutter_set_sign_backgrounds = 1
-" You gotta add a lint npm script to each package.json you want linting for
-"let g:jsx_ext_required=0
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'default'
+
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#wordcount#enabled = 1
 let g:airline#extensions#wordcount#filetypes = '\vasciidoc|help|mail|markdown|markdown.pandoc|pandoc|org|rst|tex|text'
+" let g:airline_section_b = '%{getcwd()}' " in section B of the status line display the CWD
+"TABLINE:
+let g:airline#extensions#tabline#enabled = 1           " enable airline tabline
+let g:airline#extensions#tabline#show_close_button = 0 " remove 'X' at the end of the tabline
+let g:airline#extensions#tabline#tabs_label = ''       " can put text here like BUFFERS to denote buffers (I clear it so nothing is shown)
+let g:airline#extensions#tabline#buffers_label = ''    " can put text here like TABS to denote tabs (I clear it so nothing is shown)
+let g:airline#extensions#tabline#fnamemod = ':t'       " disable file paths in the tab
+let g:airline#extensions#tabline#show_tab_count = 0    " dont show tab numbers on the right
+let g:airline#extensions#tabline#show_buffers = 0      " dont show buffers in the tabline
+let g:airline#extensions#tabline#tab_min_count = 2     " minimum of 2 tabs needed to display the tabline
+let g:airline#extensions#tabline#show_splits = 0       " disables the buffer name that displays on the right of the tabline
+let g:airline#extensions#tabline#show_tab_nr = 0       " disable tab numbers
+let g:airline#extensions#tabline#show_tab_type = 0     " disables the weird ornage arrow on the tabline
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -347,7 +356,7 @@ xnoremap <Leader>rc :s///gc<Left><Left><Left>
 
 " Split resize and navigation
 map <C-j> <C-w>j
-map <C-k> <C-w>k
+map <C-k> <C-w>
 map <C-h> <C-w>h
 map <C-l> <C-w>l
 map <Leader>l :vertical resize +3<CR>
