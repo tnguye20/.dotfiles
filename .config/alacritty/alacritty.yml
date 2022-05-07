@@ -93,7 +93,7 @@ font:
   # Normal (roman) font face
   normal:
     family: Iosevka
-    style: Light
+    style: Medium Light
 
   # Point size
   size: 14.0
@@ -830,29 +830,29 @@ key_bindings:
 _events: false
 # theme: Atelierlakeside.dark
 # BEGIN ACE
-# colors:
-#   primary:
-#     background: '#0E0E12'
-#     foreground: '#eff0e0'
-#   cursor:
-#     text:       '#0E0E12'
-#     cursor:     '#eff0e0'
-#   normal:
-#     black:      '#0E0E12'
-#     red:        '#D0A544'
-#     green:      '#F7E466'
-#     yellow:     '#5C6E93'
-#     blue:       '#68A69C'
-#     magenta:    '#A4BFAC'
-#     cyan:       '#F4EC9F'
-#     white:      '#eff0e0'
-#   bright:
-#     black:      '#a7a89c'
-#     red:        '#D0A544'
-#     green:      '#F7E466'
-#     yellow:     '#5C6E93'
-#     blue:       '#68A69C'
-#     magenta:    '#A4BFAC'
-#     cyan:       '#F4EC9F'
-#     white:      '#eff0e0'
-# # END ACE
+colors:
+  primary:
+    background: '#090907'
+    foreground: '#dee1e0'
+  cursor:
+    text:       '#090907'
+    cursor:     '#dee1e0'
+  normal:
+    black:      '#090907'
+    red:        '#586C69'
+    green:      '#6D817C'
+    yellow:     '#5E8281'
+    blue:       '#748B8A'
+    magenta:    '#99A8A7'
+    cyan:       '#BBC4C2'
+    white:      '#dee1e0'
+  bright:
+    black:      '#9b9d9c'
+    red:        '#586C69'
+    green:      '#6D817C'
+    yellow:     '#5E8281'
+    blue:       '#748B8A'
+    magenta:    '#99A8A7'
+    cyan:       '#BBC4C2'
+    white:      '#dee1e0'
+# END ACE
