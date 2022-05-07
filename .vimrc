@@ -213,7 +213,7 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " colorscheme one
 " colorscheme onedark
 " let g:dracula_colorterm = 0
-" colorscheme palenight
+colorscheme palenight
 " colorscheme nord
 " colorscheme mountaineer
 " colorscheme base16-solarized-dark
@@ -233,10 +233,10 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " let g:airline_theme='jellybeans'
 
 " let ayucolor="mirage" "for mirage version of theme"
-let g:airline_theme='ayu_mirage'
-let ayucolor="dark"   "for dark version of theme"
+" let g:airline_theme='ayu_mirage'
+" let ayucolor="dark"   "for dark version of theme"
 " let ayucolor="light"   "for dark light of theme"
-colorscheme ayu
+" colorscheme ayu
 
 " let g:lightline = { 'colorscheme': 'nightfly' }
 " let g:nightflyUnderlineMatchParen = 1
