@@ -151,11 +151,10 @@ Plug 'frazrepo/vim-rainbow'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'airblade/vim-rooter'
-" Plug 'https://github.com/puremourning/vimspector'
 " Plug 'codota/tabnine-vim'
-" Plug 'mhinz/vim-grepper'
 Plug 'mattn/calendar-vim'
-" Plug 'tpope/vim-markdown'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " ======== REACT/JSX SUPPORT  ========
 Plug 'vim-airline/vim-airline-themes'
@@ -176,9 +175,9 @@ Plug 'bluz71/vim-nightfly-guicolors'
 call plug#end()
 
 " ============ Prettier on save ===========
-" let g:prettier#autoformat = 0
-" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
-" let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+let g:prettier#config#bracket_spacing = 'true'
 
 " ============ general settings ===========
 let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint', 'coc-json', 'coc-json', 'coc-prettier', 'coc-css', 'coc-ultisnips', 'coc-snippets', 'coc-rls', 'coc-pyright']
@@ -263,9 +262,9 @@ let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
 let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 
 " ====== Markdown Table SETTINGS =======
-" let g:table_mode_corner='|'
-" let g:table_mode_corner_corner='+'
-" let g:table_mode_header_fillchar='='
+let g:table_mode_corner='|'
+let g:table_mode_corner_corner='+'
+let g:table_mode_header_fillchar='='
 
 " ====== FOLD SETTINGS (indent/syntax) =======
 set foldmethod=indent
@@ -413,7 +412,7 @@ autocmd BufWritePost *.tex !pdflatex *.tex
 
 " Put Markdown in Goyo and Disable Coc
 " autocmd BufReadPost,BufNewFile *.md silent! :CocDisable
-" autocmd BufReadPost,BufNewFile *.md silent! :Goyo
+autocmd BufReadPost,BufNewFile *.md silent! :Goyo
 autocmd BufReadPost,BufNewFile *.md silent! :set spell
 
 " augroup remember_folds
@@ -424,7 +423,6 @@ autocmd BufReadPost,BufNewFile *.md silent! :set spell
 
 " Key Mappings
 " Markdown
-
 inoremap <Leader><Leader><Space> <Esc>/<++><Enter>"_c4l
 autocmd FileType pandoc,markdown inoremap ;b ____<Space><++><Esc>F_;i
 autocmd FileType pandoc,markdown inoremap ;i __<Space><++><Esc>F_i
