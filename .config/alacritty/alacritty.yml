@@ -830,29 +830,29 @@ key_bindings:
 _events: false
 # theme: Atelierlakeside.dark
 # BEGIN ACE
-colors:
-  primary:
-    background: '#0c0b0c'
-    foreground: '#b3b8bd'
-  cursor:
-    text:       '#0c0b0c'
-    cursor:     '#b3b8bd'
-  normal:
-    black:      '#0c0b0c'
-    red:        '#304756'
-    green:      '#395364'
-    yellow:     '#5B6064'
-    blue:       '#867772'
-    magenta:    '#8C817E'
-    cyan:       '#6B7984'
-    white:      '#b3b8bd'
-  bright:
-    black:      '#7d8084'
-    red:        '#304756'
-    green:      '#395364'
-    yellow:     '#5B6064'
-    blue:       '#867772'
-    magenta:    '#8C817E'
-    cyan:       '#6B7984'
-    white:      '#b3b8bd'
-# END ACE
+# colors:
+#   primary:
+#     background: '#0E0E12'
+#     foreground: '#eff0e0'
+#   cursor:
+#     text:       '#0E0E12'
+#     cursor:     '#eff0e0'
+#   normal:
+#     black:      '#0E0E12'
+#     red:        '#D0A544'
+#     green:      '#F7E466'
+#     yellow:     '#5C6E93'
+#     blue:       '#68A69C'
+#     magenta:    '#A4BFAC'
+#     cyan:       '#F4EC9F'
+#     white:      '#eff0e0'
+#   bright:
+#     black:      '#a7a89c'
+#     red:        '#D0A544'
+#     green:      '#F7E466'
+#     yellow:     '#5C6E93'
+#     blue:       '#68A69C'
+#     magenta:    '#A4BFAC'
+#     cyan:       '#F4EC9F'
+#     white:      '#eff0e0'
+# # END ACE

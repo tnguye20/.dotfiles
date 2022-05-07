@@ -207,8 +207,8 @@ syn region markdownLinkText matchgroup=markdownLinkTextDelimiter
 
 " ============ colorscheme settings ===========
 " colorscheme wal
-colorscheme gruvbox
-" colorscheme OceanicNext
+" colorscheme gruvbox
+colorscheme OceanicNext
 " colorscheme one
 " colorscheme onedark
 " let g:dracula_colorterm = 0
