@@ -216,8 +216,8 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " colorscheme palenight
 " colorscheme nord
 " colorscheme mountaineer
-" colorscheme base16-solarized-dark
-" let g:airline_theme='solarized'
+colorscheme base16-solarized-dark
+let g:airline_theme='solarized'
 " colorscheme base16-darktooth
 " colorscheme base16-bespin
 " colorscheme base16-dracula
@@ -247,12 +247,12 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " Set contrast.
 " This configuration option should be placed before `colorscheme everforest`.
 " Available values: 'hard', 'medium'(default), 'soft'
-let g:everforest_better_performance = 1
-let g:everforest_background = 'soft'
-let g:airline_theme = 'everforest'
 " let g:everforest_transparent_background = 1
 " let g:everforest_sign_column_background = 'none'
-colorscheme everforest
+" let g:everforest_better_performance = 1
+" let g:everforest_background = 'soft'
+" let g:airline_theme = 'everforest'
+" colorscheme everforest
 
 set signcolumn=number
 highlight clear LineNr

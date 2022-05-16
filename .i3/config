@@ -338,10 +338,10 @@ mode "$mode_system" {
 }
 
 # Resize window (you can also use the mouse for that)
-bindsym $mod+y resize shrink width 15 px or 15 ppt
+bindsym $mod+o resize shrink width 15 px or 15 ppt
 bindsym $mod+u resize grow height 15 px or 15 ppt
 bindsym $mod+i resize shrink height 15 px or 15 ppt
-bindsym $mod+o resize grow width 15 px or 15 ppt
+bindsym $mod+y resize grow width 15 px or 15 ppt
 
 # Lock screen
 bindsym $mod+9 exec --no-startup-id blurlock
