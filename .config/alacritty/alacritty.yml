@@ -21,8 +21,8 @@
 # check the local terminfo database and use `alacritty` if it is
 # available, otherwise `xterm-256color` is used.
 #TERM: alacritty
-window:
-  opacity: 0.85
+# window:
+#   opacity: 0.9
 # Window dimensions (changes require restart)
 #
 # Number of lines/columns (not pixels) in the terminal. The number of columns
@@ -832,27 +832,27 @@ _events: false
 # BEGIN ACE
 colors:
   primary:
-    background: '#0D0813'
-    foreground: '#e3d0c8'
+    background: '#1a1e25'
+    foreground: '#e9e6e0'
   cursor:
-    text:       '#0D0813'
-    cursor:     '#e3d0c8'
+    text:       '#1a1e25'
+    cursor:     '#e9e6e0'
   normal:
-    black:      '#0D0813'
-    red:        '#C4B269'
-    green:      '#2A2C92'
-    yellow:     '#57659F'
-    blue:       '#AA5B8F'
-    magenta:    '#6F988A'
-    cyan:       '#A0A3A3'
-    white:      '#e3d0c8'
+    black:      '#1a1e25'
+    red:        '#AB9271'
+    green:      '#C8AA7C'
+    yellow:     '#6F7688'
+    blue:       '#D2B688'
+    magenta:    '#EBCB8B'
+    cyan:       '#EAD6AF'
+    white:      '#e9e6e0'
   bright:
-    black:      '#9e918c'
-    red:        '#C4B269'
-    green:      '#2A2C92'
-    yellow:     '#57659F'
-    blue:       '#AA5B8F'
-    magenta:    '#6F988A'
-    cyan:       '#A0A3A3'
-    white:      '#e3d0c8'
+    black:      '#a3a19c'
+    red:        '#AB9271'
+    green:      '#C8AA7C'
+    yellow:     '#6F7688'
+    blue:       '#D2B688'
+    magenta:    '#EBCB8B'
+    cyan:       '#EAD6AF'
+    white:      '#e9e6e0'
 # END ACE
