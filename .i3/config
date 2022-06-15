@@ -103,11 +103,11 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 # Custom Scripts
 bindsym $mod+z exec --no-startup-id $HOME/scripts/scriptRunner
 bindsym $mod+Ctrl+r exec --no-startup-id $HOME/scripts/repoChooser
-bindsym $mod+w exec --no-startup-id $HOME/scripts/randomWallpaper
+bindsym $mod+Ctrl+w exec --no-startup-id $HOME/scripts/randomWallpaper
 bindsym $mod+ctrl+d exec --no-startup-id $HOME/scripts/instantDate
 bindsym $mod+Shift+a exec --no-startup-id /usr/local/android-studio/bin/studio.sh
 bindsym $mod+Shift+w exec $HOME/scripts/wallpaperChooser
-bindsym $mod+Ctrl+w exec $HOME/scripts/window_switcher
+bindsym $mod+w exec $HOME/scripts/window_switcher
 bindsym $mod+Ctrl+k exec $HOME/scripts/processKiller
 bindsym $mod+Ctrl+l exec $HOME/scripts/layoutChooser
 bindsym $mod+r exec urxvt -e ranger
@@ -263,6 +263,7 @@ for_window [class="URxvt" instance="calculator"] floating enable center
 for_window [class="URxvt" instance="randomwordpick"] floating enable center
 for_window [class="URxvt" instance="float"] floating enable border pixel 2 move absolute position 15px 15px
 for_window [class="Gvim"] floating enable border pixel 2
+for_window [class="Synergy"] floating enable border pixel 2 resize set 500 500 move position center
 for_window [instance="AlacrittyFuzzy"] floating enable, resize set 330 280, move position center
 
 # switch to workspace with urgent window automatically
