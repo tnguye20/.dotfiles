@@ -31,6 +31,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+Return exec terminology
+# bindsym $mod+Shift+Return exec alacritty --class AlacrittyFuzzy
 
 # kill focused window
 bindsym $mod+q kill
@@ -83,15 +84,20 @@ bindsym $mod+Shift+F2 exec gksu pcmanfm
 # bindsym XF86AudioPrev exec st -e 'cmus-remote -r'
 # bindsym XF86AudioNext exec st -e 'cmus-remote -n'
 # bindsym $mod+Shift+m exec st -e 'pkill -9 cmus'
-bindsym $mod+Ctrl+p exec $HOME/packages/polybar-browsermediacontrol/browsermediacontrol --playpause
-bindsym $mod+Shift+v exec $HOME/packages/polybar-browsermediacontrol/browsermediacontrol --volume 1
-bindsym $mod+Ctrl+v exec $HOME/packages/polybar-browsermediacontrol/browsermediacontrol --volume -1
+bindsym $mod+m [class="Cider"] scratchpad show
+bindsym $mod+Ctrl+p exec cider-polybar -a playpause
+bindsym $mod+Shift+v exec cider-polybar -a volume -v -0.02
+bindsym $mod+Ctrl+v exec  cider-polybar -a volume -v 0.02
+bindsym $mod+n exec cider-polybar -a next
+bindsym $mod+Ctrl+ n exec cider-polybar -a previous
 
 # Clipboard Manager copyQ
 bindsym $mod+c exec --no-startup-id copyq show
 
 # Calculator using Pyhton3
+# bindsym $mod+Shift+c exec --no-startup-id urxvt -name calculator -e "python"
 bindsym $mod+Shift+c exec --no-startup-id urxvt -name calculator -e "python"
+
 
 # bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
@@ -260,11 +266,12 @@ for_window [class="Xfburn"] floating enable
 for_window [class="Pcsx2"] floating enable
 for_window [class="copyq"] floating enable, move position center
 for_window [class="URxvt" instance="calculator"] floating enable center
+for_window [class="Cider"] floating enable center resize set 500 500
 for_window [class="URxvt" instance="randomwordpick"] floating enable center
 for_window [class="URxvt" instance="float"] floating enable border pixel 2 move absolute position 15px 15px
 for_window [class="Gvim"] floating enable border pixel 2
 for_window [class="Synergy"] floating enable border pixel 2 resize set 500 500 move position center
-for_window [instance="AlacrittyFuzzy"] floating enable, resize set 330 280, move position center
+for_window [instance="AlacrittyFuzzy"] floating enable center
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -290,33 +297,33 @@ bindsym $mod+e exec --no-startup-id $HOME/scripts/emojipicker
 # }
 
 # Mouse mode for moving mouse with Vim keys
-bindsym $mod+m mode "$mode_mouse"
-set $mode_mouse Left(h), Right(l), Up(k), Down(j), (C)lick, Cancel(x)
-mode "$mode_mouse" {
-  bindsym h exec --no-startup-id xdotool mousemove_relative --sync -- -90 0
-  bindsym Shift+h exec --no-startup-id xdotool mousemove_relative -- -10 0
+# bindsym $mod+m mode "$mode_mouse"
+# set $mode_mouse Left(h), Right(l), Up(k), Down(j), (C)lick, Cancel(x)
+# mode "$mode_mouse" {
+#   bindsym h exec --no-startup-id xdotool mousemove_relative --sync -- -90 0
+#   bindsym Shift+h exec --no-startup-id xdotool mousemove_relative -- -10 0
 
-  bindsym l exec --no-startup-id xdotool mousemove_relative --sync -- 90 0
-  bindsym Shift+l exec --no-startup-id xdotool mousemove_relative --sync -- 10 0
+#   bindsym l exec --no-startup-id xdotool mousemove_relative --sync -- 90 0
+#   bindsym Shift+l exec --no-startup-id xdotool mousemove_relative --sync -- 10 0
 
-  bindsym j exec --no-startup-id xdotool mousemove_relative --sync -- 0 90
-  bindsym Shift+j exec --no-startup-id xdotool mousemove_relative --sync -- 0 10
-  bindsym u exec --no-startup-id xdotool click --repeat 5 -c 5
+#   bindsym j exec --no-startup-id xdotool mousemove_relative --sync -- 0 90
+#   bindsym Shift+j exec --no-startup-id xdotool mousemove_relative --sync -- 0 10
+#   bindsym u exec --no-startup-id xdotool click --repeat 5 -c 5
 
-  bindsym k exec --no-startup-id xdotool mousemove_relative --sync -- 0 -90
-  bindsym Shift+k exec --no-startup-id xdotool mousemove_relative --sync -- 0 -10
-  bindsym i exec --no-startup-id xdotool click --repeat 5 -c 4
+#   bindsym k exec --no-startup-id xdotool mousemove_relative --sync -- 0 -90
+#   bindsym Shift+k exec --no-startup-id xdotool mousemove_relative --sync -- 0 -10
+#   bindsym i exec --no-startup-id xdotool click --repeat 5 -c 4
 
-  bindsym c exec --no-startup-id xdotool click -c 1
-  bindsym Shift+c exec --no-startup-id xdotool click 3
-  # bindsym Ctrl+c exec --no-startup-id xdotool click -c 1 click -c 1, mode "default"
+#   bindsym c exec --no-startup-id xdotool click -c 1
+#   bindsym Shift+c exec --no-startup-id xdotool click 3
+#   # bindsym Ctrl+c exec --no-startup-id xdotool click -c 1 click -c 1, mode "default"
 
-  # bindsym d exec --no-startup-id xdotool mousedown 1
-  # bindsym Shift+d exec --no-startup-id xdotool mouseup 1
+#   # bindsym d exec --no-startup-id xdotool mousedown 1
+#   # bindsym Shift+d exec --no-startup-id xdotool mouseup 1
 
-  bindsym x mode "default"
-  bindsym Escape mode "default"
-}
+#   bindsym x mode "default"
+#   bindsym Escape mode "default"
+# }
 
 # Set shut down, restart and locking features
 bindsym $mod+0 mode "$mode_system"
@@ -361,9 +368,9 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id copyq
-# exec --no-startup-id xcompmgr
 # exec --no-startup-id xautolock -time 15 -locker blurlock
-exec --no-startup-id picom --experimental-backends
+# exec --no-startup-id picom --experimental-backends
+exec --no-startup-id xcompmgr
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 

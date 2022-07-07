@@ -66,9 +66,9 @@ font-1 = RobotoMono Nerd Font:pixelsize=10;1
 
 dpi = 192
 
-modules-left = bspwm i3 browsermediacontrol
+modules-left = bspwm i3 ciderbar
 modules-center = xwindow
-modules-right = date hostname mynetwork filesystem memory cpu wlan eth battery temperature xkeyboard powermenu
+modules-right = date hostname mynetwork filesystem memory cpu wlan eth battery
 ; dim-value= 0.5
 type = custom/script
 exec = checkupdates | wc -l
@@ -83,6 +83,13 @@ exec = ~/packages/polybar-browsermediacontrol/browsermediacontrol --limit 50
 scroll-up = ~/packages/polybar-browsermediacontrol/browsermediacontrol --volume 1
 scroll-down = ~/packages/polybar-browsermediacontrol/browsermediacontrol --volume -1
 interval = 0.1
+
+[module/ciderbar]
+type = custom/script
+exec = cider-polybar -a get-currentmediaitem
+scroll-up = cider-polybar -a volume -v 0.01
+scroll-down = cider-polybar -a volume -v -0.01
+interval = 0.5
 
 [module/mynetwork]
 type = custom/script
