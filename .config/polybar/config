@@ -77,19 +77,19 @@ label = Updates: %output%
 format-prefix = "  "
 format-prefix-foreground = #ff0000
 
-[module/browsermediacontrol]
-type = custom/script
-exec = ~/packages/polybar-browsermediacontrol/browsermediacontrol --limit 50
-scroll-up = ~/packages/polybar-browsermediacontrol/browsermediacontrol --volume 1
-scroll-down = ~/packages/polybar-browsermediacontrol/browsermediacontrol --volume -1
-interval = 0.1
+; [module/browsermediacontrol]
+; type = custom/script
+; exec = ~/packages/polybar-browsermediacontrol/browsermediacontrol --limit 50
+; scroll-up = ~/packages/polybar-browsermediacontrol/browsermediacontrol --volume 1
+; scroll-down = ~/packages/polybar-browsermediacontrol/browsermediacontrol --volume -1
+; interval = 0.1
 
 [module/ciderbar]
 type = custom/script
-exec = cider-polybar -a get-currentmediaitem
+exec = echo $(cider-polybar -a get-currentmediaitem)
 scroll-up = cider-polybar -a volume -v 0.01
 scroll-down = cider-polybar -a volume -v -0.01
-interval = 0.5
+interval = 0.3
 
 [module/mynetwork]
 type = custom/script
