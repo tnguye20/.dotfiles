@@ -272,6 +272,8 @@ for_window [class="URxvt" instance="float"] floating enable border pixel 2 move 
 for_window [class="Gvim"] floating enable border pixel 2
 for_window [class="Synergy"] floating enable border pixel 2 resize set 500 500 move position center
 for_window [instance="AlacrittyFuzzy"] floating enable center
+for_window [class="vlc"] floating enable center
+for_window [class="Blueman-manager"] floating enable center
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -369,8 +371,8 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id copyq
 # exec --no-startup-id xautolock -time 15 -locker blurlock
-# exec --no-startup-id picom --experimental-backends
-exec --no-startup-id xcompmgr
+exec --no-startup-id picom --experimental-backends
+# exec --no-startup-id xcompmgr
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
