@@ -34,7 +34,7 @@ set splitbelow splitright
 set t_Co=256
 set termguicolors
 set rtp+=~/.fzf
-set cursorline  " highlight current line
+" set cursorline  " highlight current line
 set background=dark
 set number " show line numbers
 set relativenumber
@@ -169,6 +169,7 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'sainnhe/everforest'
+Plug 'iandwelker/rose-pine-vim'
 
 " ======== TOOLING  =======
 " Plug 'vimwiki/vimwiki'
@@ -233,7 +234,7 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " let g:airline_theme='jellybeans'
 
 " let ayucolor="mirage" "for mirage version of theme"
-" let g:airline_theme='ayu_mirage'
+let g:airline_theme='ayu_dark'
 " let ayucolor="dark"   "for dark version of theme"
 " let ayucolor="light"   "for dark light of theme"
 " colorscheme ayu
@@ -249,10 +250,12 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " Available values: 'hard', 'medium'(default), 'soft'
 " let g:everforest_transparent_background = 1
 " let g:everforest_sign_column_background = 'none'
-let g:everforest_better_performance = 1
-let g:everforest_background = 'medium'
-let g:airline_theme = 'everforest'
-colorscheme everforest
+" let g:everforest_better_performance = 1
+" let g:everforest_background = 'medium'
+" let g:airline_theme = 'everforest'
+" colorscheme everforest
+
+colorscheme rose-pine-dark
 
 set signcolumn=number
 highlight clear LineNr

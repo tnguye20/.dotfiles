@@ -830,29 +830,70 @@ key_bindings:
 _events: false
 # theme: Atelierlakeside.dark
 # BEGIN ACE
+# colors:
+#   primary:
+#     background: '#0f1216'
+#     foreground: '#ecded0'
+#   cursor:
+#     text:       '#0f1216'
+#     cursor:     '#ecded0'
+#   normal:
+#     black:      '#0f1216'
+#     red:        '#4C758B'
+#     green:      '#698F9B'
+#     yellow:     '#72A8C9'
+#     blue:       '#94ACB2'
+#     magenta:    '#E4B597'
+#     cyan:       '#ECC6A3'
+#     white:      '#ecded0'
+#   bright:
+#     black:      '#a59b91'
+#     red:        '#4C758B'
+#     green:      '#698F9B'
+#     yellow:     '#72A8C9'
+#     blue:       '#94ACB2'
+#     magenta:    '#E4B597'
+#     cyan:       '#ECC6A3'
+#     white:      '#ecded0'
+# END ACE
 colors:
   primary:
-    background: '#012A3A'
-    foreground: '#d4cec7'
+    background: "0x232136"
+    foreground: "0xe0def4"
   cursor:
-    text:       '#012A3A'
-    cursor:     '#d4cec7'
+    text: "0xe0def4"
+    cursor: "0x56526e"
+  vi_mode_cursor:
+    text: "0xe0def4"
+    cursor: "0x56526e"
+  line_indicator:
+    foreground: None
+    background: None
+  selection:
+    text: "0xe0def4"
+    background: "0x44415a"
   normal:
-    black:      '#012A3A'
-    red:        '#7D7F7C'
-    green:      '#9B684E'
-    yellow:     '#C68D6C'
-    blue:       '#195E94'
-    magenta:    '#39679F'
-    cyan:       '#5A9EC8'
-    white:      '#d4cec7'
+    black: "0x393552"
+    red: "0xeb6f92"
+    green: "0x3e8fb0"
+    yellow: "0xf6c177"
+    blue: "0x9ccfd8"
+    magenta: "0xc4a7e7"
+    cyan: "0xea9a97"
+    white: "0xe0def4"
   bright:
-    black:      '#94908b'
-    red:        '#7D7F7C'
-    green:      '#9B684E'
-    yellow:     '#C68D6C'
-    blue:       '#195E94'
-    magenta:    '#39679F'
-    cyan:       '#5A9EC8'
-    white:      '#d4cec7'
-# END ACE
+    black: "0x6e6a86"
+    red: "0xeb6f92"
+    green: "0x3e8fb0"
+    yellow: "0xf6c177"
+    blue: "0x9ccfd8"
+    magenta: "0xc4a7e7"
+    cyan: "0xea9a97"
+    white: "0xe0def4"
+  hints:
+    start:
+      foreground: "#908caa"
+      background: "#2a273f"
+    end:
+      foreground: "#6e6a86"
+      background: "#2a273f"
