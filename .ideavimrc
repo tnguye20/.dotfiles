@@ -461,3 +461,4 @@ set fillchars+=vert:\▏
 " GUI Setting
 set guifont=Iosevka
 au BufNewFile,BufFilePre,BufRead,BufWinEnter *.md setlocal filetype=markdown
+set clipboard+=ideaput
