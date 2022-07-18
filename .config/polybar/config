@@ -38,7 +38,7 @@ menu-1-1 = sub-item 2.2;command
 
 [bar/left]
 monitor = ${env:MONITOR}
-width = 27%
+width = 30%
 height = 50
 offset-x = 1%
 offset-y = 0.5%
@@ -92,7 +92,7 @@ dim-value= 0.5
 
 [bar/main_sub]
 monitor = ${env:MONITOR}
-width = 60%
+width = 50%
 height = 50
 offset-x = 25%
 offset-y = 0.3%
