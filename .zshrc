@@ -36,7 +36,7 @@ POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="❱ "
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="╰\uF460\uF460\uF460 "
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator user context ssh dir_writable dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator os_icon background_jobs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv status root_indicator os_icon background_jobs)
 
 POWERLEVEL9K_VCS_CLEAN_BACKGROUND="green"
 POWERLEVEL9K_VCS_CLEAN_FOREGROUND="$DEFAULT_BACKGROUND"
@@ -250,7 +250,6 @@ export PATH=$PATH:$HOME/scripts/yabai
 export PATH=$PATH:$HOME/packages/flutter/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/tnguye20/anaconda3/bin
-# neofetch --w3m $HOME/.dotfiles/.wallpaper/mr_robot.jpg --size 350px
 export FIRESTORE_EMULATOR_HOST="localhost:8080"
 export FIREBASE_STORAGE_EMULATOR_HOST="localhost:9199"
 export FIREBASE_AUTH_EMULATOR_HOST="localhost:9099"
@@ -281,3 +280,6 @@ unset __conda_setup
 if [ -d ~/.ixis/ ]; then
   source ~/.ixis/.zshrc
 fi
+
+nerdfetch
+echo "\n"
