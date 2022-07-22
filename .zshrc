@@ -281,5 +281,6 @@ if [ -d ~/.ixis/ ]; then
   source ~/.ixis/.zshrc
 fi
 
+echo "\n"
 nerdfetch
 echo "\n"
