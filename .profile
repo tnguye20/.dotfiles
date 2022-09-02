@@ -1,6 +1,6 @@
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
-export VISUAL=/usr/bin/gvim
+export VISUAL=/usr/bin/nvim
 export EDITOR=/usr/bin/nvim
 export TERM=alacritty
 if pacman -Qi google-chrome > /dev/null; then
