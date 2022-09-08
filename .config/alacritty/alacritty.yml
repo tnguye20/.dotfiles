@@ -93,7 +93,7 @@ font:
   # Normal (roman) font face
   normal:
     family: Victor Mono
-    style: Light
+    style: Bold
 
   # Point size
   size: 11.0
