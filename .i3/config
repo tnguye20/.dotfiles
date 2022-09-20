@@ -91,6 +91,9 @@ bindsym $mod+Ctrl+v exec  cider-polybar -a volume -v 0.02
 bindsym $mod+n exec cider-polybar -a next
 bindsym $mod+Ctrl+ n exec cider-polybar -a previous
 
+# Calendar Control
+bindsym $mod+Ctrl+c [class="googlecalendar-nativefier-e22938"] scratchpad show
+
 # Clipboard Manager copyQ
 bindsym $mod+c exec --no-startup-id copyq show
 
@@ -267,6 +270,7 @@ for_window [class="Pcsx2"] floating enable
 for_window [class="copyq"] floating enable, move position center
 for_window [class="URxvt" instance="calculator"] floating enable center
 for_window [class="Cider"] floating enable center resize set 500 500
+for_window [class="googlecalendar-nativefier-e22938"] floating enable center resize set 1500 1500
 for_window [class="URxvt" instance="randomwordpick"] floating enable center
 for_window [class="URxvt" instance="float"] floating enable border pixel 2 move absolute position 15px 15px
 for_window [class="Gvim"] floating enable border pixel 2
