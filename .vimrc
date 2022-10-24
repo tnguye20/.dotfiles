@@ -250,7 +250,7 @@ let g:airline_theme='ayu_dark'
 " let g:everforest_sign_column_background = 'none'
 " let g:everforest_better_performance = 1
 " let g:everforest_background = 'medium'
-" let g:airline_theme = 'everforest'
+let g:airline_theme = 'everforest'
 " colorscheme everforest
 
 colorscheme rose-pine-dark

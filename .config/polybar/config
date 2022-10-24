@@ -8,7 +8,9 @@
 ;=====================================================
 [colors]
 ; background = ${xrdb:color0:#00222}
-background = #90000000
+; background = #90000000
+background = #2F383E
+; background = #952d7254
 background-alt = #B5e1e1e
 foreground = #dfdfdf
 foreground-alt = #dfdfdf
@@ -42,6 +44,8 @@ width = 30%
 height = 50
 offset-x = 1%
 offset-y = 0.5%
+; offset-x = 1%
+; offset-y = 97%
 override-redirect = true
 radius = 11
 fixed-center = false
@@ -49,21 +53,23 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 line-size = 7
 line-color = #9EADC8
-border-size = 2
-border-color = #FFFFFF
+; border-size = 2
+; border-color = #FFFFFF
+border-size = 3
+border-color = #D3C6AA
 padding-left = 0
 padding-right = 2
 padding-top = 2
 padding-bottom = 2
 module-margin-left = 0
 module-margin-right = 1
-font-0 = Victor Mono Light:pixelsize=11;1
+font-0 = Victor Mono:pixelsize=11;1
 font-1 = RobotoMono Nerd Font:pixelsize=11;1
 dpi = 192
 modules-left = bspwm i3 ciderbar
 ; modules-center = xwindow
 ; modules-right = date hostname mynetwork filesystem memory cpu wlan eth battery
-dim-value= 0.5
+; dim-value= 0.5
 
 [bar/main]
 monitor = ${env:MONITOR}
@@ -71,6 +77,8 @@ width = 25%
 height = 50
 offset-x = 37%
 offset-y = 0.5%
+; offset-x = 37%
+; offset-y = 97%
 radius = 11
 fixed-center = false
 override-redirect = true
@@ -78,17 +86,19 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 line-size = 7
 line-color = #9EADC8
-border-size = 2
-border-color = #FFFFFF
+; border-size = 2
+; border-color = #FFFFFF
+border-size = 3
+border-color = #D3C6AA
 padding-left = 0
 padding-right = 2
 padding-top = 2
 padding-bottom = 2
-font-0 = Victor Mono Light:pixelsize=11;1
+font-0 = Victor Mono:pixelsize=11;1
 font-1 = RobotoMono Nerd Font:pixelsize=11;1
 dpi = 192
 modules-center = xwindow
-dim-value= 0.5
+; dim-value= 0.5
 
 [bar/main_sub]
 monitor = ${env:MONITOR}
@@ -96,6 +106,8 @@ width = 50%
 height = 50
 offset-x = 25%
 offset-y = 0.3%
+; offset-x = 25%
+; offset-y = 97%
 radius = 11
 fixed-center = false
 override-redirect = true
@@ -103,17 +115,19 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 line-size = 7
 line-color = #9EADC8
-border-size = 2
-border-color = #FFFFFF
+; border-size = 2
+; border-color = #FFFFFF
+border-size = 3
+border-color = #D3C6AA
 padding-left = 0
 padding-right = 2
 padding-top = 2
 padding-bottom = 2
-font-0 = Victor Mono Light:pixelsize=11;1
+font-0 = Victor Mono:pixelsize=11;1
 font-1 = RobotoMono Nerd Font:pixelsize=11;1
 dpi = 192
 modules-center = xwindow
-dim-value= 0.5
+; dim-value= 0.5
 
 [bar/right]
 monitor = ${env:MONITOR}
@@ -121,6 +135,8 @@ width = 30%
 height = 50
 offset-x = 69%
 offset-y = 0.5%
+; offset-x = 69%
+; offset-y = 97%
 radius = 11
 fixed-center = false
 override-redirect = true
@@ -128,19 +144,21 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 line-size = 7
 line-color = #9EADC8
-border-size = 2
-border-color = #FFFFFF
+; border-size = 2
+; border-color = #FFFFFF
+border-size = 3
+border-color = #D3C6AA
 padding-left = 2
 padding-right = 2
 padding-top = 2
 padding-bottom = 2
 module-margin-left = 0
 module-margin-right = 1
-font-0 = Victor Mono Light:pixelsize=11;1
+font-0 = Victor Mono:pixelsize=11;1
 font-1 = RobotoMono Nerd Font:pixelsize=11;1
 dpi = 192
 modules-right = hostname mynetwork filesystem memory cpu wlan eth battery date
-dim-value= 0.5
+; dim-value= 0.5
 
 [module/countupdates]
 type = custom/script
@@ -253,7 +271,7 @@ label-focused-background = ${module/bspwm.label-focused-background}
 ; label-focused-underline = ${module/bspwm.label-focused-underline}
 label-focused-padding = ${module/bspwm.label-focused-padding}
 
-label-unfocused = %index%!
+label-unfocused = %index%
 label-unfocused-padding = ${module/bspwm.label-occupied-padding}
 ; label-unfocused-background = ${module/bspwm.label-focused-underline}
 label-unfocused-underline = ${module/bspwm.label-focused-underline}

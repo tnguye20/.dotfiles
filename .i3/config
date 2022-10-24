@@ -462,7 +462,12 @@ bindsym $mod+Shift+b bar mode toggle
 # Set inner/outer gaps
 gaps inner 9
 gaps outer -5
+
+# Polybar gap
 gaps top 30
+# gaps bottom 30
+
+
 for_window[class=".*"] border pixel 2
 # gaps inner 4
 # gaps outer 0

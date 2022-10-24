@@ -322,6 +322,9 @@ export FZF_DEFAULT_OPTS="
 # Increase speed when holding down keys
 xset r rate 300 50 > /dev/null 2> /dev/null
 
+# Rust ENV
+source "$HOME/.cargo/env"
+
 # Boot into starship
 # eval "$(starship init zsh)"
 
@@ -347,3 +350,4 @@ fi
 echo "\n"
 nerdfetch
 echo "\n"
+

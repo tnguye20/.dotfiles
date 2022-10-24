@@ -18,4 +18,6 @@ configuration {
 //@theme "/home/tnguye20/.local/share/rofi/themes/squared-everforest.rasi"
 //@theme "/home/tnguye20/.local/share/rofi/themes/squared-nord.rasi"
 //@theme "/home/tnguye20/.local/share/rofi/themes/squared-everforest.rasi"
-@theme "/usr/share/rofi/themes/solarized.rasi"
+//@theme "/usr/share/rofi/themes/solarized.rasi"
+//@theme "/home/tnguye20/.local/share/rofi/themes/spotlight-dark.rasi"
+@theme "/home/tnguye20/.local/share/rofi/themes/squared-everforest.rasi"
