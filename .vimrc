@@ -232,7 +232,7 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 " let g:airline_theme='jellybeans'
 
 " let ayucolor="mirage" "for mirage version of theme"
-let g:airline_theme='ayu_dark'
+" let g:airline_theme='ayu_dark'
 " let ayucolor="dark"   "for dark version of theme"
 " let ayucolor="light"   "for dark light of theme"
 " colorscheme ayu
@@ -250,7 +250,7 @@ let g:airline_theme='ayu_dark'
 " let g:everforest_sign_column_background = 'none'
 " let g:everforest_better_performance = 1
 " let g:everforest_background = 'medium'
-let g:airline_theme = 'everforest'
+" let g:airline_theme = 'everforest'
 " colorscheme everforest
 
 colorscheme rose-pine-dark

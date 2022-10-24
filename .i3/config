@@ -12,7 +12,7 @@ set $mod Mod4
 new_float none
 
 # Hide borders
-# hide_edge_borders none
+hide_edge_borders both
 
 # change borders
 # bindsym $mod+Shift+u border none
@@ -445,15 +445,17 @@ bar {
 bindsym $mod+Shift+b bar mode toggle
 
 # Theme colors
-# class                   border  backgr. text    indic.   child_border
+  # class                    border  backgr. text    indic.   child_border
   # client.focused          #556064 #2B2C2B #000000 #000000
   # client.focused          #556064 #90be6d #000000 #000000
-  client.focused          #556064 #90a16d #000000 #000000
-  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-  # client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-  # client.placeholder      #000000 #0c0c0c #ffffff #000000
-  client.background       #2B2C2B
+
+  client.focused             #90a16d #191724 #90a16d #90a16d
+  client.focused_inactive    #2F3D44 #2F3D44 #1ABC9C #90a16d
+  client.unfocused           #2F3D44 #2F3D44 #1ABC9C #90a16d
+
+  # client.urgent             #CB4B16 #FDF6E3 #1ABC9C #268BD2
+  # client.placeholder        #000000 #0c0c0c #ffffff #000000
+  # client.background         #2B2C2B
 
 #############################
 ### settings for i3-gaps: ###
@@ -484,7 +486,7 @@ for_window[class=".*"] border pixel 2
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
 smart_borders on
 smart_borders no_gaps
-# border_radius 20
+# border_radius 30
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
