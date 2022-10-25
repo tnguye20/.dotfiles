@@ -323,7 +323,7 @@ export FZF_DEFAULT_OPTS="
 xset r rate 300 50 > /dev/null 2> /dev/null
 
 # Rust ENV
-source "$HOME/.cargo/env"
+[[ -d $HOME/.cargo ]] && source "$HOME/.cargo/env"
 
 # Boot into starship
 eval "$(starship init zsh)"
