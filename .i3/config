@@ -366,7 +366,6 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id $HOME/.screenlayout/layout.sh
 exec --no-startup-id $HOME/scripts/randomWallpaper
-exec --no-startup-id $HOME/scripts/polybar_launcher
 # exec --no-startup-id $HOME/scripts/startRandomWallpaperLoop
 # exec --no-startup-id $HOME/scripts/rsyncFilesFrom
 exec --no-startup-id mpd
@@ -374,6 +373,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id copyq
+exec --no-startup-id $HOME/scripts/polybar_launcher
 # exec --no-startup-id xautolock -time 15 -locker blurlock
 exec --no-startup-id picom --experimental-backends
 # exec --no-startup-id xcompmgr
@@ -470,7 +470,7 @@ gaps top 30
 # gaps bottom 30
 
 
-for_window[class=".*"] border pixel 2
+for_window[class=".*"] border pixel 3
 # gaps inner 4
 # gaps outer 0
 

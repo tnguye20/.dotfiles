@@ -230,6 +230,7 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 
 " let g:airline_theme='base16'
 " let g:airline_theme='jellybeans'
+let g:airline_theme='minimalist'
 
 " let ayucolor="mirage" "for mirage version of theme"
 " let g:airline_theme='ayu_dark'
