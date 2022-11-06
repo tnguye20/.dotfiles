@@ -35,6 +35,7 @@
 	hookspath = .githooks
 [push]
   default=upstream
+	autoSetupRemote = true
 [pull]
 	rebase = true
 [init]
