@@ -37,6 +37,8 @@
   default=upstream
 	autoSetupRemote = true
 [pull]
+  default=upstream
+	autoSetupRemote = true
 	rebase = true
 [init]
-	defaultBranch = master
+	defaultBranch = main

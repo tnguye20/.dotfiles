@@ -466,7 +466,7 @@ gaps inner 9
 gaps outer -5
 
 # Polybar gap
-gaps top 30
+gaps top 40
 # gaps bottom 30
 
 
