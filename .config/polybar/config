@@ -378,14 +378,14 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date = "%Y-%m-%d%"
+date = "%a, %Y-%m-%d%"
 
 time = %H:%M
 
 format-prefix-foreground = ${colors.foreground-alt}
 ; format-underline = ${colors.date}
 
-label =|  %time%    %date%
+label =|  %time%  %date%
 
 [module/volume]
 type = internal/volume
