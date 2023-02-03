@@ -63,10 +63,10 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness 
 bindsym $mod+Ctrl+b exec st -e 'bmenu'
 # bindsym $mod+F1 exec firefox
 # bindsym $mod+Shift+F1 exec firefox --private-window
-# bindsym $mod+p exec firefox
-# bindsym $mod+Shift+p exec firefox --private-window
-bindsym $mod+p exec google-chrome-stable
-bindsym $mod+Shift+p exec google-chrome-stable --incognito
+bindsym $mod+p exec firefox
+bindsym $mod+Shift+p exec firefox --private-window
+# bindsym $mod+p exec google-chrome-stable
+# bindsym $mod+Shift+p exec google-chrome-stable --incognito
 bindsym $mod+F2 exec pcmanfm
 bindsym $mod+Shift+F2 exec gksu pcmanfm
 
@@ -278,8 +278,10 @@ for_window [class="URxvt" instance="float"] floating enable border pixel 2 move 
 for_window [class="Gvim"] floating enable border pixel 2
 for_window [class="Synergy"] floating enable border pixel 2 resize set 500 500 move position center
 for_window [instance="AlacrittyFuzzy"] floating enable center
-for_window [class="vlc"] floating enable center
+# for_window [class="vlc"] floating enable center
 for_window [class="Blueman-manager"] floating enable center
+for_window [class="Wfica"] floating enable center
+for_window [class="wfica"] floating enable center
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -468,8 +470,8 @@ gaps inner 9
 gaps outer -5
 
 # Polybar gap
-gaps top 40
-# gaps bottom 30
+# gaps top 20
+gaps top 30
 
 
 for_window[class=".*"] border pixel 2
