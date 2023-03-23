@@ -177,30 +177,30 @@ function goRepo() {
 
 alias cdf="cd $HOME/.dotfiles"
 alias cds="cd $HOME/scripts"
-alias cdn="cd $HOME/rsync/notes"
+alias cdn="cd $HOME/notes"
 alias cdr="goRepo"
 alias cdp="cd $HOME/packages"
 alias cdm="cd /media"
 alias cdrs="cd $HOME/rsync"
 alias cdt="cd /tmp"
 alias b="bat"
-alias v="vim"
-alias vx="vim $HOME/.Xresources"
-alias v3="vim $HOME/.i3/config"
-alias vc="vim $HOME/.vimrc"
-alias vt="vim $HOME/.tmux.conf.local"
-alias vz="vim $HOME/.zshrc"
-alias vg="vim $HOME/.gitconfig"
-alias vp="vim $HOME/.profile"
-alias vf='vim $( fzf --preview "bat --style=numbers --color=always {} | head -500"  )'
-alias gvf='gvim $( fzf --preview "bat --style=numbers --color=always {} | head -500"  )'
+alias v="nvim"
+alias vx="nvim $HOME/.Xresources"
+alias v3="nvim $HOME/.i3/config"
+alias vc="nvim $HOME/.vimrc"
+alias vt="nvim $HOME/.tmux.conf.local"
+alias vz="nvim $HOME/.zshrc"
+alias vg="nvim $HOME/.gitconfig"
+alias vp="nvim $HOME/.profile"
+alias vf='nvim $( fzf --preview "bat --style=numbers --color=always {} | head -500"  )'
+alias gvf='nvim $( fzf --preview "bat --style=numbers --color=always {} | head -500"  )'
 alias copy="xclip -sel clip"
 alias tmux="tmux -2"
 alias t="tmux new -s A"
 alias tl="tmux ls"
 alias ta="tmux attach -t A"
 alias tb="tmux attach -t B"
-alias suv="sudo vim -u $HOME/.vimrc $@"
+alias suv="sudo nvim -u $HOME/.vimrc $@"
 alias dusk="du -sk *| sort -rn"
 # alias feh="swallow feh"
 
@@ -244,7 +244,7 @@ export FZF_DEFAULT_COMMAND='find . -not -path "*.git/*" -not -path "*venv*"  -no
 export FZF_DEFAULT_OPS="--extended"
 export COMPOSE_HTTP_TIMEOUT=5000
 export RANGER_LOAD_DEFAULT_RC=false
-export FPP_EDITOR="vim -p"
+export FPP_EDITOR="nvim -p"
 export PATH=$PATH:$HOME/scripts
 export PATH=$PATH:$HOME/scripts/yabai
 export PATH=$PATH:$HOME/packages/flutter/bin

@@ -426,7 +426,7 @@ autocmd BufWritePost *.tex !pdflatex *.tex
 
 " Put Markdown in Goyo and Disable Coc
 " autocmd BufReadPost,BufNewFile *.md silent! :CocDisable
-autocmd BufReadPost,BufNewFile *.md silent! :Goyo
+" autocmd BufReadPost,BufNewFile *.md silent! :Goyo
 autocmd BufReadPost,BufNewFile *.md silent! :set spell
 
 " FOLD On Save
