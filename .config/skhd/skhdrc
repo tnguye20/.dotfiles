@@ -12,7 +12,7 @@ alt - p: yabai -m display --focus east
 alt - space : yabai -m window --toggle float; yabai -m window --grid 4:4:1:1:2:2
 
 # make floating window fill left-half of screen
-shift + alt - left   : yabai -m window --grid 1:2:0:0:1:1
+# shift + alt - left   : yabai -m window --grid 1:2:0:0:1:1
 
 # swap windows
 ctrl + alt - j : yabai -m window --swap south
@@ -21,12 +21,19 @@ ctrl + alt - k : yabai -m window --swap north
 # ctrl + alt - h : yabai -m window --swap west;
 # ctrl + alt - l : yabai -m window --swap east
 
+# move windows left and right through windows
 ctrl + alt - h: yabai -m window --swap west; xx="$(echo $?)"; [[ "$xx" = '1' ]] && sh $HOME/scripts/yabai/moveWindowLeftAndFollowFocus
 ctrl + alt - l: yabai -m window --swap east; xx="$(echo $?)"; [[ "$xx" = '1' ]] && sh $HOME/scripts/yabai/moveWindowRightAndFollowFocus
 
-# move window to display left and right
-# shift + alt - n : yabai -m window --display west; yabai -m display --focus west;
-# shift + alt - p : yabai -m window --display east; yabai -m display --focus east;
+# move floating window
+shift + alt - h : yabai -m window --move rel:-20:0
+shift + alt - l : yabai -m window --move rel:20:0
+shift + alt - k : yabai -m window --move rel:0:-20
+shift + alt - j : yabai -m window --move rel:0:20
+
+# increase window size
+# shift + alt - a : yabai -m window --resize left:-17:0
+# shift + alt - w : yabai -m window --resize top:0:-20
 
 # rotate layout clockwise
 alt - r : yabai -m space --rotate 270
@@ -44,10 +51,10 @@ alt - f : yabai -m window --toggle zoom-fullscreen
 ctrl + alt - 0 : yabai -m space --balance
 
 # move window to space #
-ctrl + alt - 1 : yabai -m window --space 1;
-ctrl + alt - 2 : yabai -m window --space 2;
-ctrl + alt - 3 : yabai -m window --space 3;
-ctrl + alt - 4 : yabai -m window --space 4;
-ctrl + alt - 5 : yabai -m window --space 5;
-ctrl + alt - 6 : yabai -m window --space 6;
-ctrl + alt - 7 : yabai -m window --space 7;
+# ctrl + alt - 1 : yabai -m window --space 1;
+# ctrl + alt - 2 : yabai -m window --space 2;
+# ctrl + alt - 3 : yabai -m window --space 3;
+# ctrl + alt - 4 : yabai -m window --space 4;
+# ctrl + alt - 5 : yabai -m window --space 5;
+# ctrl + alt - 6 : yabai -m window --space 6;
+# ctrl + alt - 7 : yabai -m window --space 7;

@@ -42,6 +42,7 @@ yabai -m rule --add app="Calculator" manage=off
 yabai -m rule --add app="VMWare Fusion" manage=off
 yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="^iTerm2$" manage=off
+yabai -m rule --add app="^Spectacle$" manage=off
 # yabai -m rule --add app="^Alacritty$" manage=off
 yabai -m rule --add app="^Flux$" manage=off
 yabai -m rule --add app="^Citrix Workspace$" manage=off

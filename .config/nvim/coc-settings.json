@@ -1,3 +1,4 @@
 {
-  "coc.preferences.jumpCommand": "tabe"
+  "coc.preferences.jumpCommand": "tabe",
+  "snippets.ultisnips.pythonPrompt": false
 }
