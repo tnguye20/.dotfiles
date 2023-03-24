@@ -1,8 +1,8 @@
 # change window focus within space
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
-alt - h : yabai -m window --focus west
-alt - l : yabai -m window --focus east
+alt - h : yabai -m window --focus south; xx="$(echo $?)"; [[ "$xx" = '1' ]] && yabai -m display --focus south
+alt - h : yabai -m window --focus north; xx="$(echo $?)"; [[ "$xx" = '1' ]] && yabai -m display --focus north
+alt - h : yabai -m window --focus west; xx="$(echo $?)"; [[ "$xx" = '1' ]] && yabai -m display --focus west
+alt - l : yabai -m window --focus east; xx="$(echo $?)"; [[ "$xx" = '1' ]] && yabai -m display --focus east
 
 #change focus between external displays (left and right)
 alt - n: yabai -m display --focus west
