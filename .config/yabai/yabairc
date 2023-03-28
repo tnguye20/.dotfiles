@@ -44,6 +44,9 @@ yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="^iTerm2$" manage=off
 yabai -m rule --add app="^Spectacle$" manage=off
 yabai -m rule --add app="^WhatsApp$" manage=off
+yabai -m rule --add app="^Messages$" manage=off
+yabai -m rule --add app="^Zoom$" manage=off
+yabai -m rule --add app="^Music$" manage=off
 # yabai -m rule --add app="^Alacritty$" manage=off
 yabai -m rule --add app="^Flux$" manage=off
 yabai -m rule --add app="^Citrix Workspace$" manage=off
