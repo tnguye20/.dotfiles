@@ -460,5 +460,5 @@ highlight VertSplit cterm=NONE
 set fillchars+=vert:\▏
 
 " GUI Setting
-set guifont=Iosevka
-au BufNewFile,BufFilePre,BufRead,BufWinEnter *.md setlocal filetype=markdown
+" set guifont=Iosevka
+" au BufNewFile,BufFilePre,BufRead,BufWinEnter *.md setlocal filetype=markdown
