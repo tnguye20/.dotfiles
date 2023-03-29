@@ -1,6 +1,6 @@
 # change window focus within space
-alt - h : yabai -m window --focus south; xx="$(echo $?)"; [[ "$xx" = '1' ]] && yabai -m display --focus south
-alt - h : yabai -m window --focus north; xx="$(echo $?)"; [[ "$xx" = '1' ]] && yabai -m display --focus north
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
 alt - h : yabai -m window --focus west; xx="$(echo $?)"; [[ "$xx" = '1' ]] && yabai -m display --focus west
 alt - l : yabai -m window --focus east; xx="$(echo $?)"; [[ "$xx" = '1' ]] && yabai -m display --focus east
 
@@ -9,7 +9,7 @@ alt - n: yabai -m display --focus west
 alt - p: yabai -m display --focus east
 
 # float / unfloat window and center on screen
-alt - space : yabai -m window --toggle float; yabai -m window --grid 4:4:1:1:2:2
+ctrl + alt - space : yabai -m window --toggle float; yabai -m window --grid 4:4:1:1:2:2
 
 # make floating window fill left-half of screen
 # shift + alt - left   : yabai -m window --grid 1:2:0:0:1:1
@@ -58,3 +58,6 @@ ctrl + alt - 0 : yabai -m space --balance
 # ctrl + alt - 5 : yabai -m window --space 5;
 # ctrl + alt - 6 : yabai -m window --space 6;
 # ctrl + alt - 7 : yabai -m window --space 7;
+
+# alt - b: yabai -m window --focus "$(yabai -m query --windows --space | jq -re "[sort_by(.id, .frame) | reverse | .[] | select(.role == \"AXWindow\" and .subrole == \"AXStandardWindow\") | .id] | nth(index($(yabai -m query --windows --window | jq -re ".id")) - 1)")"
+alt - space: yabai -m window --focus "$(yabai -m query --windows --space | jq -re "[sort_by(.id, .frame) | .[] | select(.role == \"AXWindow\" and .subrole == \"AXStandardWindow\") | .id] | nth(index($(yabai -m query --windows --window | jq -re ".id")) - 1)")"
