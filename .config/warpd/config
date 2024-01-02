@@ -1,6 +1,6 @@
 drag: x
-accelerator: e
-decelerator: r
+accelerator: r
+decelerator: t
 hint: f
 hint2: F
 buttons: c b v
