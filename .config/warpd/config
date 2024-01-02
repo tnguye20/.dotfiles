@@ -1,0 +1,18 @@
+drag: x
+accelerator: e
+decelerator: r
+hint: f
+hint2: F
+buttons: c b v
+scroll_down: u
+scroll_up: i
+
+grid_up: unbind
+grid_left: unbind
+grid_down: unbind
+grid_right: unbind
+grid_cut_up: unbind
+grid_cut_left: unbind
+grid_cut_down: unbind
+grid_cut_right: unbind
+grid_exit: unbind
