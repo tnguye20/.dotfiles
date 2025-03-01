@@ -65,6 +65,9 @@ bindsym $mod+Ctrl+b exec st -e 'bmenu'
 # bindsym $mod+Shift+F1 exec firefox --private-window
 bindsym $mod+p exec firefox
 bindsym $mod+Shift+p exec firefox --private-window
+# bindsym $mod+p exec vivaldi-stable
+# bindsym $mod+shift+p exec vivaldi-stable --incognito
+# bindsym $mod+Shift+p exec firefox --private-window
 # bindsym $mod+p exec google-chrome-stable
 # bindsym $mod+Shift+p exec google-chrome-stable --incognito
 bindsym $mod+F2 exec pcmanfm
@@ -114,14 +117,15 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 # Custom Scripts
 bindsym $mod+z exec --no-startup-id $HOME/scripts/scriptRunner
 bindsym $mod+Ctrl+r exec --no-startup-id $HOME/scripts/repoChooser
-bindsym $mod+Ctrl+w exec --no-startup-id $HOME/scripts/randomWallpaper
+# bindsym $mod+Ctrl+w exec --no-startup-id $HOME/scripts/randomWallpaper
+bindsym $mod+Ctrl+w exec --no-startup-id $HOME/scripts/rust/wallpapers/target/release/wallpapers
 bindsym $mod+ctrl+d exec --no-startup-id $HOME/scripts/instantDate
 bindsym $mod+Shift+a exec --no-startup-id /usr/local/android-studio/bin/studio.sh
 bindsym $mod+Shift+w exec $HOME/scripts/wallpaperChooser
 bindsym $mod+w exec $HOME/scripts/window_switcher
 bindsym $mod+Ctrl+k exec $HOME/scripts/processKiller
 bindsym $mod+Ctrl+l exec $HOME/scripts/layoutChooser
-bindsym $mod+r exec urxvt -e ranger
+bindsym $mod+r exec alacritty -e ranger
 bindsym $mod+Shift+9 exec --no-startup-id $HOME/scripts/lockAndSlide
 
 # change focus
@@ -233,8 +237,8 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Set workspace on startup
-workspace 1 output primary HDMI2
-workspace 2 output HDMI1
+workspace 1 output primary HDMI1
+workspace 2 output HDMI2
 # workspace 3 output DP1
 
 # Open applications on specific workspaces

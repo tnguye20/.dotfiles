@@ -354,3 +354,6 @@ echo "\n"
 
 # Added by Amplify CLI binary installer
 export PATH="$HOME/.amplify/bin:$PATH"
+
+# Turso
+export PATH="/home/tnguye20/.turso:$PATH"

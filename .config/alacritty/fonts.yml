@@ -1,7 +1,7 @@
 # Fonts
 font:
   normal:
-    family: Iosevka
+    family: Victor Mono
     style: Regular
   # Normal (roman) font face
   # normal:
@@ -23,4 +23,4 @@ font:
   #   family: Hack Nerd Font Mono
   #   style: Bold Italic
 
-  size: 18
+  size: 14

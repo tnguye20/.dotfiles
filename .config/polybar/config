@@ -67,7 +67,7 @@ module-margin-left = 0
 module-margin-right = 1
 font-0 = Victor Mono:pixelsize=6;1
 font-1 = RobotoMono Nerd Font:pixelsize=6;1
-dpi = 192
+dpi = 160
 modules-left = bspwm i3 ciderbar
 ; modules-center = xwindow
 ; modules-right = date hostname mynetwork filesystem memory cpu wlan eth battery
@@ -98,7 +98,7 @@ padding-top = 2
 padding-bottom = 2
 font-0 = Victor Mono:pixelsize=6;1
 font-1 = RobotoMono Nerd Font:pixelsize=6;1
-dpi = 192
+dpi = 160
 modules-center = xwindow
 ; dim-value= 0.5
 
@@ -127,7 +127,7 @@ padding-top = 2
 padding-bottom = 2
 font-0 = Victor Mono:pixelsize=6;1
 font-1 = RobotoMono Nerd Font:pixelsize=6;1
-dpi = 192
+dpi = 160
 modules-center = xwindow
 ; dim-value= 0.5
 
@@ -158,7 +158,7 @@ module-margin-left = 0
 module-margin-right = 1
 font-0 = Victor Mono:pixelsize=6;1
 font-1 = RobotoMono Nerd Font:pixelsize=6;1
-dpi = 192
+dpi = 160
 modules-right = hostname mynetwork filesystem memory cpu wlan eth battery date
 ; dim-value= 0.5
 

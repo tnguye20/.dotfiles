@@ -1,0 +1,28 @@
+import = ["/home/tnguye20/.config/alacritty/colors.toml", "/home/tnguye20/.config/alacritty/fonts.toml"]
+live_config_reload = true
+
+[cursor]
+blink_interval = 750
+thickness = 0.15
+unfocused_hollow = true
+vi_mode_style = "Beam"
+
+[cursor.style]
+blinking = "Always"
+shape = "Block"
+
+[env]
+TERM = "alacritty"
+
+[window]
+decorations = "full"
+dynamic_title = true
+startup_mode = "Windowed"
+
+[window.dimensions]
+columns = 82
+lines = 25
+
+[window.padding]
+x = 20
+y = 20

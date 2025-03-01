@@ -37,9 +37,6 @@ cursor:
   style:
     shape: Block
     blinking: Always
-
-  unfocused_hollow: false
-
   vi_mode_style: Beam
 
   # Cursor blinking interval in milliseconds.
