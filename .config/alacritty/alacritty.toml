@@ -1,5 +1,3 @@
-import = ["/home/tnguye20/.config/alacritty/colors.toml", "/home/tnguye20/.config/alacritty/fonts.toml"]
-live_config_reload = true
 
 [cursor]
 blink_interval = 750
@@ -26,3 +24,7 @@ lines = 25
 [window.padding]
 x = 20
 y = 20
+
+[general]
+live_config_reload = true
+import = ["/home/tnguye20/.config/alacritty/colors.toml", "/home/tnguye20/.config/alacritty/fonts.toml"]
